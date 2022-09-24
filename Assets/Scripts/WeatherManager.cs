@@ -15,10 +15,14 @@ public class WeatherManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // Summer
+        if(Input.GetButtonDown("Num1")){
+            curWeather = 0;
+        }
+        // Winter
+        if(Input.GetButtonDown("Num2")){
+            curWeather = 1;
+        }
     }
 
-    void updateWeather(){
-        curWeather
-    }
 }

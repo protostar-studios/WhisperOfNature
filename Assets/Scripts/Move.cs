@@ -6,11 +6,10 @@ public class Move : MonoBehaviour
 {
 
     private float _userHorizontalInput;
-    private const float SCALE_MOVEMENT = 0.1f;
+    public float SCALE_MOVEMENT = 0.1f;
     private Transform playerTransform;
 
-    private float _userRotationInput;
-    private Vector3 _userRotation;
+    private float _userLeftRightInput;
 
     // Start is called before the first frame update
     void Start()
@@ -25,11 +24,8 @@ public class Move : MonoBehaviour
         _userHorizontalInput = Input.GetAxis("Vertical");
         //Debug.Log(_userHorizontalInput);
 
-        _userRotationInput = Input.GetAxis("Horizontal");
-        _userRotation = playerTransform.rotation.eulerAngles; // euler angles is the xyz angles
-        _userRotation += new Vector3(0, _userRotationInput, 0); // captures the 2D input of any sequence
-
-        playerTransform.rotation = Quaternion.Euler(_userRotation);
+        _userLeftRightInput = Input.GetAxis("Horizontal");
+        playerTransform.position += transform.right * _userLeftRightInput * SCALE_MOVEMENT;
         playerTransform.position += transform.forward * _userHorizontalInput * SCALE_MOVEMENT;
 
     }
