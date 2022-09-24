@@ -29,9 +29,11 @@ public class TreeWeatherController : MonoBehaviour
     void updateTree(){
         if(curWeather == 0){
             child = Instantiate(treeSummer) as GameObject;
+            child.transform.position = gameObject.transform.position;
             child.transform.parent = gameObject.transform;
         } else if (curWeather == 1){
             child = Instantiate(treeWinter) as GameObject;
+            child.transform.position = gameObject.transform.position;
             child.transform.parent = gameObject.transform;
         }
     }
