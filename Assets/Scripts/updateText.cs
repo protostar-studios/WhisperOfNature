@@ -7,11 +7,13 @@ public class updateText : MonoBehaviour
 {
     public Text LivesTxt;
     public PlayerManager playerManager;
+    private int livesLeft;
     // Start is called before the first frame update
     void Start()
     {
         LivesTxt = GetComponent<Text>();
-        LivesTxt.text = "Lives left: " + playerManager.livesLeft;
+        livesLeft = playerManager.livesLeft;
+        LivesTxt.text = "Lives left: " + livesLeft;
 
     }
 
