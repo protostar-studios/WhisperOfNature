@@ -18,7 +18,8 @@ public class CamControl : MonoBehaviour
 
     void Start()
     {
-        gameObject.transform.LookAt(camTarget.transform);
+        transform.rotation = camTarget.transform.rotation;
+        transform.LookAt(camTarget.transform);
     }
 
     // Update is called once per frame
