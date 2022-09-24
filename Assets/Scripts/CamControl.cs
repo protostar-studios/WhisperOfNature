@@ -12,6 +12,9 @@ public class CamControl : MonoBehaviour
     public float distance;
     public float height = 1.5f; 
 
+    public float MAX_ANGLE = 80f;
+    public float MIN_ANGLE = -70f;
+
 
     void Start()
     {
@@ -23,6 +26,15 @@ public class CamControl : MonoBehaviour
     {
         xMove += Input.GetAxis("Mouse X");
         yMove += -Input.GetAxis("Mouse Y");
+
+        if(yMove > MAX_ANGLE){
+            yMove = MAX_ANGLE;
+        }
+
+        if(yMove < MIN_ANGLE){
+            yMove = MIN_ANGLE;
+        }
+
         transform.rotation = Quaternion.Euler(yMove, xMove, 0);
         Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
         transform.position = transform.rotation * negDistance;
