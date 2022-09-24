@@ -286,6 +286,7 @@ GameObject:
   - component: {fileID: 533416541}
   - component: {fileID: 533416540}
   - component: {fileID: 533416539}
+  - component: {fileID: 533416543}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -326,7 +327,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 2d51b20ae30a1404a9c5a479cdebe77f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -371,6 +372,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &533416543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 533416538}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f30ded7a550394e9b77bbf5ba74eeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Summer_Floor_tile: {fileID: 2100000, guid: 4e6b27bc42a1135429219bd5a0acb9d3, type: 2}
+  Winter_Floor_tile: {fileID: 2100000, guid: a5ff32936a05e644fafd0373e5b43d46, type: 2}
 --- !u!1001 &1568005861
 PrefabInstance:
   m_ObjectHideFlags: 0
