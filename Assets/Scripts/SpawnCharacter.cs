@@ -10,7 +10,7 @@ public class SpawnCharacter : MonoBehaviour
     private Rigidbody _rigidbody;
 
 
-    private Vector3 _charSpawnLocation = GameObject.FindGameObjectWithTag("Cauldron").transform.position - Vector3.forward * 3;
+    private Vector3 _charSpawnLocation;
 
     private const float RESPAWN_HEIGHT = -50f;
 
@@ -21,6 +21,7 @@ public class SpawnCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        _charSpawnLocation = GameObject.FindGameObjectWithTag("Cauldron").transform.position - Vector3.forward * 3;
         // spawns the prefab named Character from the Resources folder
         _playerChar = GameObject.Instantiate(Resources.Load("Player"),
             _charSpawnLocation, Quaternion.identity) as GameObject;
