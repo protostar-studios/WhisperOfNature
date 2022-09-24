@@ -6,12 +6,17 @@ public class EnemyShoot : MonoBehaviour
 {
     public GameObject projectile;
 
+    public AudioSource shootingSound;
+
     float timer = 0;
-    int waitingTime = 3;
+    int waitingTime = 1;
     bool frozen = false;
+    //public GameObject enemy;
+    public Animation anim;
     // Start is called before the first frame update
     void Start()
     {
+        anim = GetComponent<Animation>();
         
     }
 
@@ -30,7 +35,7 @@ public class EnemyShoot : MonoBehaviour
         if (timer > waitingTime && !frozen){
             // Action
             Instantiate(projectile, transform.position + (transform.forward), transform.rotation);
-
+            anim.Play("plant");
             // reset timer
             timer = 0;
         }
