@@ -17,7 +17,7 @@ public class updateText : MonoBehaviour
     }
 
     // Update is called once per frame
-    void UpdateText()
+    public void UpdateText()
     {
         LivesTxt.text = "Lives left: " + playerManager.livesLeft;
 
