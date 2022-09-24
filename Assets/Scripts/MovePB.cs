@@ -28,7 +28,6 @@ public class MovePB : MonoBehaviour
     {
         _playerInput = Input.GetAxis("Vertical");
         _rotationInput = Input.GetAxis("Horizontal");
-        _userJumped = Input.GetButton("Jump"); // whatever button is mapped to jump in project settings (ex. spacebar)
     }
 
     // private void OnCollisionEnter(Collision collision)
@@ -47,12 +46,5 @@ public class MovePB : MonoBehaviour
 
         _transform.rotation = Quaternion.Euler(_userRotation);
         _transform.position += _transform.forward * _playerInput * _inputScale; // the velocity is a Vector3
-
-        if (_userJumped && (_transform.position.y <= 2))
-        {
-            _rigidbody.AddForce(Vector3.up, ForceMode.VelocityChange); // needs direction and force mode
-            _userJumped = false;
-            // canJump = false;
-        }
     }
 }
