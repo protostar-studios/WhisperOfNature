@@ -5,14 +5,14 @@ using UnityEngine;
 public class Move : MonoBehaviour
 {
 
-    private float _userHorizontalInput;
     public float SCALE_MOVEMENT = 20.0f;
+    public float gravity = 20.0f;
     private Transform playerTransform;
-
-    private float _userLeftRightInput;
     private Animator playerAnim;
 
     private Rigidbody rb;
+    private Vector3 direction;
+    private CharacterController controller;
 
     // Start is called before the first frame update
     void Start()
@@ -25,25 +25,9 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        direction = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        playerTransform.Translate(direction * SCALE_MOVEMENT * Time.deltaTime);
 
-        _userHorizontalInput = Input.GetAxis("Vertical");
-        //Debug.Log(_userHorizontalInput);
-
-        _userLeftRightInput = Input.GetAxis("Horizontal");
-
-        if(_userHorizontalInput != 0 || _userLeftRightInput != 0){
-            Debug.Log("11");
-            playerAnim.SetBool("isWalking", true);
-        } else {
-            Debug.Log("22");
-            playerAnim.SetBool("isWalking", false);
-        }
-        rb.AddForce(new Vector3(_userLeftRightInput, 0, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
-        rb.AddForce(new Vector3(0, _userHorizontalInput, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
-
-    }
-
-    private void LateUpdate() {
     }
 
 }

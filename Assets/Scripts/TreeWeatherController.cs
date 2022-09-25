@@ -13,6 +13,7 @@ public class TreeWeatherController : MonoBehaviour
     void Start()
     {
         curWeather = weatherManager.curWeather;
+        Object.Destroy(gameObject.transform.GetChild(0).gameObject);
         updateTree();
     }
 
