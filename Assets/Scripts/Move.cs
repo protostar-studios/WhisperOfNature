@@ -2,6 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
+Credits:
+
+Jump behaviour largely inspired from this link:
+https://answers.unity.com/questions/1020197/can-someone-help-me-make-a-simple-jump-script.html
+
+~Varun
+
+*/
+
 [RequireComponent(typeof(Rigidbody))]
 public class Move : MonoBehaviour
 {
