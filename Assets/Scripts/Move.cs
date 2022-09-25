@@ -6,17 +6,20 @@ public class Move : MonoBehaviour
 {
 
     private float _userHorizontalInput;
-    public float SCALE_MOVEMENT = 0.1f;
+    public float SCALE_MOVEMENT = 20.0f;
     private Transform playerTransform;
 
     private float _userLeftRightInput;
-    public Animator playerAnim;
+    private Animator playerAnim;
+
+    private Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = gameObject.GetComponent<Transform>();
         playerAnim = gameObject.GetComponent<Animator>();
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -35,9 +38,12 @@ public class Move : MonoBehaviour
             Debug.Log("22");
             playerAnim.SetBool("isWalking", false);
         }
-
-        playerTransform.position += transform.right * _userLeftRightInput * SCALE_MOVEMENT;
-        playerTransform.position += transform.forward * _userHorizontalInput * SCALE_MOVEMENT;
+        rb.AddForce(new Vector3(_userLeftRightInput, 0, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, _userHorizontalInput, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
 
     }
+
+    private void LateUpdate() {
+    }
+
 }
