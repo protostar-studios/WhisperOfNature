@@ -26,7 +26,7 @@ public class Move : MonoBehaviour
     private Rigidbody rb;
 
     public Vector3 jump;
-    public float jumpForce = 2.0f;
+    public float jumpForce = 20000.0f;
 
     public bool isGrounded;
 
@@ -42,7 +42,7 @@ public class Move : MonoBehaviour
     void OnCollisionStay()
     {
         isGrounded = true;
-        rb = gameObject.GetComponent<Rigidbody>();
+        // rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -55,10 +55,10 @@ public class Move : MonoBehaviour
         _userLeftRightInput = Input.GetAxis("Horizontal");
 
         if(_userHorizontalInput != 0 || _userLeftRightInput != 0){
-            Debug.Log("11");
+            // Debug.Log("11");
             playerAnim.SetBool("isWalking", true);
         } else {
-            Debug.Log("22");
+            // Debug.Log("22");
             playerAnim.SetBool("isWalking", false);
         }
         rb.AddForce(new Vector3(_userLeftRightInput, 0, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
@@ -68,6 +68,7 @@ public class Move : MonoBehaviour
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
+            Debug.Log("Jump!");
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
