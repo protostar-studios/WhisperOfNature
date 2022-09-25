@@ -17,30 +17,32 @@ public class Move : MonoBehaviour
 {
 
     private float _userHorizontalInput;
-    public float SCALE_MOVEMENT = 0.1f;
+    public float SCALE_MOVEMENT = 20.0f;
     private Transform playerTransform;
 
     private float _userLeftRightInput;
-    public Animator playerAnim;
+    private Animator playerAnim;
+
+    private Rigidbody rb;
 
     public Vector3 jump;
     public float jumpForce = 2.0f;
 
     public bool isGrounded;
-    Rigidbody rb;
 
     // Start is called before the first frame update
     void Start()
     {
         playerTransform = gameObject.GetComponent<Transform>();
         playerAnim = gameObject.GetComponent<Animator>();
-        rb = GetComponent<Rigidbody>();
+        rb = gameObject.GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
     }
 
     void OnCollisionStay()
     {
         isGrounded = true;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -59,9 +61,10 @@ public class Move : MonoBehaviour
             Debug.Log("22");
             playerAnim.SetBool("isWalking", false);
         }
+        rb.AddForce(new Vector3(_userLeftRightInput, 0, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
+        rb.AddForce(new Vector3(0, _userHorizontalInput, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
 
-        playerTransform.position += transform.right * _userLeftRightInput * SCALE_MOVEMENT;
-        playerTransform.position += transform.forward * _userHorizontalInput * SCALE_MOVEMENT;
+    
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {
@@ -69,5 +72,9 @@ public class Move : MonoBehaviour
             isGrounded = false;
         }
 
+    // private void LateUpdate() {
+    //     return;
+    // }
     }
+
 }
