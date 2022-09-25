@@ -13,7 +13,7 @@ public class CamControl : MonoBehaviour
     public float height = 1.5f; 
 
     public float MAX_ANGLE = 80f;
-    public float MIN_ANGLE = -70f;
+    public float MIN_ANGLE = -50f;
 
 
     void Start()
