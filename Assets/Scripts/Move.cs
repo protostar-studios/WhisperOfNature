@@ -17,14 +17,14 @@ public class Move : MonoBehaviour
 {
 
     public float SCALE_MOVEMENT = 20.0f;
-    public float gravity = 20.0f;
+    public float rotateSpeed = 360;
     public Camera mainCamera;
     private Transform playerTransform;
     private Animator playerAnim;
 
     private Rigidbody rb;
     private Vector3 moveDirection;
-    private Vector3 faceDirection;
+    private Quaternion faceDirection;
     private CharacterController controller;
 
     public Vector3 jump;
@@ -50,8 +50,13 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-        faceDirection = new Vector3(0, mainCamera.transform.rotation.y, 0);
+        float input_h = Input.GetAxis("Horizontal");
+        float input_v = Input.GetAxis("Vertical");
+        moveDirection = new Vector3(input_h, 0, input_v);
+        if(input_h != 0 || input_v != 0){
+            faceDirection = Quaternion.Euler(0, mainCamera.transform.rotation.eulerAngles.y, 0);
+            transform.rotation = Quaternion.RotateTowards(transform.rotation, faceDirection, rotateSpeed * Time.deltaTime);
+        }
 
         playerTransform.Translate(moveDirection * SCALE_MOVEMENT * Time.deltaTime);    
 

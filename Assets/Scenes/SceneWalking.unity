@@ -502,6 +502,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 2040780543}
+    - target: {fileID: 328814985, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
+      propertyPath: SCALE_MOVEMENT
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 328814992, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
       propertyPath: m_Enabled
       value: 1
