@@ -51,26 +51,9 @@ public class Move : MonoBehaviour
     void Update()
     {
         moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        faceDirection = new Vector3(0, mainCamera.transform.rotation.y, 0);
 
-        playerTransform.Rotate(new Vector3(0, mainCamera.transform.rotation.y, 0));
-        playerTransform.Translate(moveDirection * SCALE_MOVEMENT * Time.deltaTime);
-
-        _userHorizontalInput = Input.GetAxis("Vertical");
-        //Debug.Log(_userHorizontalInput);
-
-        _userLeftRightInput = Input.GetAxis("Horizontal");
-
-        if(_userHorizontalInput != 0 || _userLeftRightInput != 0){
-            Debug.Log("11");
-            playerAnim.SetBool("isWalking", true);
-        } else {
-            Debug.Log("22");
-            playerAnim.SetBool("isWalking", false);
-        }
-        rb.AddForce(new Vector3(_userLeftRightInput, 0, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
-        rb.AddForce(new Vector3(0, _userHorizontalInput, 0) * SCALE_MOVEMENT * Time.deltaTime, ForceMode.Impulse);
-
-    
+        playerTransform.Translate(moveDirection * SCALE_MOVEMENT * Time.deltaTime);    
 
         if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
         {

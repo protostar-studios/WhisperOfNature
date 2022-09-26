@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3382441333429218774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.14, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -60,10 +60,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.82
-  m_Height: 5.78
+  m_Radius: 0.21
+  m_Height: 2.24
   m_Direction: 1
-  m_Center: {x: 0, y: 2.8, z: 0}
+  m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!1001 &769754977280941232
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -77,15 +77,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -93,7 +93,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 0.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_LocalPosition.z
@@ -130,6 +130,14 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
       propertyPath: m_Name
       value: Tree_Summer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639405848544218604, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5639405848544218604, guid: 5464af7a7b7349c479066256ebde448e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.03
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5464af7a7b7349c479066256ebde448e, type: 3}

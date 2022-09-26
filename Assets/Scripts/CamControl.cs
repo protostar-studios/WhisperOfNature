@@ -14,7 +14,6 @@ public class CamControl : MonoBehaviour
 
     public float MAX_ANGLE = 80f;
     public float MIN_ANGLE = -50f;
-    public Quaternion camera_angle;
 
 
     void Start()
@@ -40,7 +39,6 @@ public class CamControl : MonoBehaviour
         transform.rotation = Quaternion.Euler(yMove, xMove, 0);
         Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
         transform.position = transform.rotation * negDistance;
-        camera_angle = Quaternion.Euler(0, transform.rotation.x, 0);
     }
 
     private void LateUpdate() {
