@@ -448,55 +448,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &187254774
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 187254776}
-  - component: {fileID: 187254775}
-  m_Layer: 0
-  m_Name: WeatherManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &187254775
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187254774}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924c815a0b555ff479e0f72c62dd13a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curWeather: 0
-  weathers:
-  - summer
-  - winter
---- !u!4 &187254776
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 187254774}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.37, y: 0, z: -7.19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &352576885
 Mesh:
@@ -1145,7 +1097,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8948330493658503656, guid: d1b4304b318acbe42a270fc4902e431e, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8948330493658503656, guid: d1b4304b318acbe42a270fc4902e431e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1683,7 +1635,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree (4)
@@ -2388,7 +2340,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree (1)
@@ -3793,7 +3745,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree (5)
@@ -4511,7 +4463,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -4572,7 +4524,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree (3)
@@ -5153,7 +5105,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree (2)
@@ -5587,7 +5539,7 @@ PrefabInstance:
     - target: {fileID: 3382441333429218768, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: weatherManager
       value: 
-      objectReference: {fileID: 187254775}
+      objectReference: {fileID: 0}
     - target: {fileID: 3382441333429218774, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
       propertyPath: m_Name
       value: Tree
@@ -5649,7 +5601,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh54478
+  m_Name: pb_Mesh63288
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5999,3 +5951,60 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameEnded: 0
   gameHasEnded: {fileID: 0}
+--- !u!1001 &674119691067049560
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8678451864012200817, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_Name
+      value: SeasonManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200818, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
