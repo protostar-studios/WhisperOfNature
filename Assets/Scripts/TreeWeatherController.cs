@@ -5,14 +5,15 @@ using UnityEngine;
 public class TreeWeatherController : MonoBehaviour
 {
     // Start is called before the first frame update
-    public WeatherManager weatherManager;
+    private SeasonManager seasonManager;
     public GameObject treeSummer;
     public GameObject treeWinter;
     public int curWeather = 0;
     private GameObject child;
     void Start()
     {
-        curWeather = weatherManager.curWeather;
+        seasonManager = Object.FindObjectOfType<SeasonManager>();
+        curWeather = seasonManager.curWeather;
         Object.Destroy(gameObject.transform.GetChild(0).gameObject);
         updateTree();
     }
@@ -20,8 +21,8 @@ public class TreeWeatherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(weatherManager.curWeather != curWeather){
-            curWeather = weatherManager.curWeather;
+        if(seasonManager.curWeather != curWeather){
+            curWeather = seasonManager.curWeather;
             Object.Destroy(gameObject.transform.GetChild(0).gameObject);
             updateTree();
         }

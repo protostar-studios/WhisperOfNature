@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 8678451864012200818}
   - component: {fileID: 8678451864012200819}
   m_Layer: 0
-  m_Name: WeatherManager
-  m_TagString: Untagged
+  m_Name: SeasonManager
+  m_TagString: SeasonManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -41,7 +41,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8678451864012200817}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 924c815a0b555ff479e0f72c62dd13a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ef8b49027193a04ba2c9fb200dbd2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   curWeather: 0

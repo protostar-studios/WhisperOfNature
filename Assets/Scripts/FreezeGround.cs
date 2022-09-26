@@ -7,27 +7,24 @@ public class FreezeGround : MonoBehaviour
 
     public Material Summer_Floor_tile;
     public Material Winter_Floor_tile;
+    private SeasonManager seasonManager;
 
     bool frozen = false;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        seasonManager = Object.FindObjectOfType<SeasonManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-         if (Input.GetKeyDown(KeyCode.F))
-        {
-            frozen = !frozen;
-            if (frozen){
-                GetComponent<Renderer>().material = Winter_Floor_tile;
-            }
-            else{
-                GetComponent<Renderer>().material = Summer_Floor_tile;
-            }
+        if (seasonManager.curWeather == 0){
+            GetComponent<Renderer>().material = Summer_Floor_tile;
+        }
+        else{
+            GetComponent<Renderer>().material = Winter_Floor_tile;
         }
     }
 }

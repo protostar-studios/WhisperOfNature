@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeatherManager : MonoBehaviour
+public class SeasonManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int curWeather = 0;
