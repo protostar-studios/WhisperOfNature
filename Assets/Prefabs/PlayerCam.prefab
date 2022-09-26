@@ -102,3 +102,5 @@ MonoBehaviour:
   yMove: 0
   distance: 4
   height: 1.2
+  MAX_ANGLE: 80
+  MIN_ANGLE: -70
