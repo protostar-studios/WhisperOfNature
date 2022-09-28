@@ -35,6 +35,8 @@ public class Move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         playerTransform = gameObject.GetComponent<Transform>();
         playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
@@ -64,7 +66,7 @@ public class Move : MonoBehaviour
 
         playerTransform.Translate(moveDirection * SCALE_MOVEMENT * Time.deltaTime);    
 
-        if(Input.GetKeyDown(KeyCode.Space) && isGrounded)
+        if(Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
