@@ -18,6 +18,10 @@ public class GameEndedScript : MonoBehaviour
     }
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
         if (gameEnded)
         {
             gameHasEnded.enabled = true;

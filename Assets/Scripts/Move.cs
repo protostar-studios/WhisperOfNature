@@ -77,5 +77,11 @@ public class Move : MonoBehaviour
     // }
     }
 
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+    }
 }
