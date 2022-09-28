@@ -7,6 +7,7 @@ public class SeasonManager : MonoBehaviour
     // Start is called before the first frame update
     public int curWeather = 0;
     public List<string> weathers = new List<string>(){"summer", "winter"};
+    public bool rain = true;
     void Start()
     {
         
@@ -22,6 +23,12 @@ public class SeasonManager : MonoBehaviour
         // Winter
         if(Input.GetButtonDown("Num2")){
             curWeather = 1;
+        }
+
+        // Rainy season
+        if(Input.GetButtonDown("Num3")){
+            rain = !rain;
+            Debug.Log("pressed num3");
         }
     }
 
