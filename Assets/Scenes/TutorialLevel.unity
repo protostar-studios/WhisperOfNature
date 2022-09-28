@@ -1082,6 +1082,7 @@ GameObject:
   m_Component:
   - component: {fileID: 902419313}
   - component: {fileID: 902419312}
+  - component: {fileID: 902419314}
   m_Layer: 0
   m_Name: backgroundMusic
   m_TagString: Untagged
@@ -1200,6 +1201,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &902419314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 902419311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d097fc5a9416d5c4e92d30ac8ee31e62, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 902419312}
+  summerMusic: {fileID: 8300000, guid: 3d588b4955aac7241a4ae48269af1fa6, type: 3}
+  winterMusic: {fileID: 8300000, guid: 155fb40c9431f604596c8b306aefe180, type: 3}
 --- !u!1001 &1120418238
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -5,6 +5,11 @@ using UnityEngine;
 public class MusicControl : MonoBehaviour
 {
     private SeasonManager seasonManager;
+
+    public AudioSource backgroundMusic;
+    public AudioClip summerMusic;
+    public AudioClip winterMusic;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,12 +19,35 @@ public class MusicControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (seasonManager.curWeather)
+        if(Input.GetButtonDown("Num1")){
+            backgroundMusic.Stop();
+            backgroundMusic.clip = summerMusic;
+            backgroundMusic.Play();
+        }
+        // Winter
+        if(Input.GetButtonDown("Num2")){
+            backgroundMusic.Stop();
+            backgroundMusic.clip = winterMusic;
+            backgroundMusic.Play();
+        }
+
+        // THE PROBLEM WITH SWITCH IS THAT MUSIC CONTINUOUSLY REPEATS EVERY FRAME
+        // SHOULD SWITCH MUSIC ONLY ON BUTTON PRESS NOT ON EVERY FRAME
+
+        /*switch (seasonManager.curWeather)
         {
             case 1:
+                backgroundMusic.clip = summerMusic;
+                backgroundMusic.Play();
+                break;
+            case 2:
+                backgroundMusic.clip = summerMusic;
+                backgroundMusic.Play();
                 break;
             default:
-                break;
-        }
+                backgroundMusic.clip = summerMusic;
+                backgroundMusic.Play();
+                break; 
+        }*/
     }
 }
