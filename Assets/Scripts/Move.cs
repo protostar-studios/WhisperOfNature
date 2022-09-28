@@ -31,7 +31,7 @@ public class Move : MonoBehaviour
     public float jumpForce = 2.0f;
 
     public bool isGrounded;
-
+   
     // Start is called before the first frame update
     void Start()
     {
@@ -48,10 +48,14 @@ public class Move : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         float input_h = Input.GetAxis("Horizontal");
         float input_v = Input.GetAxis("Vertical");
+        bool hasHorizontalInput = !Mathf.Approximately(input_h, 0f);
+        bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
+        bool isWalking = hasHorizontalInput || hasVerticalInput;
+        playerAnim.SetBool("isWalking", isWalking);
         moveDirection = new Vector3(input_h, 0, input_v);
         if(input_h != 0 || input_v != 0){
             faceDirection = Quaternion.Euler(0, mainCamera.transform.rotation.eulerAngles.y, 0);
@@ -70,5 +74,6 @@ public class Move : MonoBehaviour
     //     return;
     // }
     }
+
 
 }
