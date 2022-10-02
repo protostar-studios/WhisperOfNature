@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 194935210386555059}
   - component: {fileID: 194935210386555063}
   m_Layer: 0
-  m_Name: Water
+  m_Name: FreezableWater
   m_TagString: WaterSurface
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

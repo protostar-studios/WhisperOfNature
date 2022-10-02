@@ -44,7 +44,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ef8b49027193a04ba2c9fb200dbd2b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  curWeather: 0
-  weathers:
+  curSeason: 0
+  seasons:
+  - sprint
   - summer
+  - fall
   - winter
+  rain: 1
+  snowParticles: {fileID: 2160889763373927569, guid: ccd3b14c2c221c549a2afbdae2e7ba9a, type: 3}
+  snowPos: {x: 0, y: 15, z: 0}
+  snowRot: {x: 0, y: 0, z: 0}

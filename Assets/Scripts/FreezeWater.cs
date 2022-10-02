@@ -24,11 +24,13 @@ public class FreezeWater : MonoBehaviour
             GetComponent<Collider>().enabled = true;
             opac = Mathf.SmoothDamp(mat.GetFloat("_iceLevel"), 0.8f, ref changeSpeed, 0.5f, 3.0f);
             mat.SetFloat("_iceLevel", opac);
+            mat.SetFloat("_waterSpeed", 1 - opac);
         }
         else{
             GetComponent<Collider>().enabled = false;
             opac = Mathf.SmoothDamp(mat.GetFloat("_iceLevel"), 0, ref changeSpeed, 0.5f, 3.0f);
             mat.SetFloat("_iceLevel", opac);
+            mat.SetFloat("_waterSpeed", 1 - opac);
         }
     }
 }

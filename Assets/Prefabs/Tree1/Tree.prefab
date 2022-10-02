@@ -46,10 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d17f89f7793413b41a92d2f97e88e226, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weatherManager: {fileID: 0}
   treeSummer: {fileID: 3342592965265305858, guid: 5a72277b2cbf36344b46ffb9070d2d21, type: 3}
   treeWinter: {fileID: 3425595457563004343, guid: 77857abfab714034cb7a8ee9f5cc35d7, type: 3}
-  curWeather: 0
+  curSeason: 0
 --- !u!136 &4568935829294407851
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -61,7 +60,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.21
-  m_Height: 2.24
+  m_Height: 7.05
   m_Direction: 1
   m_Center: {x: 0, y: 0.99, z: 0}
 --- !u!1001 &769754977280941232

@@ -19,7 +19,7 @@ public class IcebergSeason : MonoBehaviour
     {
         switch (seasonManager.curSeason)
         {
-            case 1:
+            case 3:
                 Vector3 newPos = initPos + Vector3.up * 0.5f;
                 transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
                 break;
