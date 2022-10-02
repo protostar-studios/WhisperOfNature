@@ -26,15 +26,25 @@ public class Move : MonoBehaviour
     private Vector3 moveDirection;
     private Quaternion faceDirection;
     private CharacterController controller;
+    private SeasonManager seasonManager;
 
     public Vector3 jump;
-    public float jumpForce = 2.0f;
+    public float SCALE_JUMP = 2.0f;
+    public float jumpForce;
+    private float walkingSpeed;
 
     public bool isGrounded;
+    private float curVel;
+    private bool isFrozen;
+    private bool onIce = false;
+    private Vector3 jumpVector;
    
     // Start is called before the first frame update
     void Start()
     {
+        jumpForce = SCALE_JUMP;
+        walkingSpeed = SCALE_MOVEMENT;
+        seasonManager = GameObject.FindObjectOfType<SeasonManager>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         playerTransform = gameObject.GetComponent<Transform>();
@@ -58,15 +68,32 @@ public class Move : MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         playerAnim.SetBool("isWalking", isWalking);
+        if(seasonManager.curSeason == 3){
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
+            if(walkingSpeed <= 0.01){
+                isFrozen = true;
+            }
+        }else if(walkingSpeed != SCALE_MOVEMENT){
+            isFrozen = false;
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
+        }
         moveDirection = new Vector3(input_h, 0, input_v);
-        if(input_h != 0 || input_v != 0){
+        if((!isFrozen) && (input_h != 0 || input_v != 0)){
             faceDirection = Quaternion.Euler(0, mainCamera.transform.rotation.eulerAngles.y, 0);
             transform.rotation = Quaternion.RotateTowards(transform.rotation, faceDirection, rotateSpeed * Time.deltaTime);
         }
+        if(seasonManager.curSeason == 3 && onIce && !isFrozen){
+            Debug.Log("Sliding");
+            gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(moveDirection) * 10, ForceMode.Impulse);
+        }else if(!isFrozen){
+            playerTransform.Translate(moveDirection * walkingSpeed * Time.deltaTime);    
+        }
 
-        playerTransform.Translate(moveDirection * SCALE_MOVEMENT * Time.deltaTime);    
-
-        if(Input.GetButtonDown("Jump") && isGrounded)
+        if(Input.GetButtonDown("Jump") && isGrounded && !isFrozen)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -75,6 +102,15 @@ public class Move : MonoBehaviour
     // private void LateUpdate() {
     //     return;
     // }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        Debug.Log("1");
+        if(other.gameObject.CompareTag("WaterSurface")){
+            onIce = true;
+        }else{
+            onIce = false;
+        }
     }
 
     private void Update()

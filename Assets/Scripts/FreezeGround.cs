@@ -5,9 +5,12 @@ using UnityEngine;
 public class FreezeGround : MonoBehaviour
 {
 
-    public Material Summer_Floor_tile;
-    public Material Winter_Floor_tile;
+    // public Material Summer_Floor_tile;
+    // public Material Winter_Floor_tile;
+    private float changeSpeed;
     private SeasonManager seasonManager;
+    private Material mat;
+    private float opac;
 
     bool frozen = false;
 
@@ -15,16 +18,19 @@ public class FreezeGround : MonoBehaviour
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
+        mat = GetComponent<Renderer>().material;
     }
 
     // Update is called once per frame
     void Update()
     {
         if (seasonManager.curSeason == 3){
-            GetComponent<Renderer>().material = Winter_Floor_tile;
+            opac = Mathf.SmoothDamp(mat.GetFloat("_SnowOpacity"), 1, ref changeSpeed, 0.5f, 3.0f);
+            mat.SetFloat("_SnowOpacity", opac);
         }
         else{
-            GetComponent<Renderer>().material = Summer_Floor_tile;
+            opac = Mathf.SmoothDamp(mat.GetFloat("_SnowOpacity"), 0, ref changeSpeed, 0.5f, 3.0f);
+            mat.SetFloat("_SnowOpacity", opac);
         }
     }
 }
