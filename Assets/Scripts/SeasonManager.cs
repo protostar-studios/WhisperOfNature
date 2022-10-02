@@ -1,13 +1,17 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SeasonManager : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int curWeather = 0;
-    public List<string> weathers = new List<string>(){"summer", "winter"};
+    public int curSeason = 0;
+    public List<string> seasons = new List<string>(){"sprint", "summer", "fall", "winter"};
     public bool rain = true;
+    public GameObject snowParticles;
+    public Vector3 snowPos;
+    public Vector3 snowRot;
+    private bool isSnowing = false;
+    private GameObject snow = null;
     void Start()
     {
         
@@ -18,17 +22,42 @@ public class SeasonManager : MonoBehaviour
     {
         // Summer
         if(Input.GetButtonDown("Num1")){
-            curWeather = 0;
+            curSeason = 0;
+            if(isSnowing){
+                snow.GetComponent<ParticleSystem>().Stop();
+                isSnowing = false;
+            }
+            rain = true;
         }
         // Winter
         if(Input.GetButtonDown("Num2")){
-            curWeather = 1;
+            curSeason = 1;
+            if(isSnowing){
+                snow.GetComponent<ParticleSystem>().Stop();
+                isSnowing = false;
+            }
+            rain = false;
         }
 
-        // Rainy season
+        // Fall
         if(Input.GetButtonDown("Num3")){
-            rain = !rain;
-            Debug.Log("pressed num3");
+            curSeason = 2;
+            if(isSnowing){
+                snow.GetComponent<ParticleSystem>().Stop();
+                isSnowing = false;
+            }
+            rain = false;
+        }
+
+        // Winter
+        if(Input.GetButtonDown("Num4")){
+            curSeason = 3;
+            if(snow == null){
+                snow = GameObject.Instantiate(snowParticles, snowPos, Quaternion.Euler(snowRot));
+            }
+            snow.GetComponent<ParticleSystem>().Play();
+            isSnowing = true;
+            rain = false;
         }
     }
 

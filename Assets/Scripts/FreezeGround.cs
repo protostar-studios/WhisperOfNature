@@ -20,11 +20,11 @@ public class FreezeGround : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (seasonManager.curWeather == 0){
-            GetComponent<Renderer>().material = Summer_Floor_tile;
+        if (seasonManager.curSeason == 3){
+            GetComponent<Renderer>().material = Winter_Floor_tile;
         }
         else{
-            GetComponent<Renderer>().material = Winter_Floor_tile;
+            GetComponent<Renderer>().material = Summer_Floor_tile;
         }
     }
 }

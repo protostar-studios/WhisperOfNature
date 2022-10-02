@@ -24,7 +24,7 @@ public class flowerGrow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (seasonManager.curWeather)
+        switch (seasonManager.curSeason)
         {
             case 0:
                 Vector3 newScale = new Vector3(initScale.x, initScale.y * 3, initScale.z);

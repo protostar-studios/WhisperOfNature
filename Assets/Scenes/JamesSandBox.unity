@@ -281,6 +281,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200819, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: snowPos.y
+      value: 34.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8678451864012200819, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
+      propertyPath: snowParticles
+      value: 
+      objectReference: {fileID: 2160889763373927569, guid: ccd3b14c2c221c549a2afbdae2e7ba9a, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37ec361b86844564b85dcf39d30ce67c, type: 3}
 --- !u!1 &425222264

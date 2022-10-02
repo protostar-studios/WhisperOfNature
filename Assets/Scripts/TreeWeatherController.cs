@@ -8,12 +8,12 @@ public class TreeWeatherController : MonoBehaviour
     private SeasonManager seasonManager;
     public GameObject treeSummer;
     public GameObject treeWinter;
-    public int curWeather = 0;
+    public int curSeason = 0;
     private GameObject child;
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
-        curWeather = seasonManager.curWeather;
+        curSeason = seasonManager.curSeason;
         Object.Destroy(gameObject.transform.GetChild(0).gameObject);
         updateTree();
     }
@@ -21,21 +21,21 @@ public class TreeWeatherController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(seasonManager.curWeather != curWeather){
-            curWeather = seasonManager.curWeather;
+        if(seasonManager.curSeason != curSeason){
+            curSeason = seasonManager.curSeason;
             Object.Destroy(gameObject.transform.GetChild(0).gameObject);
             updateTree();
         }
     }
 
     void updateTree(){
-        if(curWeather == 0){
+        if(curSeason == 0){
             child = Instantiate(treeSummer) as GameObject;
             child.transform.position = gameObject.transform.position;
             child.transform.rotation = gameObject.transform.rotation;
             child.transform.localScale = gameObject.transform.localScale;
             child.transform.parent = gameObject.transform;
-        } else if (curWeather == 1){
+        } else if (curSeason == 3){
             child = Instantiate(treeWinter) as GameObject;
             child.transform.position = gameObject.transform.position;
             child.transform.rotation = gameObject.transform.rotation;

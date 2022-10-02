@@ -17,7 +17,7 @@ public class IcebergSeason : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (seasonManager.curWeather)
+        switch (seasonManager.curSeason)
         {
             case 1:
                 Vector3 newPos = initPos + Vector3.up * 0.5f;

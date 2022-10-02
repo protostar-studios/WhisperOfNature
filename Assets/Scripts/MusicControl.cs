@@ -14,7 +14,7 @@ public class MusicControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (seasonManager.curWeather)
+        switch (seasonManager.curSeason)
         {
             case 1:
                 break;
