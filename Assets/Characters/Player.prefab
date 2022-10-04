@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 3198619601373268829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.44, y: 3.07, z: -10.11}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1248566680743390164}
   m_Father: {fileID: 0}
@@ -102,7 +102,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3198619601373268829}
   serializedVersion: 2
-  m_Mass: 50
+  m_Mass: 100
   m_Drag: 0
   m_AngularDrag: 0.05
   m_UseGravity: 1
@@ -122,12 +122,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06da27193bcf941c28ed12931e00ac5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SCALE_MOVEMENT: 2
+  SCALE_MOVEMENT: 3.5
   rotateSpeed: 360
+  SlideForce: 20
   mainCamera: {fileID: 0}
   jump: {x: 0, y: 0, z: 0}
-  SCALE_JUMP: 2
-  jumpForce: 50
+  SCALE_JUMP: 150
+  jumpForce: 0
   isGrounded: 0
 --- !u!95 &328814992
 Animator:
@@ -226,6 +227,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -3496630587055265941, guid: 69a866fc08af53e4b9d2a59018c685e9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 950b9214f2b93724892c9f399d210879, type: 2}
     - target: {fileID: 919132149155446097, guid: 69a866fc08af53e4b9d2a59018c685e9, type: 3}
       propertyPath: m_Name
       value: earthling_model

@@ -7,6 +7,7 @@ public class FreezeGround : MonoBehaviour
 
     // public Material Summer_Floor_tile;
     // public Material Winter_Floor_tile;
+    public int materialOrder = 1;
     private float changeSpeed;
     private SeasonManager seasonManager;
     private Material mat;
@@ -18,7 +19,7 @@ public class FreezeGround : MonoBehaviour
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
-        mat = GetComponent<Renderer>().material;
+        mat = GetComponent<Renderer>().materials[materialOrder];
     }
 
     // Update is called once per frame

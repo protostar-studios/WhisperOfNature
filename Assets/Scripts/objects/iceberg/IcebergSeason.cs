@@ -7,6 +7,7 @@ public class IcebergSeason : MonoBehaviour
     private SeasonManager seasonManager;
     private Vector3 initPos;
     public float speed = 2.0f;
+    public Vector3 moveup;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +21,7 @@ public class IcebergSeason : MonoBehaviour
         switch (seasonManager.curSeason)
         {
             case 3:
-                Vector3 newPos = initPos + Vector3.up * 0.5f;
+                Vector3 newPos = initPos + moveup;
                 transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
                 break;
             default:
