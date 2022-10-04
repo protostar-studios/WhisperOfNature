@@ -18,6 +18,7 @@ public class Move : MonoBehaviour
 
     public float SCALE_MOVEMENT = 20.0f;
     public float rotateSpeed = 360;
+    public float SlideForce = 10f;
     public Camera mainCamera;
     private Transform playerTransform;
     private Animator playerAnim;
@@ -88,7 +89,7 @@ public class Move : MonoBehaviour
         }
         if(seasonManager.curSeason == 3 && onIce && !isFrozen){
             Debug.Log("Sliding");
-            gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(moveDirection) * 10, ForceMode.Impulse);
+            gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
         }else if(!isFrozen){
             playerTransform.Translate(moveDirection * walkingSpeed * Time.deltaTime);    
         }

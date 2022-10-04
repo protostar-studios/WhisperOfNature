@@ -20,6 +20,8 @@ public class CamControl : MonoBehaviour
     {
         transform.rotation = camTarget.transform.rotation;
         transform.LookAt(camTarget.transform);
+        // xMove = transform.rotation.eulerAngles.x;
+        xMove = transform.rotation.eulerAngles.y;
     }
 
     // Update is called once per frame
