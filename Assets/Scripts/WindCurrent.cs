@@ -13,6 +13,8 @@ public class WindCurrent : MonoBehaviour{
     Vector3 startPosition;
     bool active;
     BoxCollider StartTrigger;
+
+    Renderer[] RendererArray;
     
 
 
@@ -26,7 +28,11 @@ public class WindCurrent : MonoBehaviour{
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         active = true;
         StartTrigger = GetComponent<BoxCollider>();
-        StartTrigger.center = PathNode[0].transform.position;       
+        StartTrigger.transform.position = PathNode[0].transform.position;       
+        // Debug.Log(StartTrigger.transform.position);
+        // Debug.Log(PathNode[0].transform.position);
+        startPosition = StartTrigger.transform.position;
+        RendererArray = gameObject.GetComponentsInChildren<Renderer>();
     }
 
     void CheckNode(){
@@ -36,15 +42,29 @@ public class WindCurrent : MonoBehaviour{
         startPosition = player[0].transform.position;
     }
 
+    void ShowNodes(){
+        foreach (Renderer rend in RendererArray){
+            rend.enabled=true;
+        }
+    }
+
+    void HideNodes(){
+        foreach (Renderer rend in RendererArray){
+            rend.enabled=false;
+        }
+    }
+
     void Reset(){
         active = false;
+        HideNodes();
         timer = 0;
         CurrentNode = 0;
+        startPosition = StartTrigger.transform.position;
     }
 
     void OnTriggerEnter(Collider other){
         if(other.tag == "Player" && seasonManager.curSeason == 2){
-            Debug.Log("Let's Go!");
+            // Debug.Log("Let's Go!");
             active = true;
         }
     }
@@ -53,8 +73,12 @@ public class WindCurrent : MonoBehaviour{
         if (seasonManager.curSeason != 2){
             Reset();
         }
+        if (seasonManager.curSeason == 2){
+            ShowNodes();
+        }   
         if (seasonManager.curSeason == 2 && active){
             // Debug.Log("Fall!");
+
             timer += Time.deltaTime * MoveSpeed;
             foreach(GameObject g in player){
                 if(g.transform.position != CurrentPositionHolder){
