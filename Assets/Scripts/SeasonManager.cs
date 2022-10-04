@@ -5,7 +5,7 @@ public class SeasonManager : MonoBehaviour
 {
     // Start is called before the first frame update
     public int curSeason = 0;
-    public List<string> seasons = new List<string>(){"sprint", "summer", "fall", "winter"};
+    public List<string> seasons = new List<string>(){"spring", "summer", "fall", "winter"};
     public bool rain = true;
     public GameObject snowParticles;
     public Vector3 snowPos;
