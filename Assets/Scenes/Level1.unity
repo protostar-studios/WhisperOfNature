@@ -447,7 +447,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37558
+  m_Name: pb_Mesh25962
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4834,7 +4834,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37524
+  m_Name: pb_Mesh25928
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7682,6 +7682,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materialOrder: 1
+  spring: 1
+  summer: 0
+  autumn: 0
+  winter: 0
 --- !u!1 &2101620452
 GameObject:
   m_ObjectHideFlags: 0

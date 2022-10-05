@@ -20,6 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
+    - _AutumnBase:
+        m_Texture: {fileID: 2800000, guid: e243b70a6d47b5144a36410d30923251, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _BaseMap:
         m_Texture: {fileID: 2800000, guid: 11fd68d8914d3944fa0cc8b47e97fbcd, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -60,8 +64,21 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _SpringBase:
+        m_Texture: {fileID: 2800000, guid: b490cf52ac5b5c347bcb878c243cfa13, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SummerBase:
+        m_Texture: {fileID: 2800000, guid: 264d0c164a24ead46a00a2ff05bbcc3f, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WinterBase:
+        m_Texture: {fileID: 2800000, guid: 84a0d793fd00c60439c8a3bc36a65a52, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _Autumn: 0
     - _BUILTIN_QueueControl: 0
     - _BUILTIN_QueueOffset: 0
     - _BumpScale: 1
@@ -79,9 +96,12 @@ Material:
     - _SmoothnessTextureChannel: 0
     - _SnowOpacity: 0
     - _SpecularHighlights: 1
+    - _Spring: 1
     - _SrcBlend: 1
+    - _Summer: 0
     - _UVSec: 0
-    - _UseColor: 1
+    - _UseColor: 0
+    - _Winter: 0
     - _ZWrite: 1
     m_Colors:
     - _Color: {r: 0.3392555, g: 0.4245283, b: 0.2783464, a: 1}
