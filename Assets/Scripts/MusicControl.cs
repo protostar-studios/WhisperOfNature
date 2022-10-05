@@ -8,6 +8,7 @@ public class MusicControl : MonoBehaviour
 
     public AudioSource backgroundMusic;
     public AudioClip summerMusic;
+    public AudioClip springMusic;
     public AudioClip winterMusic;
 
     // Start is called before the first frame update
@@ -22,11 +23,17 @@ public class MusicControl : MonoBehaviour
         // switch (seasonManager.curSeason)
         if(Input.GetButtonDown("Num1")){
             backgroundMusic.Stop();
+            backgroundMusic.clip = springMusic;
+            backgroundMusic.Play();
+        }
+        if (Input.GetButtonDown("Num2"))
+        {
+            backgroundMusic.Stop();
             backgroundMusic.clip = summerMusic;
             backgroundMusic.Play();
         }
         // Winter
-        if(Input.GetButtonDown("Num4")){
+        if (Input.GetButtonDown("Num4")){
             backgroundMusic.Stop();
             backgroundMusic.clip = winterMusic;
             backgroundMusic.Play();

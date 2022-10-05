@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TreeEditor;
 using UnityEngine;
 
 public class TreeWeatherController : MonoBehaviour
@@ -8,6 +9,8 @@ public class TreeWeatherController : MonoBehaviour
     private SeasonManager seasonManager;
     public GameObject treeSummer;
     public GameObject treeWinter;
+    public GameObject treeSpring;
+    public GameObject treeFall;
     public int curSeason = 0;
     private GameObject child;
     void Start()
@@ -30,13 +33,29 @@ public class TreeWeatherController : MonoBehaviour
 
     void updateTree(){
         if(curSeason == 0){
-            child = Instantiate(treeSummer) as GameObject;
+            child = Instantiate(treeSpring) as GameObject;
             child.transform.position = gameObject.transform.position;
             child.transform.rotation = gameObject.transform.rotation;
             child.transform.localScale = gameObject.transform.localScale;
             child.transform.parent = gameObject.transform;
         } else if (curSeason == 3){
             child = Instantiate(treeWinter) as GameObject;
+            child.transform.position = gameObject.transform.position;
+            child.transform.rotation = gameObject.transform.rotation;
+            child.transform.localScale = gameObject.transform.localScale;
+            child.transform.parent = gameObject.transform;
+        }
+        else if (curSeason == 1)
+        {
+            child = Instantiate(treeSummer) as GameObject;
+            child.transform.position = gameObject.transform.position;
+            child.transform.rotation = gameObject.transform.rotation;
+            child.transform.localScale = gameObject.transform.localScale;
+            child.transform.parent = gameObject.transform;
+        }
+        else if (curSeason == 2)
+        {
+            child = Instantiate(treeFall) as GameObject;
             child.transform.position = gameObject.transform.position;
             child.transform.rotation = gameObject.transform.rotation;
             child.transform.localScale = gameObject.transform.localScale;
