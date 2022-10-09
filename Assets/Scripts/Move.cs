@@ -70,7 +70,7 @@ public class Move : MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         playerAnim.SetBool("isWalking", isWalking);
         if(seasonManager.curSeason == 3){
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, 12 * Time.fixedDeltaTime, 0.8f);
             jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             if(walkingSpeed <= 0.01){
