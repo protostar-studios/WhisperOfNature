@@ -347,7 +347,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh51862
+  m_Name: pb_Mesh28400
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1757,6 +1757,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59f30ded7a550394e9b77bbf5ba74eeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  materialOrder: 0
+  spring: 1
+  summer: 0
+  autumn: 0
+  winter: 0
 --- !u!1001 &1058234663
 PrefabInstance:
   m_ObjectHideFlags: 0
