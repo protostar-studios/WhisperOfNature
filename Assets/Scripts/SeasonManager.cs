@@ -20,45 +20,43 @@ public class SeasonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Spring
-        if(Input.GetButtonDown("Num1")){
-            curSeason = 0;
-            if(isSnowing){
-                snow.GetComponent<ParticleSystem>().Stop();
-                isSnowing = false;
+        // Change seasons with two buttons.
+        if(Input.GetButtonDown("PrevSeason")){
+            if(curSeason - 1 < 0){
+                curSeason = 3;
+            }else{
+                curSeason -= 1;
             }
-            rain = true;
-        }
-        // Summer
-        if(Input.GetButtonDown("Num2")){
-            curSeason = 1;
-            if(isSnowing){
-                snow.GetComponent<ParticleSystem>().Stop();
-                isSnowing = false;
-            }
-            rain = false;
         }
 
-        // Fall
-        if(Input.GetButtonDown("Num3")){
-            curSeason = 2;
-            if(isSnowing){
-                snow.GetComponent<ParticleSystem>().Stop();
-                isSnowing = false;
+        if(Input.GetButtonDown("NextSeason")){
+            if(curSeason + 1 > 3){
+                curSeason = 0;
+            }else{
+                curSeason += 1;
             }
-            rain = false;
         }
 
-        // Winter
-        if(Input.GetButtonDown("Num4")){
-            curSeason = 3;
+        // Set snow
+        if(curSeason == 3){
+            isSnowing = true;
             if(snow == null){
                 snow = GameObject.Instantiate(snowParticles, snowPos, Quaternion.Euler(snowRot));
             }
             snow.GetComponent<ParticleSystem>().Play();
-            isSnowing = true;
+        }else{
+            if(isSnowing){
+                snow.GetComponent<ParticleSystem>().Stop();
+                isSnowing = false;
+            }
+        }
+
+        if(curSeason == 0){
+            rain = true;
+        }else{
             rain = false;
         }
+        
     }
 
 }

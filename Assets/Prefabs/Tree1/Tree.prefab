@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treeSummer: {fileID: 3342592965265305858, guid: 5a72277b2cbf36344b46ffb9070d2d21, type: 3}
   treeWinter: {fileID: 3425595457563004343, guid: 77857abfab714034cb7a8ee9f5cc35d7, type: 3}
-  treeSpring: {fileID: 0}
-  treeFall: {fileID: 0}
+  treeSpring: {fileID: 3342592965265305858, guid: 8ae1d53e8939e8542b781fbce15ba3e9, type: 3}
+  treeFall: {fileID: 3342592965265305858, guid: a6ef40d02ea134945a809cd27dc34c62, type: 3}
   curSeason: 0
 --- !u!136 &4568935829294407851
 CapsuleCollider:
