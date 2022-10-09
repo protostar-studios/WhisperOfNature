@@ -27,8 +27,8 @@ public class CamControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMove += Input.GetAxis("Mouse X");
-        yMove += -Input.GetAxis("Mouse Y");
+        xMove += (Input.GetAxis("Mouse X") + Input.GetAxis("LookX"));
+        yMove += (-Input.GetAxis("Mouse Y") + Input.GetAxis("LookY"));
 
         if(yMove > MAX_ANGLE){
             yMove = MAX_ANGLE;

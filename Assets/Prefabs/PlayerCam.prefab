@@ -100,7 +100,7 @@ MonoBehaviour:
   camTarget: {fileID: 0}
   xMove: 0
   yMove: 0
-  distance: 1.7
-  height: 0.7
+  distance: 5
+  height: 2
   MAX_ANGLE: 70
-  MIN_ANGLE: -20
+  MIN_ANGLE: -15

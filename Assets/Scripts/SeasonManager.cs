@@ -20,7 +20,7 @@ public class SeasonManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Summer
+        // Spring
         if(Input.GetButtonDown("Num1")){
             curSeason = 0;
             if(isSnowing){
@@ -29,7 +29,7 @@ public class SeasonManager : MonoBehaviour
             }
             rain = true;
         }
-        // Winter
+        // Summer
         if(Input.GetButtonDown("Num2")){
             curSeason = 1;
             if(isSnowing){
