@@ -7,13 +7,16 @@ public class beeScript : MonoBehaviour
 {
     private SeasonManager seasonManager;
     public int curSeason = 0;
-    public GameObject beehiveModel;
+    // public GameObject beehiveModel;
     private GameObject child;
+
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         curSeason = seasonManager.curSeason;
+        player = GameObject.FindWithTag("Player");
         gameObject.transform.GetChild(0).gameObject.SetActive(false);
         updateBee();
     }
@@ -26,6 +29,15 @@ public class beeScript : MonoBehaviour
             curSeason = seasonManager.curSeason;
             gameObject.transform.GetChild(0).gameObject.SetActive(false);
             updateBee();
+        }
+        //Debug.Log(player.transform.position);
+        checkNearPlayer();
+    }
+
+    void checkNearPlayer()
+    {
+        if ((gameObject.transform.position - player.transform.position).magnitude < 5.0f){
+            Debug.Log("close");
         }
     }
 

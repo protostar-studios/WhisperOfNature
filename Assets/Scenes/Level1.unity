@@ -5393,6 +5393,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5513110206433034566, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1825491449}
     - target: {fileID: 93751568121721765, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -5437,6 +5441,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5514004032706466742, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1825491449}
     - target: {fileID: 6212611758618951400, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
       propertyPath: m_Name
       value: BeeHive (1)
@@ -8298,6 +8306,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -5513110206433034566, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1825491449}
     - target: {fileID: 93751568121721765, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -8342,6 +8354,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5514004032706466742, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 1825491449}
     - target: {fileID: 6212611758618951400, guid: 9326e2cd182aa3742b0a7026a3cfd947, type: 3}
       propertyPath: m_Name
       value: BeeHive
