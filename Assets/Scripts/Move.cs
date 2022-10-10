@@ -39,6 +39,8 @@ public class Move : MonoBehaviour
     private bool isFrozen;
     private bool onIce = false;
     private Vector3 jumpVector;
+    
+    private GameObject respawnPoint;
    
     // Start is called before the first frame update
     void Start()
@@ -52,6 +54,7 @@ public class Move : MonoBehaviour
         playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
+        respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
     }
 
     void OnCollisionStay()
@@ -112,6 +115,14 @@ public class Move : MonoBehaviour
         }else{
             onIce = false;
         }
+        if(other.gameObject.CompareTag("FallThornyBush")){
+            Respawn();
+        }
+    }
+
+    private void Respawn(){
+        playerTransform.position = respawnPoint.transform.position;
+        playerTransform.rotation = respawnPoint.transform.rotation;
     }
 
     private void Update()
@@ -119,6 +130,10 @@ public class Move : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
         }
     }
 }

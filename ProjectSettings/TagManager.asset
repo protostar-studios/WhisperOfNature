@@ -6,6 +6,7 @@ TagManager:
   tags:
   - SeasonManager
   - WaterSurface
+  - FallThornyBush
   layers:
   - Default
   - TransparentFX
