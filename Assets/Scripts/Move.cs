@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 /*
@@ -114,8 +112,13 @@ public class Move : MonoBehaviour
         }else{
             onIce = false;
         }
-        if(other.gameObject.CompareTag("FallThornyBush")){
+        if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             Respawn();
+        }
+
+        if(other.gameObject.CompareTag("WinningDetection")){
+            Debug.Log("You win");
+            Application.Quit();
         }
     }
 

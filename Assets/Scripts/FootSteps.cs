@@ -19,14 +19,4 @@ public class FootSteps : MonoBehaviour
     private AudioClip GetRandomClip(){
         return clips[UnityEngine.Random.Range(0, clips.Length)];
     }
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

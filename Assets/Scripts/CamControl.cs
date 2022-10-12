@@ -18,10 +18,12 @@ public class CamControl : MonoBehaviour
 
     void Start()
     {
-        transform.rotation = camTarget.transform.rotation;
-        transform.LookAt(camTarget.transform);
         // xMove = transform.rotation.eulerAngles.x;
         xMove = transform.rotation.eulerAngles.y;
+        Vector3 negDistance = new Vector3(0.0f, 0.0f, -distance);
+        transform.position = transform.rotation * negDistance;
+        transform.rotation = camTarget.transform.rotation;
+        transform.LookAt(camTarget.transform);
     }
 
     // Update is called once per frame
