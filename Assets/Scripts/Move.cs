@@ -39,6 +39,7 @@ public class Move : MonoBehaviour
     private Vector3 jumpVector;
     
     private GameObject respawnPoint;
+    private bool jumping;
    
     // Start is called before the first frame update
     void Start()
@@ -95,7 +96,7 @@ public class Move : MonoBehaviour
             playerTransform.Translate(moveDirection * walkingSpeed * Time.deltaTime);    
         }
 
-        if(Input.GetButtonDown("Jump") && isGrounded && !isFrozen)
+        if(jumping && isGrounded && !isFrozen)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
@@ -136,6 +137,11 @@ public class Move : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             Respawn();
+        }
+        if(Input.GetButtonDown("Jump")){
+            jumping = true;
+        } else if(Input.GetButtonUp("Jump")){
+            jumping = false;
         }
     }
 }
