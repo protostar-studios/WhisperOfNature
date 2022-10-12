@@ -28,9 +28,6 @@ public class WindCurrent : MonoBehaviour{
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         active = true;
         StartTrigger = GetComponent<BoxCollider>();
-        StartTrigger.transform.position = PathNode[0].transform.position;       
-        // Debug.Log(StartTrigger.transform.position);
-        // Debug.Log(PathNode[0].transform.position);
         startPosition = StartTrigger.transform.position;
         RendererArray = gameObject.GetComponentsInChildren<Renderer>();
     }
