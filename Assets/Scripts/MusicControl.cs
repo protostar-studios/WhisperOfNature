@@ -9,33 +9,33 @@ public class MusicControl : MonoBehaviour
     public AudioSource backgroundMusic;
     public AudioClip summerMusic;
     public AudioClip springMusic;
+    public AudioClip autumnMusic;
     public AudioClip winterMusic;
+    private int curSeason;
 
     // Start is called before the first frame update
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
+        curSeason = seasonManager.curSeason;
     }
 
     // Update is called once per frame
     void Update()
     {
         // switch (seasonManager.curSeason)
-        if(Input.GetButtonDown("Num1")){
+        if(seasonManager.curSeason != curSeason){
             backgroundMusic.Stop();
-            backgroundMusic.clip = springMusic;
-            backgroundMusic.Play();
-        }
-        if (Input.GetButtonDown("Num2"))
-        {
-            backgroundMusic.Stop();
-            backgroundMusic.clip = summerMusic;
-            backgroundMusic.Play();
-        }
-        // Winter
-        if (Input.GetButtonDown("Num4")){
-            backgroundMusic.Stop();
-            backgroundMusic.clip = winterMusic;
+            if(seasonManager.curSeason == 0){
+                backgroundMusic.clip = springMusic;
+            } else if (seasonManager.curSeason == 1){
+                backgroundMusic.clip = summerMusic;
+            } else if (seasonManager.curSeason == 2){
+                backgroundMusic.clip = autumnMusic;
+            } else {
+                backgroundMusic.clip = winterMusic;
+            }
+            curSeason = seasonManager.curSeason;
             backgroundMusic.Play();
         }
 

@@ -3794,10 +3794,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1233527433272808780, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
-      propertyPath: m_audioClip
-      value: 
-      objectReference: {fileID: 8300000, guid: e2f6184f21233564faeeaeb5a134645c, type: 3}
     - target: {fileID: 1233527433272808781, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
       propertyPath: m_RootOrder
       value: 21
@@ -3842,10 +3838,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
-      propertyPath: springMusic
-      value: 
-      objectReference: {fileID: 8300000, guid: e2f6184f21233564faeeaeb5a134645c, type: 3}
     - target: {fileID: 1233527433272808787, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
       propertyPath: m_Name
       value: backgroundMusic
@@ -4756,6 +4748,18 @@ PrefabInstance:
     - target: {fileID: 328814985, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
       propertyPath: SCALE_MOVEMENT
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 328814993, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
+      propertyPath: Priority
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 328814993, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
+      propertyPath: m_Volume
+      value: 0.081
+      objectReference: {fileID: 0}
+    - target: {fileID: 328814993, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
+      propertyPath: DopplerLevel
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3198619601373268802, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
       propertyPath: m_RootOrder

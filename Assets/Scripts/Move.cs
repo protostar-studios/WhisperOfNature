@@ -109,7 +109,6 @@ public class Move : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision other) {
-        Debug.Log("1");
         if(other.gameObject.CompareTag("WaterSurface")){
             onIce = true;
         }else{

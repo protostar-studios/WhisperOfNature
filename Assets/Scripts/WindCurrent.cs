@@ -21,9 +21,9 @@ public class WindCurrent : MonoBehaviour{
     void Start(){
         player = GameObject.FindGameObjectsWithTag("Player");
         PathNode = GetComponentsInChildren<Node>();
-        foreach(Node n in PathNode){
-            Debug.Log(n.name);
-        }
+        // foreach(Node n in PathNode){
+        //     Debug.Log(n.name);
+        // }
         CheckNode();
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         active = true;
