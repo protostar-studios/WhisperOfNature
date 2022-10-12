@@ -17,7 +17,9 @@ public class beeScript : MonoBehaviour
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         curSeason = seasonManager.curSeason;
         player = GameObject.FindWithTag("Player");
-        gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        if(transform.childCount != 0){
+            gameObject.transform.GetChild(0).gameObject.SetActive(false);
+        }
         updateBee();
     }
 
