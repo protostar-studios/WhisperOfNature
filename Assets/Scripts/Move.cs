@@ -116,7 +116,7 @@ public class Move : MonoBehaviour
             Respawn();
         }
 
-        if(other.gameObject.CompareTag("WinningDetection")){
+        if(other.gameObject.CompareTag("WinDetection")){
             Debug.Log("You win");
             Application.Quit();
         }
