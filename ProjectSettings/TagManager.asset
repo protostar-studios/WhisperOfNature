@@ -6,6 +6,9 @@ TagManager:
   tags:
   - SeasonManager
   - WaterSurface
+  - FallThornyBush
+  - harmfulobj
+  - WinDetection
   layers:
   - Default
   - TransparentFX

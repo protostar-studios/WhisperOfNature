@@ -9,12 +9,17 @@ public class FreezeWater : MonoBehaviour
     private SeasonManager seasonManager;
     private Material mat;
     private float opac;
+    private Vector3 loweredWater;
+    private Vector3 initWater;
 
-    bool frozen = false;
+    public float waterLevel = 5.0f;
+    public float vapouringSpeed = 8.0f;
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         mat = GetComponent<Renderer>().material;
+        initWater = transform.position;
+        loweredWater = new Vector3(transform.position.x, transform.position.y - waterLevel, transform.position.z);
     }
 
     // Update is called once per frame
@@ -33,7 +38,10 @@ public class FreezeWater : MonoBehaviour
         }
 
         if(seasonManager.curSeason == 1){
-            
+            // Lower water level
+            transform.position = Vector3.MoveTowards(transform.position, loweredWater, vapouringSpeed * Time.deltaTime);
+        } else {
+            transform.position = Vector3.MoveTowards(transform.position, initWater, vapouringSpeed * Time.deltaTime);
         }
 
     }

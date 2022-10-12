@@ -1817,6 +1817,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 194935210386555063, guid: b5bdff78ae7e5d449b103bacc24f53c1, type: 3}
+      propertyPath: waterLevel
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 194935210386555063, guid: b5bdff78ae7e5d449b103bacc24f53c1, type: 3}
+      propertyPath: vapouringSpeed
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b5bdff78ae7e5d449b103bacc24f53c1, type: 3}
 --- !u!1001 &1613915991

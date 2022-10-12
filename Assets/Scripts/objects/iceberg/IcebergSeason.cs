@@ -18,15 +18,11 @@ public class IcebergSeason : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        switch (seasonManager.curSeason)
-        {
-            case 3:
-                Vector3 newPos = initPos + moveup;
-                transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
-                break;
-            default:
-                transform.position = Vector3.MoveTowards(transform.position, initPos, speed * Time.deltaTime);
-                break;
+        if(seasonManager.curSeason == 3){
+            Vector3 newPos = initPos + moveup;
+            transform.position = Vector3.MoveTowards(transform.position, newPos, speed * Time.deltaTime);
+        }else{
+            transform.position = Vector3.MoveTowards(transform.position, initPos, speed * Time.deltaTime);
         }
     }
 }
