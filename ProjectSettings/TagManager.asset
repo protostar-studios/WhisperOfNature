@@ -10,6 +10,7 @@ TagManager:
   - harmfulobj
   - WinDetection
   - Seed
+  - Gem
   layers:
   - Default
   - TransparentFX

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SeedInRange : MonoBehaviour
+public class CollectibleInRange : MonoBehaviour
 {
     private PlayerInventory playerInv;
     void Start()
