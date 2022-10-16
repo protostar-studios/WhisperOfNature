@@ -9,6 +9,7 @@ TagManager:
   - FallThornyBush
   - harmfulobj
   - WinDetection
+  - Seed
   layers:
   - Default
   - TransparentFX

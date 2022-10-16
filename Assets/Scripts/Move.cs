@@ -39,6 +39,7 @@ public class Move : MonoBehaviour
     private Vector3 jumpVector;
     
     private GameObject respawnPoint;
+    private CharacterController char_ctrl;
     private bool jumping;
    
     // Start is called before the first frame update
@@ -47,13 +48,20 @@ public class Move : MonoBehaviour
         jumpForce = SCALE_JUMP;
         walkingSpeed = SCALE_MOVEMENT;
         seasonManager = GameObject.FindObjectOfType<SeasonManager>();
+
+        // Set cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+
+        // Get components
         playerTransform = gameObject.GetComponent<Transform>();
         playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
+        char_ctrl = gameObject.GetComponent<CharacterController>();
         jump = new Vector3(0.0f, 2.0f, 0.0f);
-        respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
+        if(GameObject.FindGameObjectsWithTag("Respawn").Length != 0){
+            respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
+        }
     }
 
     void OnCollisionStay()
