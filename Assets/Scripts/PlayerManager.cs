@@ -5,29 +5,40 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
 
-    public const int numOfLives = 3;
-    public int livesLeft;
-    public GameEndedScript gameEndedScript;
-    public updateText updateTextLives;
-    // Start is called before the first frame update
+    // What the player has collected
+    private Dictionary<string, int> inventory = new Dictionary<string, int>();
+    private Collider playerCollider;
+
+    // Used to detect player interactions
+    private bool interacting = false;
+    public bool inBound = false;
+
+    // Leave it as null
+    public GameObject otherObject = null;
     void Start()
     {
-        livesLeft = numOfLives;
-        
+        playerCollider = gameObject.GetComponent<Collider>();
+        setupInventory();
     }
 
-    // Update is called once per frame
+    private void setupInventory(){
+        inventory.Add("Seed", 0);
+        inventory.Add("Gem", 0);
+    }
+
     void Update()
     {
-        if (livesLeft == 0)
-        {
-            gameEndedScript.gameEnded = true;
-
+        interacting = false;
+        if(Input.GetButton("Interact")){
+            interacting = true;
         }
     }
-    void UpdateLives(int damage) { 
-        livesLeft -= damage;
-        updateTextLives.UpdateText();
+    
+    private void FixedUpdate() {
+        if(interacting && inBound && otherObject != null && inventory.ContainsKey(otherObject.tag)){
+            inventory[otherObject.tag] += 1;
+            Destroy(otherObject);
+        }
     }
-}
 
+}
