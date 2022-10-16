@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class SproutFlowerAnimController : MonoBehaviour
 {
-    public int growSeason = 0;
+    public List<int> growSeason = new List<int>(){0, 1};
     public int dieSeason = 2;
     private SeasonManager seasonManager;
     private Animator flowerAnim;
+    private float originalAnimSpeed;
     void Start()
     {
         seasonManager = FindObjectOfType<SeasonManager>();
@@ -16,16 +17,18 @@ public class SproutFlowerAnimController : MonoBehaviour
 
     void Update()
     {
-        if(seasonManager.curSeason == growSeason && !flowerAnim.GetBool("Growing")){
+        if(growSeason.Contains(seasonManager.curSeason) && !flowerAnim.GetBool("Growing")){
             flowerAnim.SetBool("Growing", true);
+            flowerAnim.SetFloat("idleSpeed", 1.0f);
         }
-        if(seasonManager.curSeason != growSeason){
+        if(!growSeason.Contains(seasonManager.curSeason)){
             flowerAnim.SetBool("Growing", false);
         }
-        if(seasonManager.curSeason == dieSeason && !flowerAnim.GetBool("Dying")){
+        if(!growSeason.Contains(seasonManager.curSeason) && !flowerAnim.GetBool("Dying")){
             flowerAnim.SetBool("Dying", true);
+            flowerAnim.SetFloat("idleSpeed", 10.0f);
         }
-        if(seasonManager.curSeason != dieSeason){
+        if(growSeason.Contains(seasonManager.curSeason)){
             flowerAnim.SetBool("Dying", false);
         }
     }
