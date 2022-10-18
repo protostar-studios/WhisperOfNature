@@ -11,6 +11,7 @@ TagManager:
   - WinDetection
   - Seed
   - Gem
+  - Soil
   layers:
   - Default
   - TransparentFX
