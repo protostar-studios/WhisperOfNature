@@ -58,7 +58,7 @@ public class Move : MonoBehaviour
         playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
         char_ctrl = gameObject.GetComponent<CharacterController>();
-        jump = new Vector3(0.0f, 2.0f, 0.0f);
+        jump = new Vector3(0.0f, 2.2f, 0.0f);
         if(GameObject.FindGameObjectsWithTag("Respawn").Length != 0){
             respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
         }
