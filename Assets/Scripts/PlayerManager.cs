@@ -6,7 +6,7 @@ public class PlayerManager : MonoBehaviour
 {
 
     // What the player has collected
-    private Dictionary<string, int> inventory = new Dictionary<string, int>();
+    public Dictionary<string, int> inventory = new Dictionary<string, int>();
     private Collider playerCollider;
 
     // Used to detect player interactions

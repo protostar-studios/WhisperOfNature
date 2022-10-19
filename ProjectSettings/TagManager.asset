@@ -12,6 +12,9 @@ TagManager:
   - Seed
   - Gem
   - Soil
+  - Ground
+  - Iceberg
+  - GrownFlower
   layers:
   - Default
   - TransparentFX
