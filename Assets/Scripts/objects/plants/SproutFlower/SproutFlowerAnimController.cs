@@ -10,6 +10,7 @@ public class SproutFlowerAnimController : MonoBehaviour
     private Animator flowerAnim;
     private float originalAnimSpeed;
     private bool used = false;
+    private bool grown = false;
     private PlantControllerGeneral plantControllerGeneral;
     void Start()
     {
@@ -20,6 +21,11 @@ public class SproutFlowerAnimController : MonoBehaviour
 
     void Update()
     {
+        if(growSeason.Contains(seasonManager.curSeason)){
+            grown = true;
+        }else{
+            grown = false;
+        }
         if(growSeason.Contains(seasonManager.curSeason) && !flowerAnim.GetBool("Growing")){
             flowerAnim.SetBool("Growing", true);
             flowerAnim.SetFloat("idleSpeed", 1.0f);
@@ -36,7 +42,13 @@ public class SproutFlowerAnimController : MonoBehaviour
             flowerAnim.SetBool("Dying", false);
         }
     }
-    
+    private void FixedUpdate() {
+        if(grown){
+            plantControllerGeneral.activateCollider();
+        }else{
+            plantControllerGeneral.deactivateCollider();
+        }
+    }
     public bool isDead(){
         return flowerAnim.GetCurrentAnimatorStateInfo(0).IsName("FlowerUnderground") && used;
     }

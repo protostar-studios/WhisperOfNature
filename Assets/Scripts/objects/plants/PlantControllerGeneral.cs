@@ -16,4 +16,10 @@ public class PlantControllerGeneral : MonoBehaviour
     public bool isDead(){
         return plantAnim.GetCurrentAnimatorStateInfo(0).IsName(deadState) && used;
     }
+    public void activateCollider(){
+        transform.GetChild(0).gameObject.SetActive(true);
+    }
+    public void deactivateCollider(){        
+        transform.GetChild(0).gameObject.SetActive(false);
+    }
 }
