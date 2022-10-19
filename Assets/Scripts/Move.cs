@@ -62,9 +62,10 @@ public class Move : MonoBehaviour
         if(GameObject.FindGameObjectsWithTag("Respawn").Length != 0){
             respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
         }
+        setGrounded();
     }
 
-    void OnCollisionStay()
+    void setGrounded()
     {
         isGrounded = true;
         rb = gameObject.GetComponent<Rigidbody>();
@@ -123,6 +124,9 @@ public class Move : MonoBehaviour
         }
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             Respawn();
+        }
+        if(other.gameObject.CompareTag("Ground")){
+            setGrounded();
         }
 
         if(other.gameObject.CompareTag("WinDetection")){

@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 2310613534546873831}
   - component: {fileID: 573089158179895597}
   - component: {fileID: 6219413346600839375}
+  - component: {fileID: 5937006703055761349}
+  - component: {fileID: 6441393778690838187}
   m_Layer: 0
   m_Name: Beehive_low
   m_TagString: Untagged
@@ -96,3 +98,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b28fd3c75c231914cb91362065a8e897, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  curSeason: 0
+  player: {fileID: 0}
+--- !u!64 &5937006703055761349
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086567395209451768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3210572188263751871, guid: 8e4f596d86010dc4e8c152cbbd1c9bae, type: 3}
+--- !u!65 &6441393778690838187
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2086567395209451768}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.05, y: 0.05, z: 0.05}
+  m_Center: {x: 0.0000039762817, y: -0.00034355465, z: 0.00000013550743}

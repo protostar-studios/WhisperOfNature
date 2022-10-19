@@ -12,6 +12,7 @@ TagManager:
   - Seed
   - Gem
   - Soil
+  - Ground
   layers:
   - Default
   - TransparentFX
