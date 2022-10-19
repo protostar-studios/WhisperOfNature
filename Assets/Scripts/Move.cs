@@ -28,7 +28,7 @@ public class Move : MonoBehaviour
     private SeasonManager seasonManager;
 
     public Vector3 jump;
-    public float SCALE_JUMP = 2.0f;
+    public float SCALE_JUMP = 2.8f;
     public float jumpForce;
     private float walkingSpeed;
 
@@ -58,7 +58,7 @@ public class Move : MonoBehaviour
         playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
         char_ctrl = gameObject.GetComponent<CharacterController>();
-        jump = new Vector3(0.0f, 2.2f, 0.0f);
+        jump = new Vector3(0.0f, 3.8f, 0.0f);
         if(GameObject.FindGameObjectsWithTag("Respawn").Length != 0){
             respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
         }
@@ -123,16 +123,19 @@ public class Move : MonoBehaviour
             onIce = false;
         }
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
+            isGrounded = true;
             Respawn();
         }
-        if(other.gameObject.CompareTag("Ground")){
-            setGrounded();
-        }
+        //if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
+        // {
+        //    setGrounded();
+        //}
 
         if(other.gameObject.CompareTag("WinDetection")){
             Debug.Log("You win");
             Application.Quit();
         }
+        setGrounded();
     }
 
     private void Respawn(){
