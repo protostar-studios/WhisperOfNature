@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 93751568121721765}
-  - component: {fileID: -5513110206433034566}
   m_Layer: 0
   m_Name: BeeHive
   m_TagString: Untagged
@@ -33,20 +32,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-5513110206433034566
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6212611758618951400}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b28fd3c75c231914cb91362065a8e897, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  curSeason: 0
-  beehiveModel: {fileID: 2086567395209451768, guid: e23f9fa0d1025834da60f17ee55431b4, type: 3}
 --- !u!1001 &1930467577662618489
 PrefabInstance:
   m_ObjectHideFlags: 0
