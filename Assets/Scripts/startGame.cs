@@ -11,4 +11,14 @@ public class startGame : MonoBehaviour
         SceneManager.LoadScene("The Call of the Forest");
     }
 
+    public void LoadControls()
+    {
+        SceneManager.LoadScene("ControlsMenu");
+    }
+
+    public void LoadMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
