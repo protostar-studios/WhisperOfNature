@@ -21,12 +21,12 @@ public class newSection : MonoBehaviour
     }
 
 
-    private void OnCollisionEnter(Collision other)
+    private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
         {
             if (playerManager.inventory["Gem"] > 0) {
-                Destroy(transform.root.gameObject);
+                // Destroy(transform.root.gameObject);
                 Destroy(currGate);
                 playerManager.inventory["Gem"] = playerManager.inventory["Gem"] - 1; 
             }
