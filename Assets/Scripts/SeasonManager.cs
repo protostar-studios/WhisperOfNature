@@ -41,12 +41,11 @@ public class SeasonManager : MonoBehaviour
         if(curSeason == 3){
             isSnowing = true;
             if(snow == null){
+                Debug.Log("New snow");
                 snow = GameObject.Instantiate(snowParticles, snowPos, Quaternion.Euler(snowRot));
             }
-            snow.GetComponent<ParticleSystem>().Play();
         }else{
             if(isSnowing){
-                snow.GetComponent<ParticleSystem>().Stop();
                 isSnowing = false;
             }
         }
@@ -57,6 +56,16 @@ public class SeasonManager : MonoBehaviour
             rain = false;
         }
         
+    }
+
+    private void FixedUpdate() {
+        if(snow != null){
+            if (isSnowing && snow.GetComponent<ParticleSystem>()){
+                snow.GetComponent<ParticleSystem>().Play();
+            }else if (!isSnowing && snow.GetComponent<ParticleSystem>()){
+                snow.GetComponent<ParticleSystem>().Stop();
+            }
+        }
     }
 
 }

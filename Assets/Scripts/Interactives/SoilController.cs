@@ -32,11 +32,12 @@ public class SoilController : MonoBehaviour
         if(isPlanted || plantObject == null){
             return false;
         }
-        Vector3 newpos = new Vector3(transform.position.x, transform.position.y - 0.65f, transform.position.z);
+        Vector3 newpos = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         plantedPlant = Instantiate(plantObject, newpos, transform.rotation) as GameObject;
         plantedPlant.transform.localScale = transform.localScale;
         // plantControl = plantedPlant.GetComponentInParent<PlantControllerGeneral>();
         isPlanted = true;
+        Destroy(GetComponentInChildren<SoilSeedRotation>().gameObject);
         return true;
     }
 }

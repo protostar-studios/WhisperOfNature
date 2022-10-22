@@ -15,6 +15,7 @@ TagManager:
   - Ground
   - Iceberg
   - GrownFlower
+  - Transparent Indicator
   layers:
   - Default
   - TransparentFX
