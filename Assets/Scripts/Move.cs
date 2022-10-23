@@ -38,7 +38,7 @@ public class Move : MonoBehaviour
     private bool onIce = false;
     private Vector3 jumpVector;
     
-    private GameObject respawnPoint;
+    public RespawnManager respawnManager;
     private CharacterController char_ctrl;
     private bool jumping;
    
@@ -59,18 +59,22 @@ public class Move : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         char_ctrl = gameObject.GetComponent<CharacterController>();
         jump = new Vector3(0.0f, 3.8f, 0.0f);
-        if(GameObject.FindGameObjectsWithTag("Respawn").Length != 0){
-            respawnPoint = GameObject.FindGameObjectsWithTag("Respawn")[0];
-        }
+        respawnManager = FindObjectOfType<RespawnManager>();
         setGrounded();
     }
 
-    void setGrounded()
+    private void Update()
     {
-        isGrounded = true;
-        rb = gameObject.GetComponent<Rigidbody>();
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Respawn();
+        }
+        if(Input.GetButtonDown("Jump")){
+            jumping = true;
+        } else if(Input.GetButtonUp("Jump")){
+            jumping = false;
+        }
     }
-
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -139,20 +143,14 @@ public class Move : MonoBehaviour
     }
 
     private void Respawn(){
-        playerTransform.position = respawnPoint.transform.position;
-        playerTransform.rotation = respawnPoint.transform.rotation;
+        playerTransform.position = respawnManager.curRespawn.position;
+        playerTransform.rotation = respawnManager.curRespawn.rotation;
     }
 
-    private void Update()
+    void setGrounded()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Respawn();
-        }
-        if(Input.GetButtonDown("Jump")){
-            jumping = true;
-        } else if(Input.GetButtonUp("Jump")){
-            jumping = false;
-        }
+        isGrounded = true;
+        rb = gameObject.GetComponent<Rigidbody>();
     }
+
 }

@@ -6,20 +6,13 @@ public class newSection : MonoBehaviour
 {
     public GameObject player;
     public GameObject currGate;
+    public int respawnPosIndex = 0;
     private PlayerManager playerManager;
     // Start is called before the first frame update
     void Start()
     {
         playerManager = player.GetComponent<PlayerManager>();
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        
-    }
-
 
     private void OnTriggerEnter(Collider other)
     {
@@ -33,6 +26,7 @@ public class newSection : MonoBehaviour
                 playerManager.inventory["Gem"] = playerManager.inventory["Gem"] - 1; 
                 // Instantiate Actual Gem 
                 transform.Find("ActualGem").gameObject.SetActive(true);
+                FindObjectOfType<RespawnManager>().setRespawn(respawnPosIndex);
             }
         }
     }
