@@ -15,6 +15,6 @@ public class SoilSeedRotation : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        transform.Rotate(rotationV, Space.Self);
+        transform.Rotate(rotationV);
     }
 }

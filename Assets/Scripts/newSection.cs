@@ -28,7 +28,11 @@ public class newSection : MonoBehaviour
             if (playerManager.inventory["Gem"] > 0) {
                 // Destroy(transform.root.gameObject);
                 Destroy(currGate);
+                // Destroy Rotating Gem Indicator
+                transform.Find("GemIndicator").gameObject.SetActive(false);
                 playerManager.inventory["Gem"] = playerManager.inventory["Gem"] - 1; 
+                // Instantiate Actual Gem 
+                transform.Find("ActualGem").gameObject.SetActive(true);
             }
         }
     }
