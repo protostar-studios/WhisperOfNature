@@ -36,14 +36,14 @@ public class PlayerManager : MonoBehaviour
     
     private void FixedUpdate() {
         // Check interaction
-        if(interacting && inBound && otherObject != null){
+        if(inBound && otherObject != null){
             // Grab props
             if(inventory.ContainsKey(otherObject.tag)){
                 inventory[otherObject.tag] += 1;
                 Destroy(otherObject);
             }
             // Plant on soil
-            if(otherObject.CompareTag("Soil")){
+            if(interacting && otherObject.CompareTag("Soil")){
                 if(inventory["Seed"] > 0){
                     SoilController soilCtrl = otherObject.GetComponent<SoilController>();
                     bool success = soilCtrl.Plant();

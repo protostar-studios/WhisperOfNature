@@ -102,7 +102,7 @@ public class Move : MonoBehaviour
             Debug.Log("Sliding");
             gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
         }else if(!isFrozen){
-            playerTransform.Translate(moveDirection * walkingSpeed * Time.deltaTime);    
+            playerTransform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
         }
 
         if(jumping && isGrounded && !isFrozen)
