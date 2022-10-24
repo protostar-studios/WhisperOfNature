@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 328814991}
   - component: {fileID: 328814993}
   - component: {fileID: 6854275498183856301}
-  - component: {fileID: 328814994}
+  - component: {fileID: 1605231476}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -34,7 +34,7 @@ Transform:
   m_GameObject: {fileID: 3198619601373268829}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.44, y: 3.07, z: -10.11}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 6, y: 6, z: 6}
   m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 1248566680743390164}
@@ -125,14 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06da27193bcf941c28ed12931e00ac5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SCALE_MOVEMENT: 3.5
+  SCALE_MOVEMENT: 4
   rotateSpeed: 360
   SlideForce: 20
   mainCamera: {fileID: 0}
   jump: {x: 0, y: 0, z: 0}
-  SCALE_JUMP: 150
+  SCALE_JUMP: 180
   jumpForce: 0
   isGrounded: 0
+  respawnManager: {fileID: 0}
 --- !u!95 &328814992
 Animator:
   serializedVersion: 4
@@ -283,7 +284,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d544d6ce89457d44a3bd1d7d5b773de, type: 3}
   - {fileID: 8300000, guid: 1901275fdde716e4385d7eed907ac731, type: 3}
   - {fileID: 8300000, guid: 34d8492c7026bd542a189f81b4ef7003, type: 3}
---- !u!114 &328814994
+--- !u!114 &1605231476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -292,7 +293,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3198619601373268829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0518aa2fce9e4414a8740238f9851cb9, type: 3}
+  m_Script: {fileID: 11500000, guid: b66196f5dd8eae5468becc3c407ea49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   inBound: 0
