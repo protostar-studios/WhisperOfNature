@@ -112,12 +112,22 @@ public class Move : MonoBehaviour
         if(jumping && isGrounded && !isFrozen)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+            Debug.Log("Jumping!");
             isGrounded = false;
         }
 
     // private void LateUpdate() {
     //     return;
     // }
+    }
+
+    private void CheckCollisionWithGround(Collision other){
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
+        {
+           if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
+            setGrounded();
+           }
+        }
     }
 
     private void OnCollisionEnter(Collision other) {
@@ -139,7 +149,11 @@ public class Move : MonoBehaviour
             Debug.Log("You win");
             Application.Quit();
         }
-        setGrounded();
+        
+        CheckCollisionWithGround(other);
+
+
+        // setGrounded();
     }
 
     private void Respawn(){
@@ -150,6 +164,7 @@ public class Move : MonoBehaviour
     void setGrounded()
     {
         isGrounded = true;
+        Debug.Log("Grounded!");
         rb = gameObject.GetComponent<Rigidbody>();
     }
 
