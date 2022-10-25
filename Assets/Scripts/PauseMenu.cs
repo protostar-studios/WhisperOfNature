@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
 {
 
     public GameObject Canvas;
-    bool paused = false;
+    public static bool paused = false;
 
 
     // Start is called before the first frame update
@@ -15,6 +15,9 @@ public class PauseMenu : MonoBehaviour
     {
         Canvas.gameObject.SetActive(false);
         paused = false;
+        Cursor.lockState = CursorLockMode.None;
+        // The mouse is locked somewhere in another script that made the click
+        // not actualy 'click' the button.
     }
 
     // Update is called once per frame
@@ -25,25 +28,27 @@ public class PauseMenu : MonoBehaviour
                 Canvas.gameObject.SetActive(false);
                 Time.timeScale = 1.0f;
                 paused = false;
+                Cursor.visible = false;
             }
             else{
                 Canvas.gameObject.SetActive(true);
                 Time.timeScale = 0.0f;
                 paused = true;
+                Cursor.visible = true;
             }
         }
     }
 
     public void Resume(){
-        Debug.Log("paused");
-        Debug.Log("clicked");
         Canvas.gameObject.SetActive(false);
         Time.timeScale = 1.0f;
+        Cursor.visible = false;
         paused = false;
     }
 
     public void Home(){
         Time.timeScale = 1.0f;
+        Cursor.visible = false;
         SceneManager.LoadScene("MainMenu");
     }
     
