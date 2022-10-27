@@ -33,6 +33,10 @@ public class Move : MonoBehaviour
     private float walkingSpeed;
 
     public bool isGrounded;
+    // https://answers.unity.com/questions/665352/shot-delay-between-button-press-c.html
+    public float timeBetweenJumps = 1f;
+    private float timestamp;
+
     private float curVel;
     private bool isFrozen;
     private bool onIce = false;
@@ -109,17 +113,15 @@ public class Move : MonoBehaviour
             playerTransform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
         }
 
-        if(jumping && isGrounded && !isFrozen)
+        if(jumping && isGrounded && !isFrozen && Time.time >= timestamp)
         {
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             Debug.Log("Jumping!");
             isGrounded = false;
+            timestamp = Time.time + timeBetweenJumps;
+
         }
 
-    // private void LateUpdate() {
-    //     return;
-    // }
-    }
 
     private void CheckCollisionWithGround(Collision other){
         if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
@@ -140,10 +142,6 @@ public class Move : MonoBehaviour
             isGrounded = true;
             Respawn();
         }
-        //if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
-        // {
-        //    setGrounded();
-        //}
 
         if(other.gameObject.CompareTag("WinDetection")){
             Debug.Log("You win");
@@ -152,8 +150,6 @@ public class Move : MonoBehaviour
         
         CheckCollisionWithGround(other);
 
-
-        // setGrounded();
     }
 
     private void Respawn(){
