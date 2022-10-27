@@ -121,7 +121,7 @@ public class Move : MonoBehaviour
             timestamp = Time.time + timeBetweenJumps;
 
         }
-
+    }
 
     private void CheckCollisionWithGround(Collision other){
         if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
