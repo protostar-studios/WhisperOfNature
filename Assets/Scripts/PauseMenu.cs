@@ -16,8 +16,10 @@ public class PauseMenu : MonoBehaviour
         Canvas.gameObject.SetActive(false);
         paused = false;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = false;
         // The mouse is locked somewhere in another script that made the click
         // not actualy 'click' the button.
+        // Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -48,7 +50,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Home(){
         Time.timeScale = 1.0f;
-        Cursor.visible = false;
+        Cursor.visible = true;
         SceneManager.LoadScene("MainMenu");
     }
     

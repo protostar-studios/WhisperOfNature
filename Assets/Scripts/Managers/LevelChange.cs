@@ -19,6 +19,7 @@ public class LevelChange : MonoBehaviour
 
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){
+            Cursor.visible = true;
             SceneManager.LoadScene("MainMenu");
         }
     }
