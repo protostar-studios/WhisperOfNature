@@ -6,12 +6,14 @@ public class SoilController : MonoBehaviour
 {
     // The growable on the soil
     public GameObject plantObject = null;
+    public AudioClip plantSeedSFX;
     private GameObject plantedPlant = null;
     private bool isPlanted = false;
+    private AudioSource plantSound;
     // private PlantControllerGeneral plantControl = null;
     void Start()
     {
-        
+        plantSound = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -38,6 +40,7 @@ public class SoilController : MonoBehaviour
         // plantControl = plantedPlant.GetComponentInParent<PlantControllerGeneral>();
         isPlanted = true;
         Destroy(GetComponentInChildren<SoilSeedRotation>().gameObject);
+        plantSound.PlayOneShot(plantSeedSFX);
         return true;
     }
 }

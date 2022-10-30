@@ -361,7 +361,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh50936
+  m_Name: pb_Mesh32914
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1963,10 +1963,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: DirtPile
       objectReference: {fileID: 0}
-    - target: {fileID: 770876755172860806, guid: 895169b57765f2f4bbab1345e0dfad66, type: 3}
-      propertyPath: plantObject
-      value: 
-      objectReference: {fileID: 742599642871469392, guid: 37410c5c1b2209d4e9ad954176dfa1f5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 895169b57765f2f4bbab1345e0dfad66, type: 3}
 --- !u!1001 &1484720499951636412
