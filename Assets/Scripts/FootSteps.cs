@@ -12,8 +12,10 @@ public class FootSteps : MonoBehaviour
         audioSource = GetComponent<AudioSource>();    
     }
     private void Step(){
-        AudioClip clip = GetRandomClip();
-        audioSource.PlayOneShot(clip);
+        if(FindObjectOfType<Move>().isGrounded){
+            AudioClip clip = GetRandomClip();
+            audioSource.PlayOneShot(clip);
+        }
     }
 
     private AudioClip GetRandomClip(){

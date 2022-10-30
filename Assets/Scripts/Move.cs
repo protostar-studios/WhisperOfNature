@@ -1,5 +1,9 @@
 using UnityEngine;
 
+// ================================================== //
+//            Player Control Center Script            //
+// ================================================== //
+
 /*
 Credits:
 
@@ -11,8 +15,12 @@ https://answers.unity.com/questions/1020197/can-someone-help-me-make-a-simple-ju
 */
 
 [RequireComponent(typeof(Rigidbody))]
+
 public class Move : MonoBehaviour
 {
+
+    // DEBUG option
+    private bool DEBUG = true;
 
     public float SCALE_MOVEMENT = 20.0f;
     public float rotateSpeed = 360;
@@ -45,6 +53,9 @@ public class Move : MonoBehaviour
     public RespawnManager respawnManager;
     private CharacterController char_ctrl;
     private bool jumping;
+
+    private float input_h = 0.0f;
+    private float input_v = 0.0f;
    
     // Start is called before the first frame update
     void Start()
@@ -69,21 +80,30 @@ public class Move : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
+        // Movement
+        input_h = Input.GetAxis("Horizontal");
+        input_v = Input.GetAxis("Vertical");
+
+        // Debug Restart
+        if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
             Respawn();
         }
+
+        // Jumping
         if(Input.GetButtonDown("Jump")){
             jumping = true;
         } else if(Input.GetButtonUp("Jump")){
             jumping = false;
         }
+
+        // Pause
+        if(Input.GetButtonDown("Quit")){
+            FindObjectOfType<PauseMenu>().SetPause();
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
     {
-        float input_h = Input.GetAxis("Horizontal");
-        float input_v = Input.GetAxis("Vertical");
         bool hasHorizontalInput = !Mathf.Approximately(input_h, 0f);
         bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;

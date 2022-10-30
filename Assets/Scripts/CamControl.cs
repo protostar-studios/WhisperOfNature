@@ -15,6 +15,7 @@ public class CamControl : MonoBehaviour
     public float MAX_ANGLE = 80f;
     public float MIN_ANGLE = -50f;
 
+    public float sensitivity = 1.0f;
 
     void Start()
     {
@@ -29,8 +30,8 @@ public class CamControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        xMove += (Input.GetAxis("Mouse X") + Input.GetAxis("LookX"));
-        yMove += (-Input.GetAxis("Mouse Y") + Input.GetAxis("LookY"));
+        xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis("LookX"));
+        yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis("LookY"));
 
         if(yMove > MAX_ANGLE){
             yMove = MAX_ANGLE;
