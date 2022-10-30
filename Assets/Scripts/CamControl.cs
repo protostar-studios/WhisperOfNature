@@ -16,6 +16,10 @@ public class CamControl : MonoBehaviour
     public float MIN_ANGLE = -50f;
 
     public float sensitivity = 1.0f;
+    private float LookX = 0.0f;
+    private float LookY = 0.0f;
+
+    private string Joystick = "PS_";
 
     void Start()
     {
@@ -25,13 +29,18 @@ public class CamControl : MonoBehaviour
         transform.position = transform.rotation * negDistance;
         transform.rotation = camTarget.transform.rotation;
         transform.LookAt(camTarget.transform);
+
+        // Joystick Detection
+        Joystick = FindObjectOfType<JoyStickManager>().joyStick;
     }
 
     // Update is called once per frame
     void Update()
     {
-        xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis("LookX"));
-        yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis("LookY"));
+        if(!PauseMenu.paused){
+            xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis(Joystick + "LookX"));
+            yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis(Joystick + "LookY"));
+        }
 
         if(yMove > MAX_ANGLE){
             yMove = MAX_ANGLE;

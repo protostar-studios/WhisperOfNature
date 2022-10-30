@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 328814993}
   - component: {fileID: 6854275498183856301}
   - component: {fileID: 1605231476}
-  - component: {fileID: 328814994}
+  - component: {fileID: 328815005}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inBound: 0
   otherObject: {fileID: 0}
---- !u!114 &328814994
+--- !u!114 &328815005
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -357,11 +357,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 3198619601373268829}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66196f5dd8eae5468becc3c407ea49a, type: 3}
+  m_Script: {fileID: 11500000, guid: 799be3cb861849649a5e3bc847b4ad9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  inBound: 0
-  otherObject: {fileID: 0}
+  joyStick: PS_
 --- !u!1 &7113863153202002757
 GameObject:
   m_ObjectHideFlags: 0

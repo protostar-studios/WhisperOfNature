@@ -190,20 +190,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3198619601373268829, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
   m_PrefabInstance: {fileID: 1613915991}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &328814994
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 328814984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b66196f5dd8eae5468becc3c407ea49a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  inBound: 0
-  otherObject: {fileID: 0}
 --- !u!1001 &372745018
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1900,8 +1886,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 328814994, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 599dfca337ff8413f8fc59d966d72e0b, type: 3}
 --- !u!20 &2040780543 stripped
 Camera:

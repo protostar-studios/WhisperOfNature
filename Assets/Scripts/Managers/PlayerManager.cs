@@ -15,10 +15,12 @@ public class PlayerManager : MonoBehaviour
 
     // Leave it as null
     public GameObject otherObject = null;
+    private string joyStick = "PS_";
     void Start()
     {
         playerCollider = gameObject.GetComponent<Collider>();
         setupInventory();
+        joyStick = FindObjectOfType<JoyStickManager>().joyStick;
     }
 
     private void setupInventory(){
@@ -29,8 +31,17 @@ public class PlayerManager : MonoBehaviour
     void Update()
     {
         interacting = false;
-        if(Input.GetButton("Interact")){
+        if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
             interacting = true;
+        }
+
+        // Pause
+        if(Input.GetButtonDown("Quit") || Input.GetButtonDown(joyStick + "Quit")){
+            try{ 
+                FindObjectOfType<PauseMenu>().SetPause();
+            }catch (System.Exception){
+                Debug.Log("Please add Pause Menu Object to the scene");
+            }
         }
     }
     

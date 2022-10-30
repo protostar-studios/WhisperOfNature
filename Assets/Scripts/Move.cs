@@ -32,7 +32,6 @@ public class Move : MonoBehaviour
     private Rigidbody rb;
     private Vector3 moveDirection;
     private Quaternion faceDirection;
-    private CharacterController controller;
     private SeasonManager seasonManager;
 
     public Vector3 jump;
@@ -48,7 +47,6 @@ public class Move : MonoBehaviour
     private float curVel;
     private bool isFrozen;
     private bool onIce = false;
-    private Vector3 jumpVector;
     
     public RespawnManager respawnManager;
     private CharacterController char_ctrl;
@@ -56,6 +54,7 @@ public class Move : MonoBehaviour
 
     private float input_h = 0.0f;
     private float input_v = 0.0f;
+    private string joyStick = "PS_";
    
     // Start is called before the first frame update
     void Start()
@@ -76,6 +75,8 @@ public class Move : MonoBehaviour
         jump = new Vector3(0.0f, 3.8f, 0.0f);
         respawnManager = FindObjectOfType<RespawnManager>();
         setGrounded();
+
+        joyStick = FindObjectOfType<JoyStickManager>().joyStick;
     }
 
     private void Update()
@@ -90,15 +91,10 @@ public class Move : MonoBehaviour
         }
 
         // Jumping
-        if(Input.GetButtonDown("Jump")){
+        if(Input.GetButtonDown("Jump") || Input.GetButtonDown(joyStick + "Jump")){
             jumping = true;
-        } else if(Input.GetButtonUp("Jump")){
+        } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
             jumping = false;
-        }
-
-        // Pause
-        if(Input.GetButtonDown("Quit")){
-            FindObjectOfType<PauseMenu>().SetPause();
         }
     }
     // Update is called once per frame
