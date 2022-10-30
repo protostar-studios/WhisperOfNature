@@ -19968,7 +19968,7 @@ PrefabInstance:
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: springImage
       value: 
-      objectReference: {fileID: 21300000, guid: b33b464b8e2c8d44da83c55dea868660, type: 3}
+      objectReference: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: summerImage
       value: 
