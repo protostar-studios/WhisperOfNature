@@ -1361,6 +1361,82 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2856275385652336631, guid: fcf6beadf571c5249b9c3c362c5c194a, type: 3}
   m_PrefabInstance: {fileID: 1103973300}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &244522544
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 244522545}
+  - component: {fileID: 244522547}
+  - component: {fileID: 244522546}
+  m_Layer: 5
+  m_Name: SeasonAltUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &244522545
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244522544}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 880346515}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 106, y: 106}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &244522546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244522544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &244522547
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 244522544}
+  m_CullTransparentMesh: 1
 --- !u!1001 &245771152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8951,6 +9027,7 @@ RectTransform:
   m_Children:
   - {fileID: 1864111421}
   - {fileID: 548019462}
+  - {fileID: 244522545}
   m_Father: {fileID: 341877621}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19881,13 +19958,33 @@ PrefabInstance:
       value: SeasonUIScript
       objectReference: {fileID: 0}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
+      propertyPath: fallImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 49c2697e3b385ce418ee938512ffecda, type: 3}
+    - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeason
       value: 
       objectReference: {fileID: 1864111422}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
+      propertyPath: springImage
+      value: 
+      objectReference: {fileID: 21300000, guid: b33b464b8e2c8d44da83c55dea868660, type: 3}
+    - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
+      propertyPath: summerImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 379c0635e286846498748362e48b40a3, type: 3}
+    - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
+      propertyPath: winterImage
+      value: 
+      objectReference: {fileID: 21300000, guid: 8f54391afd4ccad4297cb87bfd25d9a8, type: 3}
+    - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeasonObj
       value: 
       objectReference: {fileID: 1864111420}
+    - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
+      propertyPath: currSeasonObj2
+      value: 
+      objectReference: {fileID: 244522544}
     - target: {fileID: 8541295986956984522, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -23675,6 +23772,10 @@ PrefabInstance:
     - target: {fileID: 7591472533653615940, guid: 1febd8b6fbcac2143aaad64bde6f8012, type: 3}
       propertyPath: m_Name
       value: SeasonUIText
+      objectReference: {fileID: 0}
+    - target: {fileID: 7591472533653615940, guid: 1febd8b6fbcac2143aaad64bde6f8012, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7591472533653615945, guid: 1febd8b6fbcac2143aaad64bde6f8012, type: 3}
       propertyPath: m_Pivot.x
