@@ -24,17 +24,15 @@ public class ModelManager : MonoBehaviour
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         curSeason = seasonManager.curSeason;
-        // playerCam = GameObject.FindGameObjectWithTag("MainCamera");
         Debug.Log(playerCam.camTarget);
-        // currentModel = ChangeModel(seasonManager.curSeason);
+        playerCam.ChangeTarget(currentModel);
 
     }
 
     GameObject ChangeModel(int season){
 
         Vector3 pos = currentModel.transform.position;
-        Quaternion rot = currentModel.transform.rotation;
-        // Destroy(currentModel);        
+        Quaternion rot = currentModel.transform.rotation;    
         if(season == 0){
             newModel = Instantiate(springPrefab, pos, rot, this.transform) as GameObject;
         }
