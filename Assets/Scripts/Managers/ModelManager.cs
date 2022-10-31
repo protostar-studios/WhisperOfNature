@@ -25,6 +25,7 @@ public class ModelManager : MonoBehaviour
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         curSeason = seasonManager.curSeason;
         Debug.Log(playerCam.camTarget);
+        // playerCam = GameObject.FindObjectOfType<Camera>();
         playerCam.ChangeTarget(currentModel);
 
     }
