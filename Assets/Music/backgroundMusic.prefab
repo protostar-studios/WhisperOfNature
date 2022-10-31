@@ -144,5 +144,5 @@ MonoBehaviour:
   backgroundMusic: {fileID: 1233527433272808780}
   summerMusic: {fileID: 8300000, guid: 3d588b4955aac7241a4ae48269af1fa6, type: 3}
   springMusic: {fileID: 8300000, guid: e2f6184f21233564faeeaeb5a134645c, type: 3}
-  autumnMusic: {fileID: 8300000, guid: 3d588b4955aac7241a4ae48269af1fa6, type: 3}
+  autumnMusic: {fileID: 8300000, guid: cb88806891f75dd4a8620636098f3e5b, type: 3}
   winterMusic: {fileID: 8300000, guid: 155fb40c9431f604596c8b306aefe180, type: 3}

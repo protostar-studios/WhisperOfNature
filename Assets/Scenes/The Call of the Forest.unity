@@ -6223,6 +6223,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
+      propertyPath: autumnMusic
+      value: 
+      objectReference: {fileID: 8300000, guid: cb88806891f75dd4a8620636098f3e5b, type: 3}
     - target: {fileID: 1233527433272808787, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
       propertyPath: m_Name
       value: backgroundMusic
@@ -20601,6 +20605,14 @@ PrefabInstance:
     - target: {fileID: 3315643094200468894, guid: 7b36d80109637c24ea8426d75407fdcb, type: 3}
       propertyPath: m_Name
       value: AmbientSound
+      objectReference: {fileID: 0}
+    - target: {fileID: 3315643094200468895, guid: 7b36d80109637c24ea8426d75407fdcb, type: 3}
+      propertyPath: ambientSFX.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 15f267bfae8e74e44940d81ab885e877, type: 3}
+    - target: {fileID: 3315643094200468895, guid: 7b36d80109637c24ea8426d75407fdcb, type: 3}
+      propertyPath: ambientVolumes.Array.data[1]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3315643094200468897, guid: 7b36d80109637c24ea8426d75407fdcb, type: 3}
       propertyPath: m_RootOrder

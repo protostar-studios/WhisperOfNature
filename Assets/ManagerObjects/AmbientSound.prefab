@@ -143,11 +143,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ambientSFX:
   - {fileID: 0}
-  - {fileID: 8300000, guid: 4c8e0a9ae7f9f2c409ba5a04329325ae, type: 3}
+  - {fileID: 8300000, guid: 15f267bfae8e74e44940d81ab885e877, type: 3}
   - {fileID: 0}
   - {fileID: 8300000, guid: e5b50e816b2a81942bc2b8fd8cced604, type: 3}
   ambientVolumes:
   - 1
-  - 0.017
+  - 1
   - 1
   - 0.1
