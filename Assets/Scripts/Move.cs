@@ -62,6 +62,7 @@ public class Move : MonoBehaviour
         jumpForce = SCALE_JUMP;
         walkingSpeed = SCALE_MOVEMENT;
         seasonManager = GameObject.FindObjectOfType<SeasonManager>();
+        mainCamera = GameObject.FindObjectOfType<Camera>();
 
         // Set cursor
         Cursor.lockState = CursorLockMode.Locked;
