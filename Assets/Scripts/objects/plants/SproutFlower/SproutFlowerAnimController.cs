@@ -12,11 +12,17 @@ public class SproutFlowerAnimController : MonoBehaviour
     private bool used = false;
     private bool grown = false;
     private PlantControllerGeneral plantControllerGeneral;
+    private bool canGrow = true;
+    private bool canDie = false;
+    private AudioSource audioSource;
+    public AudioClip growSFX = null;
+    public AudioClip dieSFX = null;
     void Start()
     {
         seasonManager = FindObjectOfType<SeasonManager>();
         flowerAnim = GetComponent<Animator>();
         plantControllerGeneral = gameObject.GetComponentInParent<PlantControllerGeneral>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void Update()
@@ -45,8 +51,18 @@ public class SproutFlowerAnimController : MonoBehaviour
     private void FixedUpdate() {
         if(grown){
             plantControllerGeneral.activateCollider();
+            if(canGrow){
+                audioSource.PlayOneShot(growSFX);
+                canGrow = false;
+                canDie = true;
+            }
         }else{
             plantControllerGeneral.deactivateCollider();
+            if(canDie){
+                audioSource.PlayOneShot(dieSFX);
+                canDie = false;
+                canGrow = true;
+            }
         }
     }
     public bool isDead(){
