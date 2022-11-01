@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7a97710d55da404fa79e93a175a9a85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -19788,7 +19788,7 @@ PrefabInstance:
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: fallImage
       value: 
-      objectReference: {fileID: 21300000, guid: 49c2697e3b385ce418ee938512ffecda, type: 3}
+      objectReference: {fileID: 21300000, guid: 3befc631801ca8949912d53202a50b7e, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeason
       value: 
@@ -19796,15 +19796,15 @@ PrefabInstance:
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: springImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
+      objectReference: {fileID: 21300000, guid: f7a97710d55da404fa79e93a175a9a85, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: summerImage
       value: 
-      objectReference: {fileID: 21300000, guid: 379c0635e286846498748362e48b40a3, type: 3}
+      objectReference: {fileID: 21300000, guid: 0c25990467018c84c90b79b878218ea8, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: winterImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8f54391afd4ccad4297cb87bfd25d9a8, type: 3}
+      objectReference: {fileID: 21300000, guid: db767c27dcb791b4b8258563e7fc3e93, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeasonObj
       value: 
