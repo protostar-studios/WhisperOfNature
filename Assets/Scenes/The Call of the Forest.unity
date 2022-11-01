@@ -267,7 +267,7 @@ PrefabInstance:
     - target: {fileID: 8415036729129248702, guid: ed4a1e2833bc8a1479d9325052656c96, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1343097452}
     - target: {fileID: 8649548478312483539, guid: ed4a1e2833bc8a1479d9325052656c96, type: 3}
       propertyPath: m_Name
       value: PR_FinishLine_01 (1)
@@ -14552,7 +14552,7 @@ PrefabInstance:
     - target: {fileID: 2480390513370140266, guid: 4780bb4a17e3a23459bbb65fffce793c, type: 3}
       propertyPath: camTarget
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1343097452}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4780bb4a17e3a23459bbb65fffce793c, type: 3}
 --- !u!1001 &1015347328
@@ -18555,6 +18555,11 @@ Transform:
 Transform:
   m_CorrespondingSourceObject: {fileID: 511378134616624468, guid: 85350cebbd45c234db028339ad726fc8, type: 3}
   m_PrefabInstance: {fileID: 170950681}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1343097452 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6074115001591501563, guid: 79ce37827621d9c44b8340018f70eac7, type: 3}
+  m_PrefabInstance: {fileID: 1037482693}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1343228618
 PrefabInstance:
@@ -25675,7 +25680,7 @@ PrefabInstance:
     - target: {fileID: 8415036729129248702, guid: ed4a1e2833bc8a1479d9325052656c96, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1343097452}
     - target: {fileID: 8415036729129248702, guid: ed4a1e2833bc8a1479d9325052656c96, type: 3}
       propertyPath: respawnPosIndex
       value: 1

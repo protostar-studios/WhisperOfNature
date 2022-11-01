@@ -10,9 +10,14 @@ GameObject:
   m_Component:
   - component: {fileID: 6074115001591501562}
   - component: {fileID: 6074115001591501561}
+  - component: {fileID: 7214542829514220122}
+  - component: {fileID: 6133965388383488518}
+  - component: {fileID: 1812184425470612584}
+  - component: {fileID: 3794022538633671410}
+  - component: {fileID: 799845684535169208}
   m_Layer: 0
   m_Name: Guardian
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -51,6 +56,85 @@ MonoBehaviour:
   winterPrefab: {fileID: 1370042303022943663, guid: 2439024556bd54f4e836839021f35309, type: 3}
   playerCam: {fileID: 0}
   currentModel: {fileID: 3058763269362010011}
+--- !u!54 &7214542829514220122
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074115001591501563}
+  serializedVersion: 2
+  m_Mass: 100
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 112
+  m_CollisionDetection: 0
+--- !u!114 &6133965388383488518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074115001591501563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06da27193bcf941c28ed12931e00ac5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SCALE_MOVEMENT: 20
+  rotateSpeed: 360
+  SlideForce: 10
+  mainCamera: {fileID: 0}
+  jump: {x: 0, y: 0, z: 0}
+  SCALE_JUMP: 2.8
+  jumpForce: 0
+  isGrounded: 0
+  timeBetweenJumps: 1
+  respawnManager: {fileID: 0}
+--- !u!114 &1812184425470612584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074115001591501563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b66196f5dd8eae5468becc3c407ea49a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inBound: 0
+  otherObject: {fileID: 0}
+--- !u!114 &3794022538633671410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074115001591501563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 799be3cb861849649a5e3bc847b4ad9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  joyStick: PS_
+--- !u!136 &799845684535169208
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6074115001591501563}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07
+  m_Height: 0.2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.15, z: 0}
 --- !u!1001 &3928610127028699403
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -110,7 +194,9 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2087368830091888274, guid: 58ccae9c5fa959d48bf0a3a3f20cfa36, type: 3}
+    - {fileID: 3500446384446004308, guid: 58ccae9c5fa959d48bf0a3a3f20cfa36, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 58ccae9c5fa959d48bf0a3a3f20cfa36, type: 3}
 --- !u!4 &3058763269362009988 stripped
 Transform:
