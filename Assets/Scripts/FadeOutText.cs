@@ -21,7 +21,7 @@ public class FadeOutText : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetKeyDown(KeyCode.R))
+            if (Input.GetKeyDown(KeyCode.R) || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut"))
             {
                 StartCoroutine(FadeTextToZeroAlpha(1f, textmesh));
             }
