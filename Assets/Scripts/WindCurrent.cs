@@ -15,6 +15,7 @@ public class WindCurrent : MonoBehaviour{
     BoxCollider StartTrigger;
 
     Renderer[] RendererArray;
+    public bool inbound = false;
     
 
 
@@ -56,11 +57,13 @@ public class WindCurrent : MonoBehaviour{
         HideNodes();
         timer = 0;
         CurrentNode = 0;
+        CurrentPositionHolder = PathNode[0].transform.position;
         startPosition = StartTrigger.transform.position;
     }
 
     void OnTriggerEnter(Collider other){
-        if(other.tag == "Player" && seasonManager.curSeason == 2){
+        inbound = true;
+        if(other.gameObject.tag == "Player" && seasonManager.curSeason == 2){
             // Debug.Log("Let's Go!");
             active = true;
         }
