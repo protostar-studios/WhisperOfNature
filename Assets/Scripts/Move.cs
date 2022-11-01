@@ -26,7 +26,6 @@ public class Move : MonoBehaviour
     public float rotateSpeed = 360;
     public float SlideForce = 10f;
     public Camera mainCamera;
-    private Transform playerTransform;
     private Animator playerAnim;
 
     private Rigidbody rb;
@@ -49,8 +48,8 @@ public class Move : MonoBehaviour
     private bool onIce = false;
     
     public RespawnManager respawnManager;
-    private CharacterController char_ctrl;
     private bool jumping;
+    private int curSeason = -1;
 
     private float input_h = 0.0f;
     private float input_v = 0.0f;
@@ -61,27 +60,31 @@ public class Move : MonoBehaviour
     {
         jumpForce = SCALE_JUMP;
         walkingSpeed = SCALE_MOVEMENT;
-        seasonManager = GameObject.FindObjectOfType<SeasonManager>();
-        mainCamera = GameObject.FindObjectOfType<Camera>();
+        seasonManager = FindObjectOfType<SeasonManager>();
+        mainCamera = FindObjectOfType<Camera>();
+        respawnManager = FindObjectOfType<RespawnManager>();
+        joyStick = FindObjectOfType<JoyStickManager>().joyStick;
 
         // Set cursor
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
 
         // Get components
-        playerTransform = gameObject.GetComponent<Transform>();
-        playerAnim = gameObject.GetComponent<Animator>();
         rb = gameObject.GetComponent<Rigidbody>();
-        char_ctrl = gameObject.GetComponent<CharacterController>();
+        setComponents();
         jump = new Vector3(0.0f, 3.8f, 0.0f);
-        respawnManager = FindObjectOfType<RespawnManager>();
         setGrounded();
 
-        joyStick = FindObjectOfType<JoyStickManager>().joyStick;
+    }
+
+    void setComponents(){
+        playerAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
     }
 
     private void Update()
     {
+
+
         // Movement
         input_h = Input.GetAxis("Horizontal");
         input_v = Input.GetAxis("Vertical");
@@ -101,20 +104,25 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        // update Season
+        if(curSeason != seasonManager.curSeason){
+            setComponents();
+            curSeason = seasonManager.curSeason;
+        }
         bool hasHorizontalInput = !Mathf.Approximately(input_h, 0f);
         bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         playerAnim.SetBool("isWalking", isWalking);
         if(seasonManager.curSeason == 3){
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, 12 * Time.fixedDeltaTime, 0.8f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, 7 * Time.fixedDeltaTime, 1.0f);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             if(walkingSpeed <= 0.01){
                 isFrozen = true;
             }
         }else if(walkingSpeed != SCALE_MOVEMENT){
             isFrozen = false;
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 5 * Time.fixedDeltaTime, 1.0f);
             jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
         }
@@ -125,9 +133,9 @@ public class Move : MonoBehaviour
         }
         if(seasonManager.curSeason == 3 && onIce && !isFrozen){
             Debug.Log("Sliding");
-            gameObject.GetComponent<Rigidbody>().AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
+            rb.AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
         }else if(!isFrozen){
-            playerTransform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
+            transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
         }
 
         if(jumping && isGrounded && !isFrozen && Time.time >= timestamp)
@@ -170,15 +178,15 @@ public class Move : MonoBehaviour
     }
 
     private void Respawn(){
-        playerTransform.position = respawnManager.curRespawn.position;
-        playerTransform.rotation = respawnManager.curRespawn.rotation;
+        transform.position = respawnManager.curRespawn.position;
+        transform.rotation = respawnManager.curRespawn.rotation;
+        walkingSpeed = SCALE_MOVEMENT;
     }
 
     void setGrounded()
     {
         isGrounded = true;
         Debug.Log("Grounded!");
-        rb = gameObject.GetComponent<Rigidbody>();
     }
 
 }
