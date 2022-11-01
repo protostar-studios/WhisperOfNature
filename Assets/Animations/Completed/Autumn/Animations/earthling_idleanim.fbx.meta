@@ -1,0 +1,194 @@
+fileFormatVersion: 2
+guid: bc240dc60a7e7f842a0ee7fed99f3886
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable:
+  - first:
+      74: 1827226128182048838
+    second: Take 001
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton:
+    - name: earthling_idleanim(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: earthling_mesh
+      parentName: earthling_idleanim(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_eye
+      parentName: earthling_mesh
+      position: {x: 0.000043025215, y: 0.0005490635, z: 0.00007040751}
+      rotation: {x: 0.006646121, y: -0, z: -0, w: 0.99997795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_eye
+      parentName: earthling_mesh
+      position: {x: -0.000043025215, y: 0.0005490635, z: 0.00007040751}
+      rotation: {x: 0.006646121, y: -0, z: -0, w: 0.99997795}
+      scale: {x: 1, y: 1, z: 1}
+    - name: earthlingBody
+      parentName: earthling_mesh
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: base_jnt
+      parentName: earthling_idleanim(Clone)
+      position: {x: -0, y: 0.0001679089, z: 0.0000030329136}
+      rotation: {x: 0.0018607867, y: 0.7071044, z: 0.0018607867, w: 0.7071044}
+      scale: {x: 1.0000002, y: 1, z: 1.0000002}
+    - name: chest_jnt
+      parentName: base_jnt
+      position: {x: -7.285838e-21, y: 0.00016643803, z: 0}
+      rotation: {x: 1.1641531e-10, y: -0.000000029802319, z: -0.00977379, w: 0.9999523}
+      scale: {x: 1.0000004, y: 0.99999994, z: 1.0000004}
+    - name: head_jnt
+      parentName: chest_jnt
+      position: {x: 2.484124e-19, y: 0.00012264935, z: 4.712382e-39}
+      rotation: {x: -1.9484116e-10, y: 0.000000029801907, z: 0.0071423315, w: 0.9999745}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: joint4
+      parentName: head_jnt
+      position: {x: 1.3218592e-19, y: 0.00012789271, z: -2.237249e-22}
+      rotation: {x: 1.3777e-10, y: -0.7071068, z: -1.3777e-10, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_arm
+      parentName: chest_jnt
+      position: {x: 0.000004139235, y: -0.000016096163, z: 0.00009886569}
+      rotation: {x: 0.80953026, y: 0.0057821427, z: 0.00419285, w: 0.5870347}
+      scale: {x: 1.0000001, y: 1.0000005, z: 1.0000005}
+    - name: joint8
+      parentName: r_arm
+      position: {x: 1.6677039e-19, y: 0.00009612108, z: 0}
+      rotation: {x: 0.3104365, y: 0.6353183, z: 0.3104365, w: 0.63531816}
+      scale: {x: 0.9999996, y: 1.0000002, z: 0.99999994}
+    - name: l_arm
+      parentName: chest_jnt
+      position: {x: 0.0000041392386, y: -0.000016096421, z: -0.00009886573}
+      rotation: {x: 0.8095304, y: 0.0057820794, z: -0.0041928673, w: -0.5870346}
+      scale: {x: 1, y: 1.0000002, z: 1.0000002}
+    - name: joint8
+      parentName: l_arm
+      position: {x: 9.1902383e-20, y: 0.00009612087, z: 4.440892e-20}
+      rotation: {x: -0.6353178, y: 0.3104372, z: 0.63531786, w: -0.31043717}
+      scale: {x: 0.9999997, y: 1.0000004, z: 0.99999994}
+    - name: l_leg
+      parentName: base_jnt
+      position: {x: 0.0000027693507, y: -0.000050084887, z: -0.00007332291}
+      rotation: {x: 0.9989693, y: -0.002628846, z: 0.0001192471, w: -0.045314245}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000002}
+    - name: joint6
+      parentName: l_leg
+      position: {x: -1.10835255e-20, y: 0.00011461514, z: 7.771561e-20}
+      rotation: {x: -0.7063804, y: 0.032042116, z: 0.7063804, w: -0.03204212}
+      scale: {x: 1, y: 1, z: 1}
+    - name: r_leg
+      parentName: base_jnt
+      position: {x: 0.0000027693493, y: -0.00005008519, z: 0.000073322895}
+      rotation: {x: -0.9989693, y: 0.0026288459, z: 0.00011924789, w: -0.045314547}
+      scale: {x: 1.0000002, y: 1.0000005, z: 1.0000001}
+    - name: joint6
+      parentName: r_leg
+      position: {x: 5.3702468e-21, y: 0.00011461484, z: -2.220446e-19}
+      rotation: {x: -0.032042336, y: -0.7063804, z: -0.032042336, w: -0.7063804}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 0.01
+    rootMotionBoneName: earthling_mesh
+    hasTranslationDoF: 0
+    hasExtraRoot: 1
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

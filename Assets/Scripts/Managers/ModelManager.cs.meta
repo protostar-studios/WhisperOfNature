@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: af42b70d2bcd4124a99a0702607f7b42
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - autumnPrefab: {fileID: 5325833290022112154, guid: 3e86d116c60bc38408a9af7ee1ddc5e7, type: 3}
+  - springPrefab: {fileID: 2087368830091888272, guid: 58ccae9c5fa959d48bf0a3a3f20cfa36, type: 3}
+  - summerPrefab: {fileID: 3762356208700852944, guid: 346a77caff7953949ac194b7e3fa879c, type: 3}
+  - winterPrefab: {fileID: 1370042303022943663, guid: 2439024556bd54f4e836839021f35309, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

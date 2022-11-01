@@ -33,6 +33,11 @@ public class CamControl : MonoBehaviour
         // Joystick Detection
         Joystick = FindObjectOfType<JoyStickManager>().joyStick;
     }
+    
+    public void ChangeTarget(GameObject newModel)
+    {
+        camTarget = newModel;
+    }
 
     // Update is called once per frame
     void Update()
@@ -58,5 +63,6 @@ public class CamControl : MonoBehaviour
     private void LateUpdate() {
         transform.position += (camTarget.transform.position + Vector3.up * height);   
     }
+
 
 }
