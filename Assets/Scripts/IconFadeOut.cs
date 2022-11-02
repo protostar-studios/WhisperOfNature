@@ -21,12 +21,12 @@ public class IconFadeOut : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (!isCoroutineExecuting && (Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut")))
+            if ((Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut")))
             {
                 isCoroutineExecuting = true;
                 StartCoroutine(FadeIconToZeroAlpha(1f, renderer));
             }
-            if (renderer.material.color.a == 0.0f) { 
+            if (renderer.material.color.a < 0.05f) { 
                 Destroy(gameObject);
             }
         }

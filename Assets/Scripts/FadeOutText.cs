@@ -24,16 +24,17 @@ public class FadeOutText : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (!isCoroutineExecuting && (Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut")))
+            if ((Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut")))
             {
                 isCoroutineExecuting = true;
                 StartCoroutine(FadeTextToZeroAlpha(1f, textmesh));
             }
+            if (textmesh.color.a < 0.05f)
+            {
+                Destroy(gameObject);
+            }
         }
-        if (textmesh.color.a == 0.0f)
-        {
-            Destroy(gameObject);
-        }
+       
     }
     // Update is called once per frame
     void Update()
