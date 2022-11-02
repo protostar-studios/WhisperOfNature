@@ -14,8 +14,9 @@ public class FadeOutText : MonoBehaviour
     void Start()
     {
      textmesh = gameObject.GetComponent<TextMesh>();
-     //FadeTextToZeroAlpha(3, textmesh);
-     //Invoke("FadeOutEvent", 3);
+     
+        //FadeTextToZeroAlpha(3, textmesh);
+        //Invoke("FadeOutEvent", 3);
     }
 
 
@@ -23,8 +24,9 @@ public class FadeOutText : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut"))
+            if (!isCoroutineExecuting && (Input.GetButtonDown("CloseTut") || Input.GetButtonDown("PS_CloseTut") || Input.GetButtonDown("Xbox_CloseTut")))
             {
+                isCoroutineExecuting = true;
                 StartCoroutine(FadeTextToZeroAlpha(1f, textmesh));
             }
         }
@@ -36,6 +38,10 @@ public class FadeOutText : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (!hasAppeared) {
+            StartCoroutine(FadeTextToFullAlpha(1f, textmesh));
+            hasAppeared = true;
+        }
        
     }
     public void FadeOutEvent()
@@ -62,8 +68,19 @@ public class FadeOutText : MonoBehaviour
         i.color = new Color(i.color.r, i.color.g, i.color.b, 1);
         while (i.color.a > 0.0f)
         {
-            Debug.Log(i.color.a);
+            //Debug.Log(i.color.a);
             i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a - (Time.deltaTime / t));
+            yield return null;
+        }
+    }
+    public IEnumerator FadeTextToFullAlpha(float t, TextMesh i)
+    {
+        i.color = new Color(i.color.r, i.color.g, i.color.b, 0);
+        while (i.color.a < 1.0f)
+        {
+            //Debug.Log(i.color.a);
+            i.color = new Color(i.color.r, i.color.g, i.color.b, i.color.a + (Time.deltaTime / t));
+            // Debug.Log(i.color.a);
             yield return null;
         }
     }

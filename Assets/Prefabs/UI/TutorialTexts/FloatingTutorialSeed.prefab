@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &5560208091865918946
+--- !u!1 &4588603075591962746
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,59 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4346433506215426410}
-  - component: {fileID: 8258635234063871098}
+  - component: {fileID: 4588603075591962750}
+  - component: {fileID: 4588603075591962748}
+  - component: {fileID: 7130479932763618138}
   m_Layer: 0
-  m_Name: FloatingTutorialMoveP
+  m_Name: FloatingTutorialSeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4346433506215426410
+--- !u!4 &4588603075591962750
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5560208091865918946}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 4588603075591962746}
+  m_LocalRotation: {x: -0, y: -0.7083328, z: -0, w: 0.7058787}
+  m_LocalPosition: {x: 37.06066, y: 14.13, z: 4.9160633}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 8257917112634765825}
+  - {fileID: 4588603076560915495}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8258635234063871098
+  m_LocalEulerAnglesHint: {x: 0, y: -90.199, z: 0}
+--- !u!65 &4588603075591962748
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588603075591962746}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.961878, y: 5.408334, z: 4.488806}
+  m_Center: {x: 0.11337925, y: -1.7046838, z: -1.7444004}
+--- !u!114 &7130479932763618138
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5560208091865918946}
+  m_GameObject: {fileID: 4588603075591962746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bd58f395a0ea48942ae4f0c220b62f18, type: 3}
+  m_Script: {fileID: 11500000, guid: a138f94a0726a814294e64aaa1ab324c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &8257917112634765830
+  tutorialText: {fileID: 4588603076560915489}
+--- !u!1 &4588603076560915489
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -53,41 +68,41 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 8257917112634765825}
-  - component: {fileID: 8257917112634765824}
-  - component: {fileID: 8257917112634765831}
-  - component: {fileID: 8257917112634765826}
-  - component: {fileID: 8258635233026064488}
-  - component: {fileID: 9149943901486873721}
+  - component: {fileID: 4588603076560915495}
+  - component: {fileID: 4588603076560915494}
+  - component: {fileID: 4588603076560915493}
+  - component: {fileID: 4588603076560915492}
+  - component: {fileID: 4588603076560915491}
+  - component: {fileID: 4588603076560915490}
   m_Layer: 0
-  m_Name: FloatingTutorialMove
+  m_Name: FloatingTutorialText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
---- !u!4 &8257917112634765825
+--- !u!4 &4588603076560915495
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
-  m_LocalRotation: {x: 0.007816249, y: -0.65865666, z: 0.0054285196, w: 0.75238353}
-  m_LocalPosition: {x: 11.98, y: 7.471, z: -13.375}
+  m_GameObject: {fileID: 4588603076560915489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 1
+  m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 4346433506215426410}
+  m_Father: {fileID: 4588603075591962750}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 1.084, y: -82.401, z: -0.122}
---- !u!23 &8257917112634765824
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &4588603076560915494
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
+  m_GameObject: {fileID: 4588603076560915489}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -123,37 +138,42 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!102 &8257917112634765831
+--- !u!102 &4588603076560915493
 TextMesh:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
-  m_Text: Move using AWSD
+  m_GameObject: {fileID: 4588603076560915489}
+  m_Text: 'Get close to pickup a Seed.
+
+    You can plant this in Pots of Soil to
+    grow
+
+    special plants to help you.'
   m_OffsetZ: 0
   m_CharacterSize: 0.1
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 64
+  m_FontSize: 32
   m_FontStyle: 1
   m_RichText: 1
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!95 &8257917112634765826
+--- !u!95 &4588603076560915492
 Animator:
   serializedVersion: 4
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
-  m_Enabled: 1
+  m_GameObject: {fileID: 4588603076560915489}
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: d49ec649ac3507d458387810ee2c0fcd, type: 2}
   m_CullingMode: 0
@@ -165,28 +185,28 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &8258635233026064488
+--- !u!114 &4588603076560915491
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
+  m_GameObject: {fileID: 4588603076560915489}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e597f4cd5b7ec21418f23d604ed77351, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!65 &9149943901486873721
+--- !u!65 &4588603076560915490
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8257917112634765830}
+  m_GameObject: {fileID: 4588603076560915489}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 6.7394586, y: 1.0619278, z: 3.1852338}
-  m_Center: {x: 0.12814152, y: 0.17346394, z: 0.10112763}
+  m_Size: {x: 5.9840965, y: 3.5760558, z: 3.1496677}
+  m_Center: {x: 0.41204825, y: -1.3799723, z: -0.16325699}
