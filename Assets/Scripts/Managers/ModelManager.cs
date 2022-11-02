@@ -47,8 +47,11 @@ public class ModelManager : MonoBehaviour
         return newModel;
     }
 
+    public Animator GetAnimator(){
+        return currentModel.GetComponent<Animator>();
+    }
     // Update is called once per frame
-    void Update()
+    public void ChangeSeasonModel()
     {  
         if (curSeason != seasonManager.curSeason){
             newModel = ChangeModel(seasonManager.curSeason);
@@ -56,7 +59,6 @@ public class ModelManager : MonoBehaviour
             Destroy(oldModel);
             currentModel = newModel;
             curSeason = seasonManager.curSeason;
-            playerCam.ChangeTarget(currentModel);
         }
     }
 }

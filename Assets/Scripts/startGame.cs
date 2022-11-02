@@ -8,7 +8,7 @@ public class startGame : MonoBehaviour
 
     public void PlayGame()
     {
-        SceneManager.LoadScene("The Call of the Forest");
+        SceneManager.LoadScene("AlphaTut");
     }
 
     public void LoadControls()

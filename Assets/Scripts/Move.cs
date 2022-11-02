@@ -104,9 +104,11 @@ public class Move : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        playerAnim = transform.GetComponentInChildren<Animator>();
         // update Season
         if(curSeason != seasonManager.curSeason){
-            setComponents();
+            
+            GetComponent<ModelManager>().ChangeSeasonModel();
             curSeason = seasonManager.curSeason;
         }
         bool hasHorizontalInput = !Mathf.Approximately(input_h, 0f);

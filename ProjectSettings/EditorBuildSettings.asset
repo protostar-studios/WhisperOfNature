@@ -15,9 +15,12 @@ EditorBuildSettings:
     path: Assets/Scenes/MainMenu.unity
     guid: 4d36850170d663c43bc482abcb0f7b46
   - enabled: 1
-    path: Assets/Scenes/The Call of the Forest.unity
-    guid: 53acff3485a50fd439f30cd4a366b057
-  - enabled: 1
     path: Assets/Scenes/ControlsMenu.unity
     guid: 2be3f4f6af7d7e840ab288863226cdab
+  - enabled: 1
+    path: Assets/Scenes/AlphaTut.unity
+    guid: bb6c694d7f2e21d4a9fa2dee4268ab3a
+  - enabled: 1
+    path: Assets/Scenes/The Call of the Forest.unity
+    guid: 53acff3485a50fd439f30cd4a366b057
   m_configObjects: {}
