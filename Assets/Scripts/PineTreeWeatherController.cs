@@ -15,6 +15,7 @@ public class PineTreeWeatherController : MonoBehaviour
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         curSeason = seasonManager.curSeason;
+       
         Object.Destroy(gameObject.transform.GetChild(0).gameObject);
         updatePineTree();
     }
@@ -24,6 +25,8 @@ public class PineTreeWeatherController : MonoBehaviour
     {
         if (seasonManager.curSeason != curSeason)
         {
+            Debug.Log(curSeason);
+            Debug.Log(seasonManager.curSeason);
             curSeason = seasonManager.curSeason;
             Object.Destroy(gameObject.transform.GetChild(0).gameObject);
             updatePineTree();
@@ -33,6 +36,7 @@ public class PineTreeWeatherController : MonoBehaviour
     void updatePineTree()
     {
 
+        Debug.Log("Updating Pine");
         if (curSeason == 3)
         {
             child = Instantiate(PineTreeWinter) as GameObject;

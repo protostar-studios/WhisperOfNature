@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
 {
 
     // DEBUG option
-    private bool DEBUG = true;
+    private bool DEBUG = false;
 
     public float SCALE_MOVEMENT = 20.0f;
     public float rotateSpeed = 360;
@@ -34,7 +34,7 @@ public class Move : MonoBehaviour
     private SeasonManager seasonManager;
 
     public Vector3 jump;
-    public float SCALE_JUMP = 2.8f;
+    public float SCALE_JUMP = 2.4f;
     public float jumpForce;
     private float walkingSpeed;
 
@@ -72,7 +72,7 @@ public class Move : MonoBehaviour
         // Get components
         rb = gameObject.GetComponent<Rigidbody>();
         setComponents();
-        jump = new Vector3(0.0f, 3.8f, 0.0f);
+        jump = new Vector3(0.0f, 3.4f, 0.0f);
         setGrounded();
 
     }
@@ -122,8 +122,8 @@ public class Move : MonoBehaviour
             }
         }else if(walkingSpeed != SCALE_MOVEMENT){
             isFrozen = false;
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 5 * Time.fixedDeltaTime, 1.0f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 7 * Time.fixedDeltaTime, 0.5f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 1f, 1.0f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 1f, 0.5f);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
         }
         moveDirection = new Vector3(input_h, 0, input_v);
