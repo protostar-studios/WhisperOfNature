@@ -7,7 +7,7 @@ public class FadeOutText : MonoBehaviour
 {
     TextMesh textmesh;
     private float secondsToFade =3.5f;
-
+    private bool hasAppeared = false;
 
     private bool isCoroutineExecuting = false;
     // Start is called before the first frame update
@@ -17,6 +17,8 @@ public class FadeOutText : MonoBehaviour
      //FadeTextToZeroAlpha(3, textmesh);
      //Invoke("FadeOutEvent", 3);
     }
+
+
     private void OnTriggerStay(Collider other)
     {
         if (other.gameObject.CompareTag("Player"))
