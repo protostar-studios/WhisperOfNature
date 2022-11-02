@@ -20,7 +20,7 @@ public class Move : MonoBehaviour
 {
 
     // DEBUG option
-    private bool DEBUG = true;
+    private bool DEBUG = false;
 
     public float SCALE_MOVEMENT = 20.0f;
     public float rotateSpeed = 360;

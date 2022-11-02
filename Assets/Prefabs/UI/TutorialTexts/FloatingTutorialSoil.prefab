@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8697255824450512209}
   - component: {fileID: 2225484123867123401}
   m_Layer: 0
-  m_Name: FloatingTutorialJump
+  m_Name: FloatingTutorialSoil
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,8 +73,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.19002, y: 8.412678, z: 5.4263277}
-  m_Center: {x: -1.4221716, y: -1.9075394, z: -2.2131639}
+  m_Size: {x: 11.943463, y: 8.412678, z: 6.4702563}
+  m_Center: {x: -0.54544973, y: -1.9075394, z: -2.7351282}
 --- !u!1001 &2505448585730798039
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -158,6 +158,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8663954519438472264, guid: 3d53c365ca0fe0a4d803e68900e8615a, type: 3}
+      propertyPath: m_Text
+      value: To plant a seed, click F or
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3d53c365ca0fe0a4d803e68900e8615a, type: 3}
 --- !u!1 &1167363941415167822 stripped
@@ -239,7 +243,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1352535542696162638, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
       propertyPath: m_Size.x
-      value: 14.0942955
+      value: 11.676826
       objectReference: {fileID: 0}
     - target: {fileID: 1352535542696162638, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
       propertyPath: m_Size.z
@@ -247,7 +251,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1352535542696162638, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
       propertyPath: m_Center.x
-      value: -3.3660812
+      value: -2.1573462
       objectReference: {fileID: 0}
     - target: {fileID: 1352535542696162638, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
       propertyPath: m_Center.y
@@ -257,6 +261,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: -0.6124687
       objectReference: {fileID: 0}
+    - target: {fileID: 7330029263317255363, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98c05218cbbdf82479e7537e58842b26, type: 2}
     - target: {fileID: 8757445624323070410, guid: 83957ab2acca7fb4cb4fe1c5758784dc, type: 3}
       propertyPath: m_Name
       value: Quad
