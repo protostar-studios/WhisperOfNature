@@ -1396,7 +1396,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 880346515}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1451,7 +1451,7 @@ RectTransform:
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 880346515}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1478,7 +1478,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f7a97710d55da404fa79e93a175a9a85, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6821,7 +6821,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 935807081}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &638570900
 MonoBehaviour:
@@ -8578,6 +8578,7 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2069424436}
   - {fileID: 1864111421}
   - {fileID: 548019462}
   - {fileID: 244522545}
@@ -8723,7 +8724,6 @@ Transform:
   m_Children:
   - {fileID: 732228786}
   - {fileID: 1117005148}
-  - {fileID: 2069424436}
   - {fileID: 638570899}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -19591,7 +19591,7 @@ PrefabInstance:
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: fallImage
       value: 
-      objectReference: {fileID: 21300000, guid: 49c2697e3b385ce418ee938512ffecda, type: 3}
+      objectReference: {fileID: 21300000, guid: 3befc631801ca8949912d53202a50b7e, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeason
       value: 
@@ -19599,15 +19599,15 @@ PrefabInstance:
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: springImage
       value: 
-      objectReference: {fileID: 21300000, guid: 9a5bdb135620d0f4c8250ffe16e20e54, type: 3}
+      objectReference: {fileID: 21300000, guid: f7a97710d55da404fa79e93a175a9a85, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: summerImage
       value: 
-      objectReference: {fileID: 21300000, guid: 379c0635e286846498748362e48b40a3, type: 3}
+      objectReference: {fileID: 21300000, guid: 0c25990467018c84c90b79b878218ea8, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: winterImage
       value: 
-      objectReference: {fileID: 21300000, guid: 8f54391afd4ccad4297cb87bfd25d9a8, type: 3}
+      objectReference: {fileID: 21300000, guid: db767c27dcb791b4b8258563e7fc3e93, type: 3}
     - target: {fileID: 8541295986956984521, guid: 1b6d2e0f94a392841b03b31a6ef19e8b, type: 3}
       propertyPath: currSeasonObj
       value: 
@@ -23725,7 +23725,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7591472533653615945, guid: 1febd8b6fbcac2143aaad64bde6f8012, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7591472533653615945, guid: 1febd8b6fbcac2143aaad64bde6f8012, type: 3}
       propertyPath: m_AnchorMax.x
@@ -24788,7 +24788,7 @@ MonoBehaviour:
   m_SendPointerHoverToParent: 1
   m_HorizontalAxis: Horizontal
   m_VerticalAxis: Vertical
-  m_SubmitButton: Submit
+  m_SubmitButton: Xbox_Interact
   m_CancelButton: Cancel
   m_InputActionsPerSecond: 10
   m_RepeatDelay: 0.5
@@ -24805,7 +24805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76c392e42b5098c458856cdf6ecaaaa1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_FirstSelected: {fileID: 0}
+  m_FirstSelected: {fileID: 407852786}
   m_sendNavigationEvents: 1
   m_DragThreshold: 10
 --- !u!4 &2069424436
@@ -24816,12 +24816,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2069424433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -439.8, y: -195.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 935807081}
-  m_RootOrder: 2
+  m_Father: {fileID: 880346515}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!43 &2100996848
 Mesh:
@@ -25419,6 +25419,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 4314923695034664112, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 46bd2adaef982b349a5e58ac2c11eff3, type: 3}
+    - target: {fileID: 4314923695034664112, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
       objectReference: {fileID: 21300000, guid: 6a76b4481e6d3da4fadafb8344f3b27c, type: 3}
@@ -25477,6 +25481,10 @@ PrefabInstance:
     - target: {fileID: 4314923695034664113, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_Color.a
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314923695034664126, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
+      propertyPath: m_Name
+      value: ResumeButton
       objectReference: {fileID: 0}
     - target: {fileID: 4314923695034664126, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_IsActive
@@ -25547,6 +25555,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4314923695351527212, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
+      propertyPath: m_Name
+      value: QuitButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314923695351527212, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -25595,6 +25607,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: cef11f4f0d4e43e44b1e507369b22d3e, type: 3}
     - target: {fileID: 4314923695351527214, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
+      propertyPath: m_SpriteState.m_SelectedSprite
+      value: 
+      objectReference: {fileID: 21300000, guid: cef11f4f0d4e43e44b1e507369b22d3e, type: 3}
+    - target: {fileID: 4314923695351527214, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_SpriteState.m_HighlightedSprite
       value: 
       objectReference: {fileID: 21300000, guid: e7c2458122dacec43b4e215a7fe9c089, type: 3}
@@ -25640,7 +25656,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314923695872014179, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4314923695872014179, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
       propertyPath: m_AnchorMax.x
