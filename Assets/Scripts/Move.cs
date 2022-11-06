@@ -43,7 +43,8 @@ public class Move : MonoBehaviour
     public float timeBetweenJumps = 1f;
     private float timestamp;
 
-    private float curVel;
+    private float curMoveVel;
+    private float curJumpVel;
     private bool isFrozen;
     private bool onIce = false;
     
@@ -116,8 +117,8 @@ public class Move : MonoBehaviour
         bool isWalking = hasHorizontalInput || hasVerticalInput;
         playerAnim.SetBool("isWalking", isWalking);
         if(seasonManager.curSeason == 3){
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, 12 * Time.fixedDeltaTime, 0.8f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, 7 * Time.fixedDeltaTime, 1.0f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, 12 * Time.fixedDeltaTime, 0.8f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, 7 * Time.fixedDeltaTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
             // Debug.Log("Slow comparison: Jump: " + jumpForce + " | " + SCALE_JUMP + " Move: " + walkingSpeed + " | " + SCALE_MOVEMENT);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             if(walkingSpeed <= 0.01){
@@ -125,8 +126,8 @@ public class Move : MonoBehaviour
             }
         }else if(walkingSpeed != SCALE_MOVEMENT){
             isFrozen = false;
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 1f, 1.0f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 1f, 0.5f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curMoveVel,12 * Time.fixedDeltaTime, 1f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curJumpVel, 7 * Time.fixedDeltaTime, 1f*SCALE_JUMP/SCALE_MOVEMENT);
             // Debug.Log("Recover comparison: Jump: " + jumpForce + " | " + SCALE_JUMP + " Move: " + walkingSpeed + " | " + SCALE_MOVEMENT);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
         }
