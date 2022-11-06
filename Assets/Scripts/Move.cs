@@ -152,6 +152,7 @@ public class Move : MonoBehaviour
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
+                onIce = false;
                 // To control the time between jumps
                 timestamp = Time.time + timeBetweenJumps;
             }
