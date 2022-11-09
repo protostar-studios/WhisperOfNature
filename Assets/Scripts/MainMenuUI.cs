@@ -30,13 +30,26 @@ public class MainMenuUI : MonoBehaviour
                 }
             }
 
-            // if(Input.GetAxis("Mouse X") > 0){
-            //     Debug.Log("aha");
-            // }
+            if(Input.GetAxis("Horizontal") > 0.1 || Input.GetAxis("Horizontal") < -0.1){
+                controllerDetected = true;
+                EventSystem.current.SetSelectedGameObject(startButton);
+            }
 
-            // if(Input.GetAxis("Mouse Y") > 0){
-            //     Debug.Log("ahaa");
-            // }
+            if(Input.GetAxis("Vertical") > 0.1 || Input.GetAxis("Vertical") < -0.1){
+                controllerDetected = true;
+                EventSystem.current.SetSelectedGameObject(startButton);
+            }
+
+            if(Input.GetAxis("Xbox_LookX") > 0.1 || Input.GetAxis("Xbox_LookX") < -0.1){
+                controllerDetected = true;
+                EventSystem.current.SetSelectedGameObject(startButton);
+            }
+
+            if(Input.GetAxis("Xbox_LookY") > 0.1 || Input.GetAxis("Xbox_LookY") < -0.1){
+                controllerDetected = true;
+                EventSystem.current.SetSelectedGameObject(startButton);
+            }
         }
+
     }
 }
