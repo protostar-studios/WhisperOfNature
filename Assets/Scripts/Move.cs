@@ -84,8 +84,6 @@ public class Move : MonoBehaviour
 
     private void Update()
     {
-
-
         // Movement
         input_h = Input.GetAxis("Horizontal");
         input_v = Input.GetAxis("Vertical");
@@ -108,7 +106,6 @@ public class Move : MonoBehaviour
         playerAnim = transform.GetComponentInChildren<Animator>();
         // update Season
         if(curSeason != seasonManager.curSeason){
-            
             GetComponent<ModelManager>().ChangeSeasonModel();
             curSeason = seasonManager.curSeason;
         }
