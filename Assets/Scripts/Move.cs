@@ -50,7 +50,8 @@ public class Move : MonoBehaviour
     private float timestamp;
 
     // Seasonal Changes
-    private float curVel;
+    private float curMoveVel;
+    private float curJumpVel;
     private bool isFrozen;
     private bool onIce = false;
     private bool onMud = false;
@@ -140,8 +141,9 @@ public class Move : MonoBehaviour
         playerAnim.SetBool("isWalking", isWalking);
         if(seasonManager.curSeason == 3){
             // Winter
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curVel, freezeTime * Time.fixedDeltaTime, 0.8f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curVel, recoverTime * Time.fixedDeltaTime, 1.0f);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, 12 * Time.fixedDeltaTime, 0.8f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, 7 * Time.fixedDeltaTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
+            // Debug.Log("Slow comparison: Jump: " + jumpForce + " | " + SCALE_JUMP + " Move: " + walkingSpeed + " | " + SCALE_MOVEMENT);
             playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             if(walkingSpeed <= 0.01){
                 isFrozen = true;
@@ -163,8 +165,8 @@ public class Move : MonoBehaviour
             // Not Winter
             if(walkingSpeed != SCALE_MOVEMENT){
                 isFrozen = false;
-                walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curVel, 1f * Time.fixedDeltaTime, 1.0f);
-                jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curVel, 1f, 0.5f);
+                walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curMoveVel,12 * Time.fixedDeltaTime, 1f);
+                jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curJumpVel, 7 * Time.fixedDeltaTime, 1f*SCALE_JUMP/SCALE_MOVEMENT);
                 playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             }
             if(opacity >= 0.01f){
@@ -182,22 +184,34 @@ public class Move : MonoBehaviour
 
         // Player Movement Updates
         moveDirection = new Vector3(input_h, 0, input_v);
-        if((!isFrozen) && (input_h != 0 || input_v != 0)){
-            faceDirection = Quaternion.Euler(0, mainCamera.transform.rotation.eulerAngles.y, 0);
-            transform.rotation = Quaternion.RotateTowards(transform.rotation, faceDirection, rotateSpeed * Time.deltaTime);
+
+        if (!isFrozen){
+            // All movement can only happen if the character is not currently frozen
+            if((input_h != 0 || input_v != 0)){
+                faceDirection = Quaternion.Euler(0, mainCamera.transform.rotation.eulerAngles.y, 0);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, faceDirection, rotateSpeed * Time.deltaTime);
+            }
+            if(seasonManager.curSeason == 3 && onIce){
+                // Sliding behaviour on ice in winter
+                Debug.Log("Sliding");
+                rb.AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
+            }else{
+                // Regular movement
+                transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
+            }
+
+            if(jumping && isGrounded  && Time.time >= timestamp)
+            {
+                // Jumping behaviour
+                rb.AddForce(jump * jumpForce, ForceMode.Impulse);
+                Debug.Log("Jumping!");
+                isGrounded = false;
+                onIce = false;
+                // To control the time between jumps
+                timestamp = Time.time + timeBetweenJumps;
+            }
         }
-        if(seasonManager.curSeason == 3 && onIce && !isFrozen){
-            Debug.Log("Sliding");
-            rb.AddForce(transform.TransformDirection(moveDirection) * SlideForce, ForceMode.Impulse);
-        }else if(!isFrozen){
-            transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
-        }
-        if(jumping && isGrounded && !isFrozen && Time.time >= timestamp){
-            rb.AddForce(jump * jumpForce, ForceMode.Impulse);
-            Debug.Log("Jumping!");
-            isGrounded = false;
-            timestamp = Time.time + timeBetweenJumps;
-        }
+        
     }
 
     // Jumping
