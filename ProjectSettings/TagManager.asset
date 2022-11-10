@@ -17,6 +17,7 @@ TagManager:
   - GrownFlower
   - Transparent Indicator
   - Foot
+  - Mud
   layers:
   - Default
   - TransparentFX

@@ -31,8 +31,8 @@ Transform:
   m_GameObject: {fileID: 6074115001591501563}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.99, y: 1.3353927, z: -1.47}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3058763269362009988}
   m_Father: {fileID: 0}
@@ -94,6 +94,10 @@ MonoBehaviour:
   isGrounded: 0
   timeBetweenJumps: 1
   respawnManager: {fileID: 0}
+  freezeTime: 12
+  recoverTime: 7
+  iceCube: {fileID: 7352417645418415343, guid: e8da706949aeb12439c5ad09dd857d7d, type: 3}
+  opacity: 0
 --- !u!114 &1812184425470612584
 MonoBehaviour:
   m_ObjectHideFlags: 0
