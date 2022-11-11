@@ -22,13 +22,13 @@ public class Move : MonoBehaviour
     // DEBUG option
     private bool DEBUG = false;
     // Move and Camera Basics
-    public float SCALE_MOVEMENT = 20.0f;
+    public float SCALE_MOVEMENT = 18.0f;
     public float rotateSpeed = 360;
     public float SlideForce = 10f;
     public Camera mainCamera;
     
     public Vector3 jump;
-    public float SCALE_JUMP = 2.4f;
+    public float SCALE_JUMP = 3.5f;
     public float jumpForce;
     public bool isGrounded;
     public float MUD_SPEED = 10.0f;
@@ -87,7 +87,7 @@ public class Move : MonoBehaviour
         // Get components
         rb = gameObject.GetComponent<Rigidbody>();
         setComponents();
-        jump = new Vector3(0.0f, 3.4f, 0.0f);
+        jump = new Vector3(0.0f, 3.8f, 0.0f);
         setGrounded();
         iceShader = null;
         curOpa = opacity;
