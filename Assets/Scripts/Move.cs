@@ -201,6 +201,7 @@ public class Move : MonoBehaviour
             if(jumping && isGrounded  && Time.time >= timestamp)
             {
                 // Jumping behaviour
+                // Play one shot jumping sound
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
@@ -214,10 +215,10 @@ public class Move : MonoBehaviour
 
     // Jumping
     private void CheckCollisionWithGround(Collision other){
-        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg") || other.gameObject.CompareTag("Mud"))
         {
            if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
-            setGrounded();
+                setGrounded();
            }
         }
     }
@@ -257,6 +258,7 @@ public class Move : MonoBehaviour
 
     void setGrounded()
     {
+        // play landing sound
         isGrounded = true;
         Debug.Log("Grounded!");
     }
