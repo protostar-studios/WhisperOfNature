@@ -101,7 +101,7 @@ MonoBehaviour:
   recoverTime: 7
   opacity: 0
   iceCube: {fileID: 7352417645418415343, guid: e8da706949aeb12439c5ad09dd857d7d, type: 3}
-  jumpingWhoosh: {fileID: 8300000, guid: ebe541c24f9a37d49824c9f2ce99586b, type: 3}
+  jumpingWhoosh: {fileID: 8300000, guid: 8888547b0e3d07d4f83f4e46f5a9fc54, type: 3}
   landingAudio: {fileID: 8300000, guid: f4f5b3682ceeac543974816bb566368e, type: 3}
 --- !u!114 &1812184425470612584
 MonoBehaviour:
@@ -200,7 +200,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
