@@ -16,7 +16,7 @@ https://answers.unity.com/questions/1020197/can-someone-help-me-make-a-simple-ju
 
 [RequireComponent(typeof(Rigidbody))]
 
-public class Move : MonoBehaviour
+public class PlayerMainController : MonoBehaviour
 {
 
     // DEBUG option
@@ -68,7 +68,12 @@ public class Move : MonoBehaviour
     private Renderer iceShader;
     private float curOpa;
     private Vector4 albedo;
-   
+    // Player audio general
+    
+    public AudioClip jumpingWhoosh;
+    public AudioClip landingAudio;
+    private AudioSource audioSource;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -86,6 +91,7 @@ public class Move : MonoBehaviour
 
         // Get components
         rb = gameObject.GetComponent<Rigidbody>();
+        audioSource = gameObject.GetComponent<AudioSource>();
         setComponents();
         jump = new Vector3(0.0f, 3.8f, 0.0f);
         setGrounded();
@@ -181,7 +187,7 @@ public class Move : MonoBehaviour
         }
 
         // Player Movement Updates
-        moveDirection = new Vector3(input_h, 0, input_v);
+        moveDirection = new Vector3(input_h, 0, input_v).normalized;
 
         if (!isFrozen){
             // All movement can only happen if the character is not currently frozen
@@ -201,6 +207,9 @@ public class Move : MonoBehaviour
             if(jumping && isGrounded  && Time.time >= timestamp)
             {
                 // Jumping behaviour
+                // Play one shot jumping sound
+                audioSource.PlayOneShot(jumpingWhoosh);
+                
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
@@ -214,11 +223,14 @@ public class Move : MonoBehaviour
 
     // Jumping
     private void CheckCollisionWithGround(Collision other){
-        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg"))
+        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg") || other.gameObject.CompareTag("Mud"))
         {
-           if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
-            setGrounded();
-           }
+            if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
+                if(!isGrounded){
+                    audioSource.PlayOneShot(landingAudio);
+                    setGrounded();
+                }
+            }
         }
     }
 
@@ -257,6 +269,7 @@ public class Move : MonoBehaviour
 
     void setGrounded()
     {
+        // play landing sound
         isGrounded = true;
         Debug.Log("Grounded!");
     }
