@@ -22,13 +22,13 @@ public class PlayerMainController : MonoBehaviour
     // DEBUG option
     private bool DEBUG = false;
     // Move and Camera Basics
-    public float SCALE_MOVEMENT = 20.0f;
+    public float SCALE_MOVEMENT = 18.0f;
     public float rotateSpeed = 360;
     public float SlideForce = 10f;
     public Camera mainCamera;
     
     public Vector3 jump;
-    public float SCALE_JUMP = 2.4f;
+    public float SCALE_JUMP = 3.5f;
     public float jumpForce;
     public bool isGrounded;
     public float MUD_SPEED = 10.0f;
@@ -68,8 +68,8 @@ public class PlayerMainController : MonoBehaviour
     private Renderer iceShader;
     private float curOpa;
     private Vector4 albedo;
-    
     // Player audio general
+    
     public AudioClip jumpingWhoosh;
     public AudioClip landingAudio;
     private AudioSource audioSource;
@@ -93,7 +93,7 @@ public class PlayerMainController : MonoBehaviour
         rb = gameObject.GetComponent<Rigidbody>();
         audioSource = gameObject.GetComponent<AudioSource>();
         setComponents();
-        jump = new Vector3(0.0f, 3.4f, 0.0f);
+        jump = new Vector3(0.0f, 3.8f, 0.0f);
         setGrounded();
         iceShader = null;
         curOpa = opacity;
@@ -209,6 +209,7 @@ public class PlayerMainController : MonoBehaviour
                 // Jumping behaviour
                 // Play one shot jumping sound
                 audioSource.PlayOneShot(jumpingWhoosh);
+                
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
