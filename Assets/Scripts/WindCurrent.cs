@@ -16,6 +16,7 @@ public class WindCurrent : MonoBehaviour{
 
     Renderer[] RendererArray;
     public bool inbound = false;
+    public float distanceThreshold;
     
 
 
@@ -73,11 +74,10 @@ public class WindCurrent : MonoBehaviour{
             ShowNodes();
         }   
         if (seasonManager.curSeason == 2 && active){
-            // Debug.Log("Fall!");
 
             timer += Time.deltaTime * MoveSpeed;
             foreach(GameObject g in player){
-                if(Vector3.Distance(g.transform.position, CurrentPositionHolder) > 1 ){
+                if(Vector3.Distance(g.transform.position, CurrentPositionHolder) > distanceThreshold){
                     g.transform.position = Vector3.Lerp(startPosition, CurrentPositionHolder, timer);
                 }
                 else{
