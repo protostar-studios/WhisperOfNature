@@ -63,6 +63,6 @@ public class FallThornyBush : MonoBehaviour
                 currentActive.SetActive(true);
             }
         }
-
+        curSeason = seasonManager.curSeason;
     }
 }
