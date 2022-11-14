@@ -22,9 +22,6 @@ public class WindCurrent : MonoBehaviour{
     void Start(){
         player = GameObject.FindGameObjectsWithTag("Player");
         PathNode = GetComponentsInChildren<Node>();
-        // foreach(Node n in PathNode){
-        //     Debug.Log(n.name);
-        // }
         CheckNode();
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         active = true;
@@ -64,7 +61,6 @@ public class WindCurrent : MonoBehaviour{
     void OnTriggerEnter(Collider other){
         inbound = true;
         if(other.gameObject.tag == "Player" && seasonManager.curSeason == 2){
-            // Debug.Log("Let's Go!");
             active = true;
         }
     }
