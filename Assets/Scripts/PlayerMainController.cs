@@ -111,7 +111,11 @@ public class PlayerMainController : MonoBehaviour
 
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
-            Respawn();
+            try{ 
+                FindObjectOfType<RespawnMenu>().DisplayMenu();
+            }catch (System.Exception){
+                Debug.Log("Please add Respawn Menu Object to the scene");
+            }
         }
 
         // Jumping
@@ -244,7 +248,11 @@ public class PlayerMainController : MonoBehaviour
         // player getting hurt
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
-            Respawn();
+            try{ 
+                FindObjectOfType<RespawnMenu>().DisplayMenu();
+            }catch (System.Exception){
+                Debug.Log("Please add Respawn Menu Object to the scene");
+            }
         }
         // Winning check
         if(other.gameObject.CompareTag("WinDetection")){
@@ -261,7 +269,7 @@ public class PlayerMainController : MonoBehaviour
 
     }
 
-    private void Respawn(){
+    public void Respawn(){
         transform.position = respawnManager.curRespawn.position;
         transform.rotation = respawnManager.curRespawn.rotation;
         walkingSpeed = SCALE_MOVEMENT;
