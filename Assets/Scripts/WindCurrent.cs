@@ -81,7 +81,7 @@ public class WindCurrent : MonoBehaviour{
 
             timer += Time.deltaTime * MoveSpeed;
             foreach(GameObject g in player){
-                if(g.transform.position != CurrentPositionHolder){
+                if(Vector3.Distance(g.transform.position, CurrentPositionHolder) > 1 ){
                     g.transform.position = Vector3.Lerp(startPosition, CurrentPositionHolder, timer);
                 }
                 else{
