@@ -44,6 +44,7 @@ public class PlayerMainController : MonoBehaviour
     private float input_h = 0.0f;
     private float input_v = 0.0f;
     private string joyStick = "PS_";
+    public float animWalkingSpeed = 0.0f;
 
     // https://answers.unity.com/questions/665352/shot-delay-between-button-press-c.html
     public float timeBetweenJumps = 1f;
@@ -130,6 +131,8 @@ public class PlayerMainController : MonoBehaviour
         }
     }
 
+    float walkingSpeedVal;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -141,14 +144,19 @@ public class PlayerMainController : MonoBehaviour
         }
         bool hasHorizontalInput = !Mathf.Approximately(input_h, 0f);
         bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
-        bool isWalking = hasHorizontalInput || hasVerticalInput;
-        playerAnim.SetBool("isWalking", isWalking);
+        // bool isWalking = hasHorizontalInput || hasVerticalInput;
+        // playerAnim.SetBool("isWalking", isWalking);
+        if(hasHorizontalInput || hasVerticalInput){
+            animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 1.0f, ref walkingSpeedVal, 0.1f);
+        }else{
+            animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
+        }
+        playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
         if(seasonManager.curSeason == 3){
             // Winter
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, 12 * Time.fixedDeltaTime, 0.8f);
             jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, 7 * Time.fixedDeltaTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
             // Debug.Log("Slow comparison: Jump: " + jumpForce + " | " + SCALE_JUMP + " Move: " + walkingSpeed + " | " + SCALE_MOVEMENT);
-            playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             if(walkingSpeed <= 0.01){
                 isFrozen = true;
             }
@@ -171,7 +179,6 @@ public class PlayerMainController : MonoBehaviour
                 isFrozen = false;
                 walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curMoveVel,12 * Time.fixedDeltaTime, 1f);
                 jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curJumpVel, 7 * Time.fixedDeltaTime, 1f*SCALE_JUMP/SCALE_MOVEMENT);
-                playerAnim.SetFloat("walkingSpeed", Mathf.Clamp(walkingSpeed, 0, 1));
             }
             if(opacity >= 0.01f){
                 opacity = Mathf.SmoothDamp(opacity, 0.0f, ref curOpa, 3 * Time.fixedDeltaTime, 0.3f);

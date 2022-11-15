@@ -1,0 +1,355 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: LowerBody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: god_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/l_god_wing_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/l_god_wing_autumn/r_god_ctrl_wing_spring
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/l_winFoot_ctrl_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/l_winFoot_ctrl_offset/l_winFoot_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/r_god_wing_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/r_god_wing_autumn/r_god_ctrl_wing_spring
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/r_winFoot_ctrl_offset1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/r_winFoot_ctrl_offset1/r_winFoot_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl/l_winIK_ctrl_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl/l_winIK_ctrl_offset/l_winIK_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_wing_autumn1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_wing_autumn1/l_wing_ctrl_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/C_EARPIECE_CTRL_AUTUMN_offset1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/C_EARPIECE_CTRL_AUTUMN_offset1/C_EARPIECE_CTRL_AUTUMN
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/L_EARPIECE_CTRL_AUTUMN_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/L_EARPIECE_CTRL_AUTUMN_offset/L_EARPIECE_CTRL_AUTUMN
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/R_EARPIECE_CTRL_AUTUMN_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl/R_EARPIECE_CTRL_AUTUMN_offset/R_EARPIECE_CTRL_AUTUMN
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl/r_winIK_ctrl_offset1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl/r_winIK_ctrl_offset1/r_winIK_ctrl
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_wing_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_wing_autumn/r_wing_ctrl_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/tailctrl_autumn_offset
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/master_null/master_ctrl/tailctrl_autumn_offset/tailctrl_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn
+    m_Weight: 1
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/l_hipjnt_autumn
+    m_Weight: 1
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/l_hipjnt_autumn/l_kneejnt_autumn
+    m_Weight: 1
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/r_hipjnt_autumn
+    m_Weight: 1
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/r_hipjnt_autumn/r_kneejnt_autumn
+    m_Weight: 1
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/l_claviclejnt_spring
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/l_claviclejnt_spring/l_shoulderjnt_spring
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/l_claviclejnt_spring/l_shoulderjnt_spring/l_elbowjnt_spring
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform3
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform3/joint13
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint15
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint15/joint16
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint15/joint16/joint17
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint18
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint18/joint19
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint18/joint19/joint20
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/head002jnt_autumn/transform4/joint14/joint18/joint19/joint20/joint21
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform2
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1/joint2
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1/joint2/joint3
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1/joint4
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1/joint4/joint5
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform8/joint1/joint4/joint5/joint6
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7/joint8
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7/joint8/joint9
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7/joint10
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7/joint10/joint11
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/head001jnt_autumn/transform9/joint7/joint10/joint11/joint12
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40/r_spring41
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40/r_spring41/r_spring42
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40/r_spring41/r_spring42/r_spring43
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40/r_spring41/r_spring42/r_spring43/r_spring44
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring38/r_spring39/r_spring40/r_spring41/r_spring42/r_spring43/r_spring44/r_spring45
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55/r_spring56
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55/r_spring56/r_spring57
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55/r_spring56/r_spring57/r_spring58
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55/r_spring56/r_spring57/r_spring58/r_spring59
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring34/r_spring35/r_spring36/r_spring37/r_spring55/r_spring56/r_spring57/r_spring58/r_spring59/r_spring60
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring51
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring51/r_spring52
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring51/r_spring52/r_spring53
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring31/r_spring32/r_spring33/r_spring51/r_spring52/r_spring53/r_spring54
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring46
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring46/r_spring47
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring46/r_spring47/r_spring48
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring46/r_spring47/r_spring48/r_spring49
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform6/r_spring30/r_spring46/r_spring47/r_spring48/r_spring49/r_spring50
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71/l_spring72
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71/l_spring72/l_spring73
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71/l_spring72/l_spring73/l_spring74
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71/l_spring72/l_spring73/l_spring74/l_spring75
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring69/l_spring70/l_spring71/l_spring72/l_spring73/l_spring74/l_spring75/l_spring76
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77/l_spring78
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77/l_spring78/l_spring79
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77/l_spring78/l_spring79/l_spring80
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77/l_spring78/l_spring79/l_spring80/l_spring81
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring65/l_spring66/l_spring67/l_spring68/l_spring77/l_spring78/l_spring79/l_spring80/l_spring81/l_spring82
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring83
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring83/l_spring84
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring83/l_spring84/l_spring85
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring62/l_spring63/l_spring64/l_spring83/l_spring84/l_spring85/l_spring86
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring87
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring87/l_spring88
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring87/l_spring88/l_spring89
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring87/l_spring88/l_spring89/l_spring90
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/neckjnt_autumn/transform7/l_spring61/l_spring87/l_spring88/l_spring89/l_spring90/l_spring91
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/r_claviclejnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/r_claviclejnt_autumn/r_shoulderjnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/spine001jnt_autumn/chestjnt_autumn/r_claviclejnt_autumn/r_shoulderjnt_autumn/r_elbowjnt_autumn
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24/spring25
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24/spring25/spring26
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24/spring25/spring26/spring27
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24/spring25/spring26/spring27/spring28
+    m_Weight: 0
+  - m_Path: god_offset/god_CTRL/skeleton_grp/pelvisjnt_autumn/transform5/spring22/spring23/spring24/spring25/spring26/spring27/spring28/spring29
+    m_Weight: 0
+  - m_Path: god_offset/winter_ikLfoot
+    m_Weight: 0
+  - m_Path: god_offset/winter_ikLhand
+    m_Weight: 0
+  - m_Path: god_offset/winter_ikRfoot
+    m_Weight: 0
+  - m_Path: god_offset/winter_ikRhand
+    m_Weight: 0
+  - m_Path: Spring
+    m_Weight: 0
+  - m_Path: Spring/Accessories
+    m_Weight: 0
+  - m_Path: Spring/Accessories/Flower
+    m_Weight: 0
+  - m_Path: Spring/polySurface15
+    m_Weight: 0
+  - m_Path: Spring/polySurface17
+    m_Weight: 0
+  - m_Path: Spring/polySurface19
+    m_Weight: 0
+  - m_Path: Spring/polySurface21
+    m_Weight: 0
+  - m_Path: Spring/polySurface22
+    m_Weight: 0
+  - m_Path: Spring/polySurface26
+    m_Weight: 0
+  - m_Path: Spring/Spring_body_gem_low
+    m_Weight: 0

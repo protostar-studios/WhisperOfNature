@@ -57,9 +57,9 @@ GameObject:
   - component: {fileID: 5325833290022112133}
   - component: {fileID: 5325833290022112135}
   - component: {fileID: 7316923037655896407}
-  - component: {fileID: 7316923037655896392}
   - component: {fileID: 7316923037655896406}
   - component: {fileID: 4221467127576186986}
+  - component: {fileID: 7316923037655896392}
   m_Layer: 0
   m_Name: AutumnGuardian
   m_TagString: Untagged
@@ -137,7 +137,7 @@ Animator:
   m_GameObject: {fileID: 5325833290022112154}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 2e6f78bc70d60fb4e96e3a56ba32bc70, type: 3}
-  m_Controller: {fileID: 9100000, guid: e2788917d8adfe24ab22a3a26b2c3db5, type: 2}
+  m_Controller: {fileID: 9100000, guid: 9e433f857e4d877459a38f4b68b5c213, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -147,20 +147,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7316923037655896392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5325833290022112154}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fdbb9e878e026f49aa22852646eb02b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 5325833290022112154}
-  playerAnim: {fileID: 7316923037655896407}
 --- !u!82 &7316923037655896406
 AudioSource:
   m_ObjectHideFlags: 0
@@ -277,6 +263,20 @@ MonoBehaviour:
   - {fileID: 8300000, guid: 1d544d6ce89457d44a3bd1d7d5b773de, type: 3}
   - {fileID: 8300000, guid: 1901275fdde716e4385d7eed907ac731, type: 3}
   - {fileID: 8300000, guid: 34d8492c7026bd542a189f81b4ef7003, type: 3}
+--- !u!114 &7316923037655896392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5325833290022112154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fdbb9e878e026f49aa22852646eb02b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  player: {fileID: 5325833290022112154}
+  playerAnim: {fileID: 7316923037655896407}
 --- !u!1 &7125621898340885954
 GameObject:
   m_ObjectHideFlags: 0
