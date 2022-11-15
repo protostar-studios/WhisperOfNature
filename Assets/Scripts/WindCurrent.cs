@@ -16,15 +16,13 @@ public class WindCurrent : MonoBehaviour{
 
     Renderer[] RendererArray;
     public bool inbound = false;
+    public float distanceThreshold;
     
 
 
     void Start(){
         player = GameObject.FindGameObjectsWithTag("Player");
         PathNode = GetComponentsInChildren<Node>();
-        // foreach(Node n in PathNode){
-        //     Debug.Log(n.name);
-        // }
         CheckNode();
         seasonManager = Object.FindObjectOfType<SeasonManager>();
         active = true;
@@ -64,7 +62,6 @@ public class WindCurrent : MonoBehaviour{
     void OnTriggerEnter(Collider other){
         inbound = true;
         if(other.gameObject.tag == "Player" && seasonManager.curSeason == 2){
-            // Debug.Log("Let's Go!");
             active = true;
         }
     }
@@ -77,11 +74,10 @@ public class WindCurrent : MonoBehaviour{
             ShowNodes();
         }   
         if (seasonManager.curSeason == 2 && active){
-            // Debug.Log("Fall!");
 
             timer += Time.deltaTime * MoveSpeed;
             foreach(GameObject g in player){
-                if(g.transform.position != CurrentPositionHolder){
+                if(Vector3.Distance(g.transform.position, CurrentPositionHolder) > distanceThreshold){
                     g.transform.position = Vector3.Lerp(startPosition, CurrentPositionHolder, timer);
                 }
                 else{
