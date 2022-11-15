@@ -131,6 +131,8 @@ public class PlayerMainController : MonoBehaviour
         }
     }
 
+    float walkingSpeedVal;
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -144,7 +146,11 @@ public class PlayerMainController : MonoBehaviour
         bool hasVerticalInput = !Mathf.Approximately(input_v, 0f);
         // bool isWalking = hasHorizontalInput || hasVerticalInput;
         // playerAnim.SetBool("isWalking", isWalking);
-        animWalkingSpeed = Mathf.Clamp(new Vector3(input_h, 0, input_v).magnitude, 0, 1);
+        if(hasHorizontalInput || hasVerticalInput){
+            animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 1.0f, ref walkingSpeedVal, 0.1f);
+        }else{
+            animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
+        }
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
         if(seasonManager.curSeason == 3){
             // Winter
