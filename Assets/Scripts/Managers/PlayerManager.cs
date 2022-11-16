@@ -7,18 +7,21 @@ public class PlayerManager : MonoBehaviour
 
     // What the player has collected
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
-    private Collider playerCollider;
+    Collider playerCollider;
+    PlayerMainController playerMainController;
 
     // Used to detect player interactions
-    private bool interacting = false;
+    bool interacting = false;
     public bool inBound = false;
 
     // Leave it as null
     public GameObject otherObject = null;
-    private string joyStick = "PS_";
+    string joyStick = "PS_";
+
     void Start()
     {
         playerCollider = gameObject.GetComponent<Collider>();
+        playerMainController = GetComponent<PlayerMainController>();
         setupInventory();
         joyStick = FindObjectOfType<JoyStickManager>().joyStick;
     }
@@ -51,6 +54,7 @@ public class PlayerManager : MonoBehaviour
             // Grab props
             if(inventory.ContainsKey(otherObject.tag)){
                 inventory[otherObject.tag] += 1;
+                playerMainController.setAnimBool("pickingup");
                 Destroy(otherObject);
             }
             // Plant on soil
@@ -59,6 +63,7 @@ public class PlayerManager : MonoBehaviour
                     SoilController soilCtrl = otherObject.GetComponent<SoilController>();
                     bool success = soilCtrl.Plant();
                     if(success){
+                        playerMainController.setAnimBool("planting");
                         inventory["Seed"] -= 1; 
                     }
                 }

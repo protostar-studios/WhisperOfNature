@@ -95,6 +95,7 @@ MonoBehaviour:
   isGrounded: 0
   MUD_SPEED: 2
   walkingSpeed: 0
+  animWalkingSpeed: 0
   timeBetweenJumps: 1
   respawnManager: {fileID: 0}
   freezeTime: 12
