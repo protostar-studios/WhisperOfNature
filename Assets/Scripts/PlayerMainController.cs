@@ -121,7 +121,7 @@ public class PlayerMainController : MonoBehaviour
         } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
             jumping = false;
         }
-        if(seasonManager.curSeason == 1 && onMud){
+        if(seasonManager.curSeason == 0 && onMud){
             SCALE_MOVEMENT = MUD_SPEED;
             if(walkingSpeed > MUD_SPEED){
                 walkingSpeed = MUD_SPEED;
@@ -152,7 +152,7 @@ public class PlayerMainController : MonoBehaviour
             animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
         }
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
-        if(seasonManager.curSeason == 3){
+        if(seasonManager.curSeason == 3 && !onIce){
             // Winter
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, 12 * Time.fixedDeltaTime, 0.8f);
             jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, 7 * Time.fixedDeltaTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
