@@ -280,5 +280,14 @@ public class PlayerMainController : MonoBehaviour
         isGrounded = true;
         Debug.Log("Grounded!");
     }
+    
+    public void setAnimBool(string name){
+        playerAnim.SetBool(name, true);
+    }
+
+    public void resetAnimBool(string name){
+        Debug.Log(name);
+        playerAnim.SetBool(name, false);
+    }
 
 }
