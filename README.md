@@ -11,8 +11,6 @@
 
 ## Respawn Menu
 -- How to include a Respawn Menu:
-
-1. Go to the Level 1 - Beta scene
-2. Copy the Managers/RespawnMenuManager gameobject to the same Managers folder in the scene you are editing
-3. Copy the GUI/RespawnCanvas gameobject to the same GUI folder in the scene you are editing
-4. in the Managers/RespawnMenuManager gameobject, drag and drop the GUI/RespawnCanvas/RespawnMenu gameobject to the "Canvas" field
+1. Copy the Prefabs/RespawnMenuManager to Managers parent object in the scene you are editing
+2. Copy the Prefabs/RespawnCanvas to the GUI object in the scene you are editing
+3. in the Managers/RespawnMenuManager gameobject, drag and drop the GUI/RespawnCanvas/RespawnMenu gameobject to the "Canvas" field
