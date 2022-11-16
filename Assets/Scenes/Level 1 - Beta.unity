@@ -26328,9 +26328,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resumeSprites:
-  - {fileID: 21300000, guid: e8408a054d31e514589d925d24de2094, type: 3}
-  - {fileID: 21300000, guid: 6a76b4481e6d3da4fadafb8344f3b27c, type: 3}
-  - {fileID: 21300000, guid: 46bd2adaef982b349a5e58ac2c11eff3, type: 3}
+  - {fileID: 21300000, guid: 08ec23ac151cf9749901f60305265736, type: 3}
+  - {fileID: 21300000, guid: cdc4904bf8728c4459c66648568dec5e, type: 3}
+  - {fileID: 21300000, guid: cd178622d297e6d4a9664ffe9e5f86a7, type: 3}
   resumeButton: {fileID: 31826620}
 --- !u!1001 &2092931976
 PrefabInstance:
