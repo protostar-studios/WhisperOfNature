@@ -8,6 +8,7 @@ public class newSection : MonoBehaviour
     public GameObject currGate;
     public int respawnPosIndex = 0;
     private PlayerManager playerManager;
+    private bool isopened = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,9 +19,10 @@ public class newSection : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            if (playerManager.inventory["Gem"] > 0) {
+            if (playerManager.inventory["Gem"] > 0 && !isopened) {
                 // Destroy(transform.root.gameObject);
                 Destroy(currGate);
+                isopened = true;
                 // Destroy Rotating Gem Indicator
                 transform.Find("GemIndicator").gameObject.SetActive(false);
                 playerManager.inventory["Gem"] = playerManager.inventory["Gem"] - 1; 
