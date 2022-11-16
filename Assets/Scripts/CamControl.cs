@@ -42,11 +42,10 @@ public class CamControl : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!PauseMenu.paused){
+        if(!RespawnMenu.died && !PauseMenu.paused){
             xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis(Joystick + "LookX"));
             yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis(Joystick + "LookY"));
         }
-
         if(yMove > MAX_ANGLE){
             yMove = MAX_ANGLE;
         }
