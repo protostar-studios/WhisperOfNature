@@ -156,7 +156,7 @@ public class PlayerMainController : MonoBehaviour
             animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
         }
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
-        if(seasonManager.curSeason == 3){
+        if(seasonManager.curSeason == 3 && !onIce){
             // Winter
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, freezeTime, 1.0f);
             jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, freezeTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
