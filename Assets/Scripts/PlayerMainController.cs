@@ -113,7 +113,7 @@ public class PlayerMainController : MonoBehaviour
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
             try{ 
-                FindObjectOfType<RespawnMenu>().DisplayMenu();
+                Respawn();
             }catch (System.Exception){
                 Debug.Log("Please add Respawn Menu Object to the scene");
             }
@@ -254,7 +254,7 @@ public class PlayerMainController : MonoBehaviour
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
             try{ 
-                FindObjectOfType<RespawnMenu>().DisplayMenu();
+                Respawn();
             }catch (System.Exception){
                 Debug.Log("Please add Respawn Menu Object to the scene");
             }
