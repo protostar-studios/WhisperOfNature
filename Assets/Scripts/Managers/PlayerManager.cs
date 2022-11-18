@@ -9,7 +9,7 @@ public class PlayerManager : MonoBehaviour
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
     Collider playerCollider;
     PlayerMainController playerMainController;
-
+    public int[] inv = new int[2];
     // Used to detect player interactions
     bool interacting = false;
     public bool inBound = false;
@@ -33,6 +33,7 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log("Gem" + inventory["Gem"]);
         interacting = false;
         if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
             interacting = true;

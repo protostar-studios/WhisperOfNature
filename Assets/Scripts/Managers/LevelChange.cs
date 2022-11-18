@@ -20,7 +20,7 @@ public class LevelChange : MonoBehaviour
     private void OnCollisionEnter(Collision other) {
         if(other.gameObject.CompareTag("Player")){
             Cursor.visible = true;
-            SceneManager.LoadScene("The Call of the Forest");
+            SceneManager.LoadScene("Level 1 - Beta");
         }
     }
 }

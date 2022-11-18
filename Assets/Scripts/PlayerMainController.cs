@@ -61,8 +61,8 @@ public class PlayerMainController : MonoBehaviour
     private int curSeason = -1;
 
     // Winter Player Freeze Control
-    public float freezeTime = 12.0f;
-    public float recoverTime = 7.0f;
+    public float freezeTime = 7.0f;
+    public float recoverTime = 1.0f;
     public float opacity = 0f;
     public GameObject iceCube;
 
@@ -112,7 +112,11 @@ public class PlayerMainController : MonoBehaviour
 
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
-            Respawn();
+            try{ 
+                Respawn();
+            }catch (System.Exception){
+                Debug.Log("Please add Respawn Menu Object to the scene");
+            }
         }
 
         // Jumping
@@ -154,21 +158,19 @@ public class PlayerMainController : MonoBehaviour
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
         if(seasonManager.curSeason == 3 && !onIce){
             // Winter
-            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, 12 * Time.fixedDeltaTime, 0.8f);
-            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, 7 * Time.fixedDeltaTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
+            walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, freezeTime, 1.0f);
+            jumpForce = Mathf.SmoothDamp(jumpForce, 0, ref curJumpVel, freezeTime, 0.8f*SCALE_JUMP/SCALE_MOVEMENT);
             // Debug.Log("Slow comparison: Jump: " + jumpForce + " | " + SCALE_JUMP + " Move: " + walkingSpeed + " | " + SCALE_MOVEMENT);
             if(walkingSpeed <= 0.01){
                 isFrozen = true;
             }
-
             // Add ice on player
+
+            opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime, 0.083f);            
             if(iceShader == null){
                 GameObject newIceCube = Instantiate<GameObject>(iceCube, transform.position, transform.rotation, transform);
                 iceShader = newIceCube.transform.GetChild(0).GetComponent<Renderer>();
             }
-
-
-            opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime * Time.fixedDeltaTime, 0.083f);
             albedo = iceShader.materials[0].GetVector("_Color");
             iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
 
@@ -177,11 +179,11 @@ public class PlayerMainController : MonoBehaviour
             // Not Winter
             if(walkingSpeed != SCALE_MOVEMENT){
                 isFrozen = false;
-                walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curMoveVel,12 * Time.fixedDeltaTime, 1f);
-                jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curJumpVel, 7 * Time.fixedDeltaTime, 1f*SCALE_JUMP/SCALE_MOVEMENT);
+                walkingSpeed = Mathf.SmoothDamp(walkingSpeed, SCALE_MOVEMENT, ref curMoveVel, recoverTime, 1f);
+                jumpForce = Mathf.SmoothDamp(jumpForce, SCALE_JUMP, ref curJumpVel, recoverTime, 1f*SCALE_JUMP/SCALE_MOVEMENT);
             }
             if(opacity >= 0.01f){
-                opacity = Mathf.SmoothDamp(opacity, 0.0f, ref curOpa, 3 * Time.fixedDeltaTime, 0.3f);
+                opacity = Mathf.SmoothDamp(opacity, 0.0f, ref curOpa, recoverTime, 0.3f);
                 albedo = iceShader.materials[0].GetVector("_Color");
                 if(iceShader != null){
                     iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
@@ -251,7 +253,11 @@ public class PlayerMainController : MonoBehaviour
         // player getting hurt
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
-            Respawn();
+            try{ 
+                Respawn();
+            }catch (System.Exception){
+                Debug.Log("Please add Respawn Menu Object to the scene");
+            }
         }
         // Winning check
         if(other.gameObject.CompareTag("WinDetection")){
@@ -268,7 +274,7 @@ public class PlayerMainController : MonoBehaviour
 
     }
 
-    private void Respawn(){
+    public void Respawn(){
         transform.position = respawnManager.curRespawn.position;
         transform.rotation = respawnManager.curRespawn.rotation;
         walkingSpeed = SCALE_MOVEMENT;

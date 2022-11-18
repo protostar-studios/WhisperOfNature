@@ -5,11 +5,11 @@ using UnityEngine;
 public class JoyStickManager : MonoBehaviour
 {
     public string joyStick = "PS_";
-    void Start()
+    void Awake()
     {
         foreach (var item in Input.GetJoystickNames())
         {
-            if(item.Contains("Xbox")){
+            if(item.Contains("X")){
                 joyStick = "Xbox_";
             }
         }

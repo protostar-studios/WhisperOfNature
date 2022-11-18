@@ -24,45 +24,38 @@ public class PauseMenuUI : MonoBehaviour
         if (PauseMenu.paused){
             if (!controllerDetected){
                 for (int i = 0;i < 20; i++) {
-                    if(Input.GetKeyDown("joystick 1 button "+i)){
+                    if(Input.GetKeyDown("joystick 1 button "+i) && i!=7){
+                        // Debug.Log(i);
                         controllerDetected = true;
                         EventSystem.current.SetSelectedGameObject(resumeButton);
                         Debug.Log("joystick 1 button "+i);
                     }
                 }
 
-            if(Input.GetAxis("Horizontal") > 0.1 || Input.GetAxis("Horizontal") < -0.1){
-                controllerDetected = true;
-                EventSystem.current.SetSelectedGameObject(resumeButton);
-            }
+                if(Input.GetAxis("Horizontal") > 0.1 || Input.GetAxis("Horizontal") < -0.1){
+                    controllerDetected = true;
+                    EventSystem.current.SetSelectedGameObject(resumeButton);
+                }
 
-            if(Input.GetAxis("Vertical") > 0.1 || Input.GetAxis("Vertical") < -0.1){
-                controllerDetected = true;
-                EventSystem.current.SetSelectedGameObject(resumeButton);
-            }
+                if(Input.GetAxis("Vertical") > 0.1 || Input.GetAxis("Vertical") < -0.1){
+                    controllerDetected = true;
+                    EventSystem.current.SetSelectedGameObject(resumeButton);
+                }
 
-            if(Input.GetAxis("Xbox_LookX") > 0.1 || Input.GetAxis("Xbox_LookX") < -0.1){
-                controllerDetected = true;
-                EventSystem.current.SetSelectedGameObject(resumeButton);
-            }
+                if(Input.GetAxis("Xbox_LookX") > 0.1 || Input.GetAxis("Xbox_LookX") < -0.1){
+                    controllerDetected = true;
+                    EventSystem.current.SetSelectedGameObject(resumeButton);
+                }
 
-            if(Input.GetAxis("Xbox_LookY") > 0.1 || Input.GetAxis("Xbox_LookY") < -0.1){
-                controllerDetected = true;
-                EventSystem.current.SetSelectedGameObject(resumeButton);
+                if(Input.GetAxis("Xbox_LookY") > 0.1 || Input.GetAxis("Xbox_LookY") < -0.1){
+                    controllerDetected = true;
+                    EventSystem.current.SetSelectedGameObject(resumeButton);
+                }
             }
         }
-
-        // else{
-        //     controllerDetected = false;
-        //     EventSystem.current.SetSelectedGameObject(gameObject);
-        // }
-        // if(Input.GetAxis("Mouse X") > 0.1 && Input.GetAxis("Mouse X") < -0.1){
-        //     Debug.Log("aha");
-        // }
-
-        // if(Input.GetAxis("Mouse Y") > 0){
-        //     Debug.Log("ahaa");
-        // }
+        else{
+            controllerDetected = false;
+            EventSystem.current.SetSelectedGameObject(gameObject);
         }
     }
 }

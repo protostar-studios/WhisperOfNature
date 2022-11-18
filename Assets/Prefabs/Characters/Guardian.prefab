@@ -98,8 +98,8 @@ MonoBehaviour:
   animWalkingSpeed: 0
   timeBetweenJumps: 1
   respawnManager: {fileID: 0}
-  freezeTime: 12
-  recoverTime: 7
+  freezeTime: 5
+  recoverTime: 1
   opacity: 0
   iceCube: {fileID: 7352417645418415343, guid: e8da706949aeb12439c5ad09dd857d7d, type: 3}
   jumpingWhoosh: {fileID: 8300000, guid: 8888547b0e3d07d4f83f4e46f5a9fc54, type: 3}
@@ -116,6 +116,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b66196f5dd8eae5468becc3c407ea49a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  inv: 
   inBound: 0
   otherObject: {fileID: 0}
 --- !u!114 &3794022538633671410
