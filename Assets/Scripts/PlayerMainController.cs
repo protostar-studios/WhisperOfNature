@@ -127,11 +127,17 @@ public class PlayerMainController : MonoBehaviour
         }
         if(seasonManager.curSeason == 0 && onMud){
             SCALE_MOVEMENT = MUD_SPEED;
+            if(!jumping){
+                FindObjectOfType<SinkInMud>().setPlayerOnMud();
+            }else{
+                FindObjectOfType<SinkInMud>().resetPlayerOnMud();
+            }
             if(walkingSpeed > MUD_SPEED){
                 walkingSpeed = MUD_SPEED;
             }
         }else{
             SCALE_MOVEMENT = normalSpeed;
+            FindObjectOfType<SinkInMud>().resetPlayerOnMud();
         }
     }
 
@@ -213,7 +219,7 @@ public class PlayerMainController : MonoBehaviour
                 transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
             }
 
-            if(jumping && isGrounded  && Time.time >= timestamp)
+            if(!(onMud && curSeason == 0) && jumping && isGrounded  && Time.time >= timestamp)
             {
                 // Jumping behaviour
                 // Play one shot jumping sound
