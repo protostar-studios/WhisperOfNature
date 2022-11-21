@@ -13,6 +13,8 @@ public class beeScript : MonoBehaviour
     public GameObject player;
 
     private Collider collider;
+    private Animator beeAnim;
+    private MeshRenderer beeCloud;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,6 +22,9 @@ public class beeScript : MonoBehaviour
         curSeason = seasonManager.curSeason;
         player = GameObject.FindWithTag("Player");
         collider = GetComponent<BoxCollider>();
+        beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        beeCloud = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
+        beeCloud.enabled = false;
         // if(transform.childCount != 0){
             // gameObject.transform.GetChild(0).gameObject.SetActive(false);
         // }
@@ -29,23 +34,18 @@ public class beeScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // if (seasonManager.curSeason != curSeason)
-        // {
-        //     curSeason = seasonManager.curSeason;
-        //     gameObject.transform.GetChild(0).gameObject.SetActive(false);
-        //     updateBee();
-        // }
         if (seasonManager.curSeason != 1)
         {
-            // curSeason = seasonManager.curSeason;
-            // gameObject.transform.GetChild(0).gameObject.SetActive(false);
-            // updateBee();
             collider.enabled = false;
             gameObject.tag = "Untagged";
+            beeAnim.SetBool("isSummer", false);
+            beeCloud.enabled = false;
         }
         else{
             collider.enabled = true;
             gameObject.tag = "harmfulobj";
+            beeAnim.SetBool("isSummer", true);
+            beeCloud.enabled = true;
         }
         //Debug.Log(player.transform.position);
         checkNearPlayer();
