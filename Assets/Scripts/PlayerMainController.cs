@@ -218,7 +218,7 @@ public class PlayerMainController : MonoBehaviour
                 // Jumping behaviour
                 // Play one shot jumping sound
                 audioSource.PlayOneShot(jumpingWhoosh);
-                
+                playerAnim.SetBool("jumping", true);
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
@@ -237,6 +237,7 @@ public class PlayerMainController : MonoBehaviour
             if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
                 if(!isGrounded){
                     audioSource.PlayOneShot(landingAudio);
+                    playerAnim.SetBool("jumping", false);
                     setGrounded();
                 }
             }
