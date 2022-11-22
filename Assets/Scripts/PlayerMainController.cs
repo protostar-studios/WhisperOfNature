@@ -272,7 +272,11 @@ public class PlayerMainController : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Mud")){
             onMud = true;
-        }else{
+            // **** IMPORTANT **** //
+            // We need to add all ground tags that are not Mud to the if statement below
+        }else if(other.gameObject.CompareTag("Ground") ||
+                 other.gameObject.CompareTag("GrownFlower") || 
+                 other.gameObject.CompareTag("Iceberg")){
             onMud = false;
         }
         // Check ground for jumping

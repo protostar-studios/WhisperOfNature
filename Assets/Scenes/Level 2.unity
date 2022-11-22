@@ -418,7 +418,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh139876
+  m_Name: pb_Mesh171624
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6251,7 +6251,7 @@ GameObject:
   - component: {fileID: 660560671}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Untagged
+  m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
