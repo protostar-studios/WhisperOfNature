@@ -14,7 +14,7 @@ public class beeScript : MonoBehaviour
 
     private Collider collider;
     private Animator beeAnim;
-    private MeshRenderer beeCloud;
+    private SkinnedMeshRenderer beeCloud;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,9 +22,9 @@ public class beeScript : MonoBehaviour
         curSeason = seasonManager.curSeason;
         player = GameObject.FindWithTag("Player");
         collider = GetComponent<BoxCollider>();
-        beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
-        beeCloud = gameObject.transform.GetChild(0).GetComponent<MeshRenderer>();
-        beeCloud.enabled = false;
+        beeAnim = gameObject.transform.GetChild(1).GetComponent<Animator>();
+        beeCloud = gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
+        // beeCloud.enabled = false;
         // if(transform.childCount != 0){
             // gameObject.transform.GetChild(0).gameObject.SetActive(false);
         // }
