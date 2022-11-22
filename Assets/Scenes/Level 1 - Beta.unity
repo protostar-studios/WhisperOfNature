@@ -225,49 +225,9 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 348409825}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: pausedTextSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: e733f9e5886919e4f8df4499f6b861b5, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButtonImage
       value: 
       objectReference: {fileID: 348409823}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: perishedTextSprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 2abb3db14cbfa624bb3f916fcc35aa09, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: resumeSprites.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: respawnSprites.Array.size
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: resumeSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: e8408a054d31e514589d925d24de2094, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: resumeSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: 6a76b4481e6d3da4fadafb8344f3b27c, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: resumeSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: 46bd2adaef982b349a5e58ac2c11eff3, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: respawnSprites.Array.data[0]
-      value: 
-      objectReference: {fileID: 21300000, guid: c211a1f60f14da244bf89e9905c9bdfd, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: respawnSprites.Array.data[1]
-      value: 
-      objectReference: {fileID: 21300000, guid: cdc4904bf8728c4459c66648568dec5e, type: 3}
-    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
-      propertyPath: respawnSprites.Array.data[2]
-      value: 
-      objectReference: {fileID: 21300000, guid: cd178622d297e6d4a9664ffe9e5f86a7, type: 3}
     - target: {fileID: 8563559547858808196, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -8535,22 +8495,6 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 893225337}
-    - target: {fileID: 1323709885078967729, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Resume
-      objectReference: {fileID: 0}
-    - target: {fileID: 1323709886876149292, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1323709886876149292, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1323709886876149292, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -57
-      objectReference: {fileID: 0}
     - target: {fileID: 3008249648214670950, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
       propertyPath: m_RootOrder
       value: 15
