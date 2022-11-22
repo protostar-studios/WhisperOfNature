@@ -55,7 +55,7 @@ public class PlayerMainController : MonoBehaviour
     private float curJumpVel;
     private bool isFrozen;
     private bool onIce = false;
-    private bool onMud = false;
+    public bool onMud = false;
     
     public RespawnManager respawnManager;
     private int curSeason = -1;
@@ -127,11 +127,17 @@ public class PlayerMainController : MonoBehaviour
         }
         if(seasonManager.curSeason == 0 && onMud){
             SCALE_MOVEMENT = MUD_SPEED;
+            if(!jumping){
+                FindObjectOfType<SinkInMud>().setPlayerOnMud();
+            }else{
+                FindObjectOfType<SinkInMud>().resetPlayerOnMud();
+            }
             if(walkingSpeed > MUD_SPEED){
                 walkingSpeed = MUD_SPEED;
             }
         }else{
             SCALE_MOVEMENT = normalSpeed;
+            FindObjectOfType<SinkInMud>().resetPlayerOnMud();
         }
     }
 
@@ -216,7 +222,7 @@ public class PlayerMainController : MonoBehaviour
                 transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
             }
 
-            if(jumping && isGrounded  && Time.time >= timestamp)
+            if(!(onMud && curSeason == 0) && jumping && isGrounded  && Time.time >= timestamp)
             {
                 // Jumping behaviour
                 // Play one shot jumping sound
@@ -270,7 +276,11 @@ public class PlayerMainController : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Mud")){
             onMud = true;
-        }else{
+            // **** IMPORTANT **** //
+            // We need to add all ground tags that are not Mud to the if statement below
+        }else if(other.gameObject.CompareTag("Ground") ||
+                 other.gameObject.CompareTag("GrownFlower") || 
+                 other.gameObject.CompareTag("Iceberg")){
             onMud = false;
         }
         // Check ground for jumping
