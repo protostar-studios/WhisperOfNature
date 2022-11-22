@@ -108,7 +108,13 @@ public class PlayerMainController : MonoBehaviour
     {
         // Movement
         input_h = Input.GetAxis("Horizontal");
+        if(-0.01f < input_h && input_h < 0.01f){
+            input_h = 0;
+        }
         input_v = Input.GetAxis("Vertical");
+        if(-0.01f < input_v && input_v < 0.01f){
+            input_v = 0;
+        }
 
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
