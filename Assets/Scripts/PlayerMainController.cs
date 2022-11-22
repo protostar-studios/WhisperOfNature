@@ -55,7 +55,7 @@ public class PlayerMainController : MonoBehaviour
     private float curJumpVel;
     private bool isFrozen;
     private bool onIce = false;
-    private bool onMud = false;
+    public bool onMud = false;
     
     public RespawnManager respawnManager;
     private int curSeason = -1;
