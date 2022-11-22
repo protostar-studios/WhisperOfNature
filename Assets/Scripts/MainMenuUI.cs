@@ -21,6 +21,8 @@ public class MainMenuUI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // feedback-adjusted with elias says no to this feature.
+
         if (!controllerDetected){
             for (int i = 0;i < 20; i++) {
                 if(Input.GetKeyDown("joystick 1 button "+i)){

@@ -41,8 +41,11 @@ public class PlayerManager : MonoBehaviour
 
         // Pause
         if(Input.GetButtonDown("Quit") || Input.GetButtonDown(joyStick + "Quit")){
-            try{ 
-                FindObjectOfType<PauseMenu>().SetPause();
+            try{
+                if(PauseMenu.died == false)
+                {
+                    FindObjectOfType<PauseMenu>().SetPause();
+                }
             }catch (System.Exception){
                 Debug.Log("Please add Pause Menu Object to the scene");
             }
