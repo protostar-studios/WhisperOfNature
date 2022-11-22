@@ -8,17 +8,17 @@ public class LevelsMenu : MonoBehaviour
 
     public void SelectLevel1()
     {
-        SceneManager.LoadScene("The Call of the Forest");
+        SceneManager.LoadScene("AlphaTut");
     }
 
     public void SelectLevel2()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Level 1 - Beta");
     }
 
     public void SelectLevel3()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Level 2");
     }
 
 }

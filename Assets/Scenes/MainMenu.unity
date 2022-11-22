@@ -208,7 +208,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 995059354}
         m_TargetAssemblyTypeName: startGame, Assembly-CSharp
-        m_MethodName: LoadControls
+        m_MethodName: LoadLevels
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
