@@ -22,8 +22,8 @@ public class beeScript : MonoBehaviour
         curSeason = seasonManager.curSeason;
         player = GameObject.FindWithTag("Player");
         collider = GetComponent<BoxCollider>();
-        beeAnim = gameObject.transform.GetChild(1).GetComponent<Animator>();
-        beeCloud = gameObject.transform.GetChild(1).GetComponent<SkinnedMeshRenderer>();
+        beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
+        beeCloud = gameObject.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
         // beeCloud.enabled = false;
         // if(transform.childCount != 0){
             // gameObject.transform.GetChild(0).gameObject.SetActive(false);
