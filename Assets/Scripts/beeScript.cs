@@ -14,7 +14,9 @@ public class beeScript : MonoBehaviour
 
     private Collider collider;
     private Animator beeAnim;
-    private SkinnedMeshRenderer beeCloud;
+    private GameObject beeCloud1;
+    private GameObject beeCloud2;
+    private GameObject beeCloud3;
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +25,9 @@ public class beeScript : MonoBehaviour
         player = GameObject.FindWithTag("Player");
         collider = GetComponent<BoxCollider>();
         beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
-        beeCloud = gameObject.transform.GetChild(0).GetComponent<SkinnedMeshRenderer>();
+        beeCloud1 = gameObject.transform.GetChild(0).gameObject;//.GetComponent<SkinnedMeshRenderer>();
+        beeCloud2 = gameObject.transform.GetChild(1).gameObject;//.GetComponent<SkinnedMeshRenderer>();
+        beeCloud3 = gameObject.transform.GetChild(2).gameObject;//.GetComponent<SkinnedMeshRenderer>();
         // beeCloud.enabled = false;
         // if(transform.childCount != 0){
             // gameObject.transform.GetChild(0).gameObject.SetActive(false);
@@ -39,13 +43,18 @@ public class beeScript : MonoBehaviour
             collider.enabled = false;
             gameObject.tag = "Untagged";
             beeAnim.SetBool("isSummer", false);
-            beeCloud.enabled = false;
+            beeCloud1.SetActive(false);
+            beeCloud2.SetActive(false);
+            beeCloud3.SetActive(false);
         }
         else{
             collider.enabled = true;
-            gameObject.tag = "harmfulobj";
+            // gameObject.tag = "harmfulobj";
             beeAnim.SetBool("isSummer", true);
-            beeCloud.enabled = true;
+            // beeCloud.enabled = true;
+            beeCloud1.SetActive(true);
+            beeCloud2.SetActive(true);
+            beeCloud3.SetActive(true);
         }
         //Debug.Log(player.transform.position);
         checkNearPlayer();
