@@ -273,17 +273,6 @@ public class PlayerMainController : MonoBehaviour
         }else{
             onIce = false;
         }
-        // player getting hurt
-        if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
-            isGrounded = true;
-            try{ 
-                PauseMenu.died = true;
-                FindObjectOfType<PauseMenu>().SetPause();
-                // Respawn();
-            }catch (System.Exception){
-                Debug.Log("Please add Respawn Menu Object to the scene");
-            }
-        }
         // Winning check
         if(other.gameObject.CompareTag("WinDetection")){
             Debug.Log("You win");
@@ -303,6 +292,21 @@ public class PlayerMainController : MonoBehaviour
 
     }
 
+    private void OnTriggerStay(Collider other) {
+        // player getting hurt
+        if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
+            isGrounded = true;
+            jumping = false;
+            playerAnim.SetBool("jumping", false);
+            try{ 
+                PauseMenu.died = true;
+                FindObjectOfType<PauseMenu>().SetPause();
+                // Respawn();
+            }catch (System.Exception){
+                Debug.Log("Please add Respawn Menu Object to the scene");
+            }
+        }
+    }
     public void Respawn(){
         transform.position = respawnManager.curRespawn.position;
         transform.rotation = respawnManager.curRespawn.rotation;
