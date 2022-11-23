@@ -304,8 +304,9 @@ public class PlayerMainController : MonoBehaviour
             jumping = false;
             playerAnim.SetBool("jumping", false);
             try{
-                transform.position = respawnManager.curRespawn.position;
-                transform.rotation = respawnManager.curRespawn.rotation;
+                rb.velocity = Vector3.zero;
+                //transform.position = respawnManager.curRespawn.position;
+                // transform.rotation = respawnManager.curRespawn.rotation;
                 walkingSpeed = SCALE_MOVEMENT;
                 PauseMenu.died = true;
                 FindObjectOfType<PauseMenu>().SetPause();
