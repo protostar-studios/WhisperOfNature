@@ -44,8 +44,8 @@ public class beeScript : MonoBehaviour
             gameObject.tag = "Untagged";
             beeAnim.SetBool("isSummer", false);
             beeCloud1.SetActive(false);
-            beeCloud2.SetActive(false);
-            beeCloud3.SetActive(false);
+        //     beeCloud2.SetActive(false);
+        //     beeCloud3.SetActive(false);
         }
         else{
             collider.enabled = true;
@@ -53,8 +53,8 @@ public class beeScript : MonoBehaviour
             beeAnim.SetBool("isSummer", true);
             // beeCloud.enabled = true;
             beeCloud1.SetActive(true);
-            beeCloud2.SetActive(true);
-            beeCloud3.SetActive(true);
+            // beeCloud2.SetActive(true);
+            // beeCloud3.SetActive(true);
         }
         //Debug.Log(player.transform.position);
         checkNearPlayer();
