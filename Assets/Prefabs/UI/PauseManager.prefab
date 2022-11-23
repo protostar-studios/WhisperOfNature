@@ -44,4 +44,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 52599b6e7d4ee5a4a906b3bdff797e32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Canvas: {fileID: 4314923695872014178, guid: d144967760ad81d4988f00dc3f14500d, type: 3}
+  Canvas: {fileID: 0}
+  pausedTextSprite: {fileID: 21300000, guid: e733f9e5886919e4f8df4499f6b861b5, type: 3}
+  perishedTextSprite: {fileID: 21300000, guid: 2abb3db14cbfa624bb3f916fcc35aa09, type: 3}
+  statusText: {fileID: 0}
+  respawnSprites:
+  - {fileID: 21300000, guid: c211a1f60f14da244bf89e9905c9bdfd, type: 3}
+  - {fileID: 21300000, guid: cdc4904bf8728c4459c66648568dec5e, type: 3}
+  - {fileID: 21300000, guid: cd178622d297e6d4a9664ffe9e5f86a7, type: 3}
+  resumeSprites:
+  - {fileID: 21300000, guid: e8408a054d31e514589d925d24de2094, type: 3}
+  - {fileID: 21300000, guid: 6a76b4481e6d3da4fadafb8344f3b27c, type: 3}
+  - {fileID: 21300000, guid: 46bd2adaef982b349a5e58ac2c11eff3, type: 3}
+  resumeButton: {fileID: 0}
+  resumeButtonImage: {fileID: 0}
+  respawnStates:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  resumeStates:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  pmc: {fileID: 0}
