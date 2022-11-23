@@ -26,8 +26,8 @@ public class beeScript : MonoBehaviour
         collider = GetComponent<BoxCollider>();
         beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         beeCloud1 = gameObject.transform.GetChild(0).gameObject;//.GetComponent<SkinnedMeshRenderer>();
-        beeCloud2 = gameObject.transform.GetChild(1).gameObject;//.GetComponent<SkinnedMeshRenderer>();
-        beeCloud3 = gameObject.transform.GetChild(2).gameObject;//.GetComponent<SkinnedMeshRenderer>();
+        // beeCloud2 = gameObject.transform.GetChild(1).gameObject;//.GetComponent<SkinnedMeshRenderer>();
+        // beeCloud3 = gameObject.transform.GetChild(2).gameObject;//.GetComponent<SkinnedMeshRenderer>();
         // beeCloud.enabled = false;
         // if(transform.childCount != 0){
             // gameObject.transform.GetChild(0).gameObject.SetActive(false);
