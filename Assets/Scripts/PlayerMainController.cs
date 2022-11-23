@@ -303,7 +303,10 @@ public class PlayerMainController : MonoBehaviour
             isGrounded = true;
             jumping = false;
             playerAnim.SetBool("jumping", false);
-            try{ 
+            try{
+                transform.position = respawnManager.curRespawn.position;
+                transform.rotation = respawnManager.curRespawn.rotation;
+                walkingSpeed = SCALE_MOVEMENT;
                 PauseMenu.died = true;
                 FindObjectOfType<PauseMenu>().SetPause();
                 // Respawn();
