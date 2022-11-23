@@ -649,7 +649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: feb1ce3cf67a2af45bc17d67afc3502b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  growSeason: 0000000001000000
+  growSeason: 00000000
   dieSeason: 2
   growSFX: {fileID: 8300000, guid: 6e9cdb1187870e944b72451251517b4b, type: 3}
   dieSFX: {fileID: 8300000, guid: 592c8db968085ea4596d966e68d2a6dc, type: 3}

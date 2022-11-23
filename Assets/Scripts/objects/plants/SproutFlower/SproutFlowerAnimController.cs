@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SproutFlowerAnimController : MonoBehaviour
 {
-    public List<int> growSeason = new List<int>(){0, 1};
+    public List<int> growSeason = new List<int>(){0};
     public int dieSeason = 2;
     private SeasonManager seasonManager;
     private Animator flowerAnim;
