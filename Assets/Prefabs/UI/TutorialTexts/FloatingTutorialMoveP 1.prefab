@@ -146,7 +146,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4588603076560915489}
-  m_Text: 'To move, use AWSD or the JoyStick
+  m_Text: 'To move, use WASD or the JoyStick
 
     To Look Around, move the Mouse
 

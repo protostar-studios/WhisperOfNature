@@ -424,6 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 0}
   currGate: {fileID: 4457181068612287200}
+  respawnPosIndex: 0
 --- !u!65 &4862363583925217689
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -461,8 +462,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0.59, y: 0.49, z: 0}
+  m_Size: {x: 1.7579267, y: 1, z: 1}
+  m_Center: {x: 0.9689635, y: 0.49, z: 0}
 --- !u!1001 &5470802374826057839
 PrefabInstance:
   m_ObjectHideFlags: 0
