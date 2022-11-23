@@ -7,7 +7,7 @@ using UnityEngine;
 /*
 Credits:
 
-Jump behaviour largely inspired from this link:
+Add force part of jump behaviour inspired from this link:
 https://answers.unity.com/questions/1020197/can-someone-help-me-make-a-simple-jump-script.html
 
 ~Varun
@@ -55,7 +55,7 @@ public class PlayerMainController : MonoBehaviour
     private float curJumpVel;
     private bool isFrozen;
     private bool onIce = false;
-    private bool onMud = false;
+    public bool onMud = false;
     
     public RespawnManager respawnManager;
     private int curSeason = -1;
@@ -127,11 +127,17 @@ public class PlayerMainController : MonoBehaviour
         }
         if(seasonManager.curSeason == 0 && onMud){
             SCALE_MOVEMENT = MUD_SPEED;
+            if(!jumping){
+                FindObjectOfType<SinkInMud>().setPlayerOnMud();
+            }else{
+                FindObjectOfType<SinkInMud>().resetPlayerOnMud();
+            }
             if(walkingSpeed > MUD_SPEED){
                 walkingSpeed = MUD_SPEED;
             }
         }else{
             SCALE_MOVEMENT = normalSpeed;
+            FindObjectOfType<SinkInMud>().resetPlayerOnMud();
         }
     }
 
@@ -156,6 +162,9 @@ public class PlayerMainController : MonoBehaviour
             animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
         }
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
+        playerAnim.SetFloat("inputX", Mathf.Clamp(walkingSpeed, 0, 1) * input_h);
+        playerAnim.SetFloat("inputY", Mathf.Clamp(walkingSpeed, 0, 1) * input_v);
+
         if(seasonManager.curSeason == 3 && !onIce){
             // Winter
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, freezeTime, 1.0f);
@@ -165,17 +174,17 @@ public class PlayerMainController : MonoBehaviour
                 isFrozen = true;
             }
             // Add ice on player
-
-            opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime, 0.083f);            
-            if(iceShader == null){
-                GameObject newIceCube = Instantiate<GameObject>(iceCube, transform.position, transform.rotation, transform);
-                iceShader = newIceCube.transform.GetChild(0).GetComponent<Renderer>();
+            if(walkingSpeed < SCALE_MOVEMENT / 2){
+                opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime / 2, 0.083f);          
+                if(iceShader == null){
+                    GameObject newIceCube = Instantiate<GameObject>(iceCube, transform.position, transform.rotation, transform);
+                    iceShader = newIceCube.transform.GetChild(0).GetComponent<Renderer>();
+                }
+                albedo = iceShader.materials[0].GetVector("_Color");
+                iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
             }
-            albedo = iceShader.materials[0].GetVector("_Color");
-            iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
 
         }else{
-
             // Not Winter
             if(walkingSpeed != SCALE_MOVEMENT){
                 isFrozen = false;
@@ -213,12 +222,12 @@ public class PlayerMainController : MonoBehaviour
                 transform.Translate(moveDirection * walkingSpeed * Time.fixedDeltaTime);    
             }
 
-            if(jumping && isGrounded  && Time.time >= timestamp)
+            if(!(onMud && curSeason == 0) && jumping && isGrounded  && Time.time >= timestamp)
             {
                 // Jumping behaviour
                 // Play one shot jumping sound
                 audioSource.PlayOneShot(jumpingWhoosh);
-                
+                playerAnim.SetBool("jumping", true);
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
@@ -237,6 +246,7 @@ public class PlayerMainController : MonoBehaviour
             if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
                 if(!isGrounded){
                     audioSource.PlayOneShot(landingAudio);
+                    playerAnim.SetBool("jumping", false);
                     setGrounded();
                 }
             }
@@ -266,7 +276,11 @@ public class PlayerMainController : MonoBehaviour
         }
         if(other.gameObject.CompareTag("Mud")){
             onMud = true;
-        }else{
+            // **** IMPORTANT **** //
+            // We need to add all ground tags that are not Mud to the if statement below
+        }else if(other.gameObject.CompareTag("Ground") ||
+                 other.gameObject.CompareTag("GrownFlower") || 
+                 other.gameObject.CompareTag("Iceberg")){
             onMud = false;
         }
         // Check ground for jumping
