@@ -39,14 +39,17 @@ public class WindCurrent : MonoBehaviour{
     }
 
     void ShowNodes(){
-        foreach (Renderer rend in RendererArray){
-            rend.enabled=true;
+        // foreach (Renderer rend in RendererArray){
+        //     rend.enabled=true;
+        // }
+        foreach (Transform child in transform){
+            child.gameObject.SetActive(true);
         }
     }
 
     void HideNodes(){
-        foreach (Renderer rend in RendererArray){
-            rend.enabled=false;
+        foreach (Transform child in transform){
+            child.gameObject.SetActive(false);
         }
     }
 

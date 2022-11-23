@@ -21,6 +21,12 @@ public class AnimationEvents : MonoBehaviour
         }
     }
 
+    void sideStep(){
+        if((GetComponent<Animator>().GetFloat("inputX") == -1 || GetComponent<Animator>().GetFloat("inputX") == 1) && GetComponent<Animator>().GetFloat("inputY") == 0){
+            Step();
+        }
+    }
+
     private AudioClip GetRandomClip(){
         return clips[UnityEngine.Random.Range(0, clips.Length)];
     }

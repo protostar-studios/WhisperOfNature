@@ -7,7 +7,7 @@ using UnityEngine;
 /*
 Credits:
 
-Jump behaviour largely inspired from this link:
+Add force part of jump behaviour inspired from this link:
 https://answers.unity.com/questions/1020197/can-someone-help-me-make-a-simple-jump-script.html
 
 ~Varun
@@ -164,6 +164,9 @@ public class PlayerMainController : MonoBehaviour
             animWalkingSpeed = Mathf.SmoothDamp(animWalkingSpeed, 0.0f, ref walkingSpeedVal, 0.1f);
         }
         playerAnim.SetFloat("walkingSpeed", Mathf.Min(Mathf.Clamp(walkingSpeed, 0, 1), animWalkingSpeed));
+        playerAnim.SetFloat("inputX", Mathf.Clamp(walkingSpeed, 0, 1) * input_h);
+        playerAnim.SetFloat("inputY", Mathf.Clamp(walkingSpeed, 0, 1) * input_v);
+
         if(seasonManager.curSeason == 3 && !onIce){
             // Winter
             walkingSpeed = Mathf.SmoothDamp(walkingSpeed, 0, ref curMoveVel, freezeTime, 1.0f);
@@ -173,17 +176,17 @@ public class PlayerMainController : MonoBehaviour
                 isFrozen = true;
             }
             // Add ice on player
-
-            opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime, 0.083f);            
-            if(iceShader == null){
-                GameObject newIceCube = Instantiate<GameObject>(iceCube, transform.position, transform.rotation, transform);
-                iceShader = newIceCube.transform.GetChild(0).GetComponent<Renderer>();
+            if(walkingSpeed < SCALE_MOVEMENT / 2){
+                opacity = Mathf.SmoothDamp(opacity, 0.7f, ref curOpa, freezeTime / 2, 0.083f);          
+                if(iceShader == null){
+                    GameObject newIceCube = Instantiate<GameObject>(iceCube, transform.position, transform.rotation, transform);
+                    iceShader = newIceCube.transform.GetChild(0).GetComponent<Renderer>();
+                }
+                albedo = iceShader.materials[0].GetVector("_Color");
+                iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
             }
-            albedo = iceShader.materials[0].GetVector("_Color");
-            iceShader.materials[0].SetVector("_Color", new Vector4(albedo.x, albedo.y, albedo.z, opacity));
 
         }else{
-
             // Not Winter
             if(walkingSpeed != SCALE_MOVEMENT){
                 isFrozen = false;
@@ -226,7 +229,7 @@ public class PlayerMainController : MonoBehaviour
                 // Jumping behaviour
                 // Play one shot jumping sound
                 audioSource.PlayOneShot(jumpingWhoosh);
-                
+                playerAnim.SetBool("jumping", true);
                 rb.AddForce(jump * jumpForce, ForceMode.Impulse);
                 Debug.Log("Jumping!");
                 isGrounded = false;
@@ -245,6 +248,7 @@ public class PlayerMainController : MonoBehaviour
             if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
                 if(!isGrounded){
                     audioSource.PlayOneShot(landingAudio);
+                    playerAnim.SetBool("jumping", false);
                     setGrounded();
                 }
             }
