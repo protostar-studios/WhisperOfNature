@@ -254,7 +254,11 @@ public class PlayerMainController : MonoBehaviour
 
     // Jumping
     private void CheckCollisionWithGround(Collision other){
-        if(other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("GrownFlower") || other.gameObject.CompareTag("Iceberg") || other.gameObject.CompareTag("Mud"))
+        if(other.gameObject.CompareTag("Ground") || 
+            other.gameObject.CompareTag("GrownFlower") || 
+            other.gameObject.CompareTag("Iceberg") || 
+            other.gameObject.CompareTag("Mud") ||
+            (other.gameObject.CompareTag("WaterSurface") && curSeason == 3))
         {
             if(other.GetContact(0).thisCollider.gameObject.CompareTag("Foot")){
                 if(!isGrounded){
@@ -284,7 +288,8 @@ public class PlayerMainController : MonoBehaviour
             // We need to add all ground tags that are not Mud to the if statement below
         }else if(other.gameObject.CompareTag("Ground") ||
                  other.gameObject.CompareTag("GrownFlower") || 
-                 other.gameObject.CompareTag("Iceberg")){
+                 other.gameObject.CompareTag("Iceberg") ||
+                other.gameObject.CompareTag("WaterSurface")){
             onMud = false;
         }
         // Check ground for jumping
