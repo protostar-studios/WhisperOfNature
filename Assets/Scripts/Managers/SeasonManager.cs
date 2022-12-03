@@ -30,7 +30,7 @@ public class SeasonManager : MonoBehaviour
     void Update()
     {
         // Change seasons with two buttons.
-        if(playerInput.Player.PrevSeason.ReadValue<float>() == 1){
+        if(playerInput.Player.PrevSeason.triggered){
             if(curSeason - 1 < 0){
                 curSeason = 3;
             }else{
@@ -38,7 +38,7 @@ public class SeasonManager : MonoBehaviour
             }
         }
 
-        if(playerInput.Player.NextSeason.ReadValue<float>() == 1){
+        if(playerInput.Player.NextSeason.triggered){
             if(curSeason + 1 > 3){
                 curSeason = 0;
             }else{

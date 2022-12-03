@@ -1554,6 +1554,41 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3382441333429218775, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
   m_PrefabInstance: {fileID: 195760223}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &196919228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3008249647496901666, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 915610792}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &196919233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196919228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01614664b831546d2ae94a42149d80ac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_SendPointerHoverToParent: 1
+  m_MoveRepeatDelay: 0.5
+  m_MoveRepeatRate: 0.1
+  m_XRTrackingOrigin: {fileID: 0}
+  m_ActionsAsset: {fileID: -944628639613478452, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_PointAction: {fileID: 7420226952536662342, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_MoveAction: {fileID: 4984709809771601703, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_SubmitAction: {fileID: -5070725890712379824, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_CancelAction: {fileID: 8848350523150966891, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_LeftClickAction: {fileID: 5899383688280412787, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_MiddleClickAction: {fileID: -852658334984245581, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_RightClickAction: {fileID: 2360144119222355400, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_ScrollWheelAction: {fileID: -5343759065743956592, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_TrackedDevicePositionAction: {fileID: -1547790331150543782, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_TrackedDeviceOrientationAction: {fileID: 2032137333662599259, guid: 76c7d3cb4808da9498212387fbee5552, type: 3}
+  m_DeselectOnBackgroundClick: 1
+  m_PointerBehavior: 0
+  m_CursorLockBehavior: 0
 --- !u!1001 &200406331
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9134,7 +9169,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3008249647496901665, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
 --- !u!1 &915610793 stripped
 GameObject:
