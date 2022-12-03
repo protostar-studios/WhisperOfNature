@@ -109,6 +109,12 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void Levels(){
+        Time.timeScale = 1.0f;
+        Cursor.visible = true;
+        SceneManager.LoadScene("LevelsMenu");
+    }
+
     public void DisplayRespawn(){
         Canvas.gameObject.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
