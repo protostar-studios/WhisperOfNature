@@ -9,6 +9,11 @@ public class PauseMenuUI : MonoBehaviour
     public EventSystem pausemenusys;
     public bool controllerDetected = false;
     public GameObject resumeButton;
+    private PlayerInput playerInput;
+
+    private void Awake() {
+        playerInput = new PlayerInput();
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -22,38 +27,30 @@ public class PauseMenuUI : MonoBehaviour
     void Update()
     {   
         if (PauseMenu.paused){
+            if(!playerInput.UI.enabled){
+                playerInput.Player.Disable();
+                playerInput.UI.Enable();
+            }
             if (!controllerDetected){
-                for (int i = 0;i < 20; i++) {
-                    if(Input.GetKeyDown("joystick 1 button "+i) && i!=7){
-                        // Debug.Log(i);
-                        controllerDetected = true;
-                        EventSystem.current.SetSelectedGameObject(resumeButton);
-                        Debug.Log("joystick 1 button "+i);
-                    }
-                }
-
-                if(Input.GetAxis("Horizontal") > 0.1 || Input.GetAxis("Horizontal") < -0.1){
-                    controllerDetected = true;
-                    EventSystem.current.SetSelectedGameObject(resumeButton);
-                }
-
-                if(Input.GetAxis("Vertical") > 0.1 || Input.GetAxis("Vertical") < -0.1){
-                    controllerDetected = true;
-                    EventSystem.current.SetSelectedGameObject(resumeButton);
-                }
-
-                if(Input.GetAxis("Xbox_LookX") > 0.1 || Input.GetAxis("Xbox_LookX") < -0.1){
-                    controllerDetected = true;
-                    EventSystem.current.SetSelectedGameObject(resumeButton);
-                }
-
-                if(Input.GetAxis("Xbox_LookY") > 0.1 || Input.GetAxis("Xbox_LookY") < -0.1){
+                // for (int i = 0;i < 20; i++) {
+                //     if(Input.GetKeyDown("joystick 1 button "+i) && i!=7){
+                //         // Debug.Log(i);
+                //         controllerDetected = true;
+                //         EventSystem.current.SetSelectedGameObject(resumeButton);
+                //         Debug.Log("joystick 1 button "+i);
+                //     }
+                // }
+                Vector2 navigate_input = playerInput.UI.Navigate.ReadValue<Vector2>();
+                Debug.Log(navigate_input);
+                if(navigate_input.y > 0.1 || navigate_input.y < -0.1){
                     controllerDetected = true;
                     EventSystem.current.SetSelectedGameObject(resumeButton);
                 }
             }
         }
         else{
+            playerInput.Player.Enable();
+            playerInput.UI.Disable();
             controllerDetected = false;
             EventSystem.current.SetSelectedGameObject(gameObject);
         }

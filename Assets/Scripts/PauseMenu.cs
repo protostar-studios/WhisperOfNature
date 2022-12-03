@@ -37,11 +37,12 @@ public class PauseMenu : MonoBehaviour
 
         respawnStates.pressedSprite = respawnSprites[2];
         respawnStates.highlightedSprite = respawnSprites[1];
-        respawnStates.selectedSprite = respawnSprites[2];
+        respawnStates.selectedSprite = respawnSprites[1];
 
         resumeStates.pressedSprite = resumeSprites[2];
         resumeStates.highlightedSprite = resumeSprites[1];
-        resumeStates.selectedSprite = resumeSprites[2];
+        resumeStates.selectedSprite = resumeSprites[1];
+        statusText.sprite = pausedTextSprite;
     }
 
     void Update()
