@@ -26,6 +26,7 @@ public class PlayerMainController : MonoBehaviour
     public float rotateSpeed = 360;
     public float SlideForce = 10f;
     public Camera mainCamera;
+    private PlayerInput playerInput;
     
     public Vector3 jump;
     public float SCALE_JUMP = 3.5f;
@@ -75,7 +76,18 @@ public class PlayerMainController : MonoBehaviour
     public AudioClip landingAudio;
     private AudioSource audioSource;
 
-    // Start is called before the first frame update
+    private void Awake() {
+        playerInput = new PlayerInput();    
+    }
+
+    private void OnEnable() {
+        playerInput.Enable();
+    }
+
+    private void OnDisable() {
+        playerInput.Disable();
+    }
+
     void Start()
     {
         jumpForce = SCALE_JUMP;
@@ -107,14 +119,20 @@ public class PlayerMainController : MonoBehaviour
     private void Update()
     {
         // Movement
-        input_h = Input.GetAxis("Horizontal");
-        if(-0.1f < input_h && input_h < 0.1f){
-            input_h = 0;
-        }
-        input_v = Input.GetAxis("Vertical");
-        if(-0.1f < input_v && input_v < 0.1f){
-            input_v = 0;
-        }
+
+        // Read input values
+        Vector2 move = playerInput.Player.Move.ReadValue<Vector2>();
+        input_h = move.x;
+        input_v = move.y;
+
+        // input_h = Input.GetAxis("Horizontal");
+        // if(-0.1f < input_h && input_h < 0.1f){
+        //     input_h = 0;
+        // }
+        // input_v = Input.GetAxis("Vertical");
+        // if(-0.1f < input_v && input_v < 0.1f){
+        //     input_v = 0;
+        // }
 
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
@@ -128,9 +146,14 @@ public class PlayerMainController : MonoBehaviour
         }
 
         // Jumping
-        if(Input.GetButtonDown("Jump") || Input.GetButtonDown(joyStick + "Jump")){
+        // if(Input.GetButtonDown("Jump") || Input.GetButtonDown(joyStick + "Jump")){
+        //     jumping = true;
+        // } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
+        //     jumping = false;
+        // }
+        if(playerInput.Player.Jump.ReadValue<float>() == 1){
             jumping = true;
-        } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
+        } else if(playerInput.Player.Jump.ReadValue<float>() == 0){
             jumping = false;
         }
         if(seasonManager.curSeason == 0 && onMud){

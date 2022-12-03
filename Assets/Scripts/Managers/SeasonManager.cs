@@ -12,16 +12,25 @@ public class SeasonManager : MonoBehaviour
     public Vector3 snowRot;
     private bool isSnowing = false;
     private GameObject snow = null;
-    void Start()
-    {
-        
+    private PlayerInput playerInput;
+
+    private void Awake() {
+        playerInput = new PlayerInput();
+    }
+
+    private void OnEnable() {
+        playerInput.Enable();
+    }
+
+    private void OnDisable() {
+        playerInput.Disable();
     }
 
     // Update is called once per frame
     void Update()
     {
         // Change seasons with two buttons.
-        if(Input.GetButtonDown("PrevSeason")){
+        if(playerInput.Player.PrevSeason.ReadValue<float>() == 1){
             if(curSeason - 1 < 0){
                 curSeason = 3;
             }else{
@@ -29,7 +38,7 @@ public class SeasonManager : MonoBehaviour
             }
         }
 
-        if(Input.GetButtonDown("NextSeason")){
+        if(playerInput.Player.NextSeason.ReadValue<float>() == 1){
             if(curSeason + 1 > 3){
                 curSeason = 0;
             }else{
