@@ -652,17 +652,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!114 &82811590 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3008249648349476575, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
-  m_PrefabInstance: {fileID: 871484495}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &95181804
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10113,6 +10102,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1323709886389216867, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
   m_PrefabInstance: {fileID: 871484495}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &871484497 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1395353566, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 871484495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &883572780
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11493,7 +11493,7 @@ PrefabInstance:
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: statusText
       value: 
-      objectReference: {fileID: 82811590}
+      objectReference: {fileID: 871484497}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButton
       value: 

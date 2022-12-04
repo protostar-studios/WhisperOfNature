@@ -15,6 +15,14 @@ public class PauseMenuUI : MonoBehaviour
         playerInput = new PlayerInput();
     }
 
+    private void OnEnable() {
+        playerInput.Enable();
+    }
+
+    private void OnDisable() {
+        playerInput.Disable();
+    }
+
     // Start is called before the first frame update
     void Start()
     {   
@@ -49,10 +57,10 @@ public class PauseMenuUI : MonoBehaviour
             }
         }
         else{
-            playerInput.Player.Enable();
-            playerInput.UI.Disable();
             controllerDetected = false;
             EventSystem.current.SetSelectedGameObject(gameObject);
+            playerInput.UI.Disable();
+            playerInput.Player.Enable();
         }
     }
 }
