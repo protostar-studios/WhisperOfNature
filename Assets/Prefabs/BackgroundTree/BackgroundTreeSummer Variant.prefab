@@ -13,15 +13,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1615555568985450654, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 21.985777
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615555568985450654, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 30.110512
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615555568985450654, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 37.9
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1615555568985450654, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_LocalRotation.w
@@ -54,10 +54,10 @@ PrefabInstance:
     - target: {fileID: 4501892556037252727, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7703cc9337d861b4ab1aa874c6fac892, type: 2}
+      objectReference: {fileID: 2100000, guid: 1436398dbc826f34dadf1a0c66cb4fbc, type: 2}
     - target: {fileID: 7200690490314703547, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
       propertyPath: m_Name
-      value: BackgroundTreeSummer
+      value: BackgroundTreeSummer Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
