@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
     public Dictionary<string, int> inventory = new Dictionary<string, int>();
     Collider playerCollider;
     PlayerMainController playerMainController;
+    PlayerInput playerInput;
     public int[] inv = new int[2];
     // Used to detect player interactions
     bool interacting = false;
@@ -16,14 +17,24 @@ public class PlayerManager : MonoBehaviour
 
     // Leave it as null
     public GameObject otherObject = null;
-    string joyStick = "PS_";
+    // string joyStick = "PS_";
 
+    private void Awake() {
+        playerInput = new PlayerInput();
+    }
+    private void OnEnable() {
+        playerInput.Enable();
+    }
+
+    private void OnDisable() {
+        playerInput.Disable();
+    }
     void Start()
     {
         playerCollider = gameObject.GetComponent<Collider>();
         playerMainController = GetComponent<PlayerMainController>();
         setupInventory();
-        joyStick = FindObjectOfType<JoyStickManager>().joyStick;
+        // joyStick = FindObjectOfType<JoyStickManager>().joyStick;
     }
 
     private void setupInventory(){
@@ -35,12 +46,16 @@ public class PlayerManager : MonoBehaviour
     {
         Debug.Log("Gem" + inventory["Gem"]);
         interacting = false;
-        if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
+        // if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
+        //     interacting = true;
+        // }
+        if(playerInput.Player.Interact.ReadValue<float>() == 1){
             interacting = true;
         }
 
         // Pause
-        if(Input.GetButtonDown("Quit") || Input.GetButtonDown(joyStick + "Quit")){
+        // if(Input.GetButtonDown("Quit") || Input.GetButtonDown(joyStick + "Quit")){
+        if(playerInput.Player.Quit.triggered){
             try{
                 if(PauseMenu.died == false)
                 {

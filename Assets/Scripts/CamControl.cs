@@ -15,11 +15,19 @@ public class CamControl : MonoBehaviour
     public float MAX_ANGLE = 80f;
     public float MIN_ANGLE = -50f;
 
-    public float sensitivity = 1.0f;
+    public float sensitivity = 0.2f;
     private float LookX = 0.0f;
     private float LookY = 0.0f;
 
     private string Joystick = "PS_";
+    private PlayerInput playerInput;
+
+    float lookx_cal = 0.0f;
+    float looky_cal = 0.0f;
+
+    private void Awake() {
+        playerInput = new PlayerInput();
+    }
 
     void Start()
     {
@@ -29,6 +37,9 @@ public class CamControl : MonoBehaviour
         transform.position = transform.rotation * negDistance;
         transform.rotation = camTarget.transform.rotation;
         transform.LookAt(camTarget.transform);
+        Vector2 look = playerInput.Player.Look.ReadValue<Vector2>();
+        lookx_cal = look.x;
+        looky_cal = look.y;
 
         // Joystick Detection
         Joystick = FindObjectOfType<JoyStickManager>().joyStick;
@@ -38,13 +49,22 @@ public class CamControl : MonoBehaviour
     {
         camTarget = newModel;
     }
+    private void OnEnable() {
+        playerInput.Enable();
+    }
 
+    private void OnDisable() {
+        playerInput.Disable();
+    }
     // Update is called once per frame
     void Update()
     {
         if(!RespawnMenu.died && !PauseMenu.paused){
-            xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis(Joystick + "LookX"));
-            yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis(Joystick + "LookY"));
+            // xMove += (Input.GetAxis("Mouse X") + sensitivity * Input.GetAxis(Joystick + "LookX"));
+            // yMove += (-Input.GetAxis("Mouse Y") + sensitivity * Input.GetAxis(Joystick + "LookY"));
+            Vector2 look = playerInput.Player.Look.ReadValue<Vector2>();
+            xMove += look.x * sensitivity;
+            yMove += look.y * sensitivity;
         }
         if(yMove > MAX_ANGLE){
             yMove = MAX_ANGLE;

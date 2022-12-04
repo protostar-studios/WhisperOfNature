@@ -4011,6 +4011,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2088970265}
+    - target: {fileID: 1323709886876149295, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2088970265}
+    - target: {fileID: 1323709886876149295, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Home
+      objectReference: {fileID: 0}
     - target: {fileID: 3008249648214670950, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
       propertyPath: m_RootOrder
       value: 19
@@ -4059,6 +4067,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GUI
       objectReference: {fileID: 0}
+    - target: {fileID: 3008249648530532547, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2088970265}
+    - target: {fileID: 3008249648530532547, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Levels
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
 --- !u!1 &559251052 stripped
@@ -4090,7 +4106,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
 --- !u!114 &559251055 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 3008249648349476575, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1395353566, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
   m_PrefabInstance: {fileID: 559251051}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
@@ -5904,6 +5920,10 @@ PrefabInstance:
       propertyPath: camTarget
       value: 
       objectReference: {fileID: 1343097452}
+    - target: {fileID: 2480390513370140266, guid: 4780bb4a17e3a23459bbb65fffce793c, type: 3}
+      propertyPath: sensitivity
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4780bb4a17e3a23459bbb65fffce793c, type: 3}
 --- !u!1001 &1016453417
