@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3935585118366637619}
   - component: {fileID: 3918844550872023046}
+  - component: {fileID: 4539831516371843625}
   m_Layer: 0
   m_Name: BackgroundTree
   m_TagString: Untagged
@@ -50,6 +51,20 @@ MonoBehaviour:
   treeSpring: {fileID: 7200690490314703547, guid: 31eb3a36248bbc04abde5342bcc91860, type: 3}
   treeFall: {fileID: 430860417271960243, guid: 418801cdecb000141b7688b034d2a330, type: 3}
   curSeason: 0
+--- !u!136 &4539831516371843625
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 199163226884107010}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1.8035173
+  m_Height: 14.308176
+  m_Direction: 1
+  m_Center: {x: -0.029999733, y: 6.654088, z: -0.23949623}
 --- !u!1001 &3768961664402093230
 PrefabInstance:
   m_ObjectHideFlags: 0
