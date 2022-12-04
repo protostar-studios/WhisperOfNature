@@ -49,7 +49,7 @@ public class PlayerManager : MonoBehaviour
         // if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
         //     interacting = true;
         // }
-        if(playerInput.Player.Interact.triggered){
+        if(playerInput.Player.Interact.ReadValue<float>() == 1){
             interacting = true;
         }
 
