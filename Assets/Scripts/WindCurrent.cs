@@ -17,6 +17,8 @@ public class WindCurrent : MonoBehaviour{
     Renderer[] RendererArray;
     public bool inbound = false;
     public float distanceThreshold;
+
+    private AudioSource audioSource;
     
 
 
@@ -29,6 +31,7 @@ public class WindCurrent : MonoBehaviour{
         StartTrigger = GetComponent<BoxCollider>();
         startPosition = StartTrigger.transform.position;
         RendererArray = gameObject.GetComponentsInChildren<Renderer>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     void CheckNode(){
@@ -45,6 +48,7 @@ public class WindCurrent : MonoBehaviour{
         foreach (Transform child in transform){
             child.gameObject.SetActive(true);
         }
+        audioSource.volume = 1.0f;
     }
 
     void HideNodes(){
@@ -60,6 +64,7 @@ public class WindCurrent : MonoBehaviour{
         CurrentNode = 0;
         CurrentPositionHolder = PathNode[0].transform.position;
         startPosition = StartTrigger.transform.position;
+        audioSource.volume = 0.0f;
     }
 
     void OnTriggerEnter(Collider other){
