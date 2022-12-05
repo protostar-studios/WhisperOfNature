@@ -16,6 +16,11 @@ public class startGame : MonoBehaviour
         SceneManager.LoadScene("ControlsMenu");
     }
 
+    public void LoadIntermediateControls()
+    {
+        SceneManager.LoadScene("ControlsMenuStart");
+    }
+
     public void LoadLevels()
     {
         SceneManager.LoadScene("LevelsMenu");
