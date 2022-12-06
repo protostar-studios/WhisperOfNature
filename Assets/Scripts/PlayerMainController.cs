@@ -325,10 +325,16 @@ public class PlayerMainController : MonoBehaviour
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
             jumping = false;
+            Debug.Log("asdfded");
             playerAnim.SetBool("jumping", false);
             try{
 
-                if(other.gameObject.CompareTag("FallThornyBush")){
+                Debug.Log(other.gameObject.name);
+                if(other.gameObject.name == "beecloud_loop"){
+                    Debug.Log("beeded");
+                    PauseMenu.char_status = 7;
+                }
+                else if(other.gameObject.CompareTag("FallThornyBush")){
                     if (seasonManager.curSeason == 3){
                         PauseMenu.char_status = 5;
                     }
