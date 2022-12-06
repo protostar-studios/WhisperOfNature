@@ -169,7 +169,8 @@ public class PauseMenu : MonoBehaviour
         }
     }
     public void SetPause(){
-        if(paused == true){
+        if(died == false && paused == true){
+            Debug.Log("paused");
             Canvas.gameObject.SetActive(false);
             Time.timeScale = 1.0f;
             paused = false;
@@ -177,6 +178,7 @@ public class PauseMenu : MonoBehaviour
             Cursor.visible = false;
         }
         else if(died == true){
+            Debug.Log("died");
             Canvas.gameObject.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             // The cursor is locked when playing the game but not in pause menu
