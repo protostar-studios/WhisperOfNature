@@ -1,0 +1,151 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: WinterLowerBody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: winter_geo
+    m_Weight: 0
+  - m_Path: winter_geo/crystals
+    m_Weight: 0
+  - m_Path: winter_geo/crystals/headCrystal_low
+    m_Weight: 0
+  - m_Path: winter_geo/crystals/shoulderCrystal_L_low
+    m_Weight: 0
+  - m_Path: winter_geo/crystals/shoulderCrystal_R_low
+    m_Weight: 0
+  - m_Path: winter_geo/crystals/tail_low
+    m_Weight: 0
+  - m_Path: winter_geo/earthling_body_low
+    m_Weight: 0
+  - m_Path: winter_geo/earthling_body_low/body_gem_low
+    m_Weight: 0
+  - m_Path: winter_geo/earthling_body_low/L_eye_low
+    m_Weight: 0
+  - m_Path: winter_geo/earthling_body_low/R_eye_low
+    m_Weight: 0
+  - m_Path: winter_geo/snowHead_low
+    m_Weight: 0
+  - m_Path: winter_rig
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/l_winFoot_ctrl_offset
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/l_winFoot_ctrl_offset/l_winFoot_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/r_winFoot_ctrl_offset1
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/r_winFoot_ctrl_offset1/r_winFoot_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl/l_winIK_ctrl_offset
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/l_clavicle_null/l_clavicle_ctrl/l_winIK_ctrl_offset/l_winIK_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/neck_null/neck_ctrl/head001_null/head001_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl/r_winIK_ctrl_offset1
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/pelvis_null/pelvis_ctrl/spine001_null/spine001_ctrl/chest_null/chest_ctrl/r_clavicle_null/r_clavicle_ctrl/r_winIK_ctrl_offset1/r_winIK_ctrl
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter
+    m_Weight: 1
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/l_hipjnt_winter
+    m_Weight: 1
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/l_hipjnt_winter/l_kneejnt_winter
+    m_Weight: 1
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/r_hipjnt_winter
+    m_Weight: 1
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/r_hipjnt_winter/r_kneejnt_winter
+    m_Weight: 1
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/l_claviclejnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/l_claviclejnt_winter/l_shoulderjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/l_claviclejnt_winter/l_shoulderjnt_winter/l_elbowjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/l_claviclejnt_winter/l_shoulderjnt_winter/transform1
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/l_claviclejnt_winter/l_shoulderjnt_winter/transform1/l_shouldercrystal_jnt
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter/transform3
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter/transform3/headcrystal001_jnt
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter/transform4
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter/transform4/headcrystal002_jnt
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/neckjnt_winter/head001jnt_winter/head002jnt_winter/transform5
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/r_claviclejnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/r_claviclejnt_winter/r_shoulderjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/r_claviclejnt_winter/r_shoulderjnt_winter/r_elbowjnt_winter
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/r_claviclejnt_winter/r_shoulderjnt_winter/transform2
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/chestjnt_winter/r_claviclejnt_winter/r_shoulderjnt_winter/transform2/r_shouldercrystal_jnt
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/nurbsCircle1
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/nurbsCircle1/transform6
+    m_Weight: 0
+  - m_Path: winter_rig/master_offset/MASTER_CTRL/skeleton_grp/pelvisjnt_winter/spine001jnt_winter/nurbsCircle1/transform6/backcrystal_jnt
+    m_Weight: 0
+  - m_Path: winter_rig/winter_ikLfoot
+    m_Weight: 0
+  - m_Path: winter_rig/winter_ikLhand
+    m_Weight: 0
+  - m_Path: winter_rig/winter_ikRfoot
+    m_Weight: 0
+  - m_Path: winter_rig/winter_ikRhand
+    m_Weight: 0

@@ -26,6 +26,7 @@ public class PlayerMainController : MonoBehaviour
     public float rotateSpeed = 360;
     public float SlideForce = 10f;
     public Camera mainCamera;
+    private PlayerInput playerInput;
     
     public Vector3 jump;
     public float SCALE_JUMP = 3.5f;
@@ -75,7 +76,18 @@ public class PlayerMainController : MonoBehaviour
     public AudioClip landingAudio;
     private AudioSource audioSource;
 
-    // Start is called before the first frame update
+    private void Awake() {
+        playerInput = new PlayerInput();    
+    }
+
+    private void OnEnable() {
+        playerInput.Enable();
+    }
+
+    private void OnDisable() {
+        playerInput.Disable();
+    }
+
     void Start()
     {
         jumpForce = SCALE_JUMP;
@@ -107,14 +119,20 @@ public class PlayerMainController : MonoBehaviour
     private void Update()
     {
         // Movement
-        input_h = Input.GetAxis("Horizontal");
-        if(-0.1f < input_h && input_h < 0.1f){
-            input_h = 0;
-        }
-        input_v = Input.GetAxis("Vertical");
-        if(-0.1f < input_v && input_v < 0.1f){
-            input_v = 0;
-        }
+
+        // Read input values
+        Vector2 move = playerInput.Player.Move.ReadValue<Vector2>();
+        input_h = move.x;
+        input_v = move.y;
+
+        // input_h = Input.GetAxis("Horizontal");
+        // if(-0.1f < input_h && input_h < 0.1f){
+        //     input_h = 0;
+        // }
+        // input_v = Input.GetAxis("Vertical");
+        // if(-0.1f < input_v && input_v < 0.1f){
+        //     input_v = 0;
+        // }
 
         // Debug Restart
         if (DEBUG == true && Input.GetKeyDown(KeyCode.R)){
@@ -128,9 +146,14 @@ public class PlayerMainController : MonoBehaviour
         }
 
         // Jumping
-        if(Input.GetButtonDown("Jump") || Input.GetButtonDown(joyStick + "Jump")){
+        // if(Input.GetButtonDown("Jump") || Input.GetButtonDown(joyStick + "Jump")){
+        //     jumping = true;
+        // } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
+        //     jumping = false;
+        // }
+        if(playerInput.Player.Jump.ReadValue<float>() == 1){
             jumping = true;
-        } else if(Input.GetButtonUp("Jump") || Input.GetButtonUp(joyStick + "Jump")){
+        } else if(playerInput.Player.Jump.ReadValue<float>() == 0){
             jumping = false;
         }
         if(seasonManager.curSeason == 0 && onMud){
@@ -302,8 +325,42 @@ public class PlayerMainController : MonoBehaviour
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
             jumping = false;
+            Debug.Log("asdfded");
             playerAnim.SetBool("jumping", false);
             try{
+
+                Debug.Log(other.gameObject.name);
+                if(other.gameObject.name == "beecloud_loop"){
+                    Debug.Log("beeded");
+                    PauseMenu.char_status = 7;
+                }
+                else if(other.gameObject.CompareTag("FallThornyBush")){
+                    if (seasonManager.curSeason == 3){
+                        PauseMenu.char_status = 5;
+                    }
+                    else {
+                        PauseMenu.char_status = 6;
+                    }
+                }
+                else{
+                    if (seasonManager.curSeason == 0){
+                        PauseMenu.char_status = 2;
+                    }
+                    else if (seasonManager.curSeason == 1){
+                        PauseMenu.char_status = 3;
+                    }
+                    else if (seasonManager.curSeason == 2){
+                        PauseMenu.char_status = 1;
+                    }
+                    else if (seasonManager.curSeason == 3){
+                        PauseMenu.char_status = 4;
+                    }
+                    else{
+                        PauseMenu.char_status = 2;
+                    }
+                    Debug.Log("ded");
+                }
+
                 rb.velocity = Vector3.zero;
                 //transform.position = respawnManager.curRespawn.position;
                 // transform.rotation = respawnManager.curRespawn.rotation;
