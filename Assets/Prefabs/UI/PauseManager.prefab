@@ -69,3 +69,13 @@ MonoBehaviour:
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   pmc: {fileID: 0}
+  charStatusImage: {fileID: 0}
+  charStatusSprites:
+  - {fileID: 21300000, guid: 9051267863ddec3478fa014ecd2fab59, type: 3}
+  - {fileID: 21300000, guid: 64f02a19f229c88459e5565ebee71f9e, type: 3}
+  - {fileID: 21300000, guid: 9051267863ddec3478fa014ecd2fab59, type: 3}
+  - {fileID: 21300000, guid: 63ffd8960cc7b5a4b996da99a740b6fa, type: 3}
+  - {fileID: 21300000, guid: 37b0d5c3f4aadda4ab5b3c2a78938160, type: 3}
+  - {fileID: 21300000, guid: efd39d15627817448b4e2d7c3e91edeb, type: 3}
+  - {fileID: 21300000, guid: fc208e8d98de9a04f9cf5acec0589bee, type: 3}
+  - {fileID: 21300000, guid: 3a13f8739fd554448ab0a209fd8a912f, type: 3}

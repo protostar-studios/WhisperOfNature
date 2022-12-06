@@ -4115,6 +4115,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &559251056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821551742, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 559251051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &574344763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2856275385652336631, guid: fcf6beadf571c5249b9c3c362c5c194a, type: 3}
@@ -15116,6 +15127,10 @@ PrefabInstance:
       propertyPath: resumeButton
       value: 
       objectReference: {fileID: 559251054}
+    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
+      propertyPath: charStatusImage
+      value: 
+      objectReference: {fileID: 559251056}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButtonImage
       value: 
