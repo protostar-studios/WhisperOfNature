@@ -44,7 +44,7 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        Debug.Log("Gem" + inventory["Gem"]);
+        // Debug.Log("Gem" + inventory["Gem"]);
         interacting = false;
         // if(Input.GetButton("Interact") || Input.GetButton(joyStick + "Interact")){
         //     interacting = true;

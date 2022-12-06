@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 93751568121721765}
   m_Layer: 0
   m_Name: BeeHive
-  m_TagString: Untagged
+  m_TagString: BeeHive
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

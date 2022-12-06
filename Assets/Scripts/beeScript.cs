@@ -63,7 +63,7 @@ public class beeScript : MonoBehaviour
     void checkNearPlayer()
     {
         if ((gameObject.transform.position - player.transform.position).magnitude < 5.0f){
-            Debug.Log("close");
+            //Debug.Log("close");
         }
     }
 

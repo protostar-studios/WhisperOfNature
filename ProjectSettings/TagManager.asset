@@ -18,6 +18,7 @@ TagManager:
   - Transparent Indicator
   - Foot
   - Mud
+  - BeeHive
   layers:
   - Default
   - TransparentFX

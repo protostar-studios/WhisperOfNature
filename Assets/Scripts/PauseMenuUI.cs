@@ -50,7 +50,7 @@ public class PauseMenuUI : MonoBehaviour
                 // }
                 Vector2 navigate_input = playerInput.UI.Navigate.ReadValue<Vector2>();
                 Debug.Log(navigate_input);
-                if(navigate_input.y > 0.1 || navigate_input.y < -0.1){
+                if(navigate_input.x > 0.1 || navigate_input.x < -0.1){
                     controllerDetected = true;
                     EventSystem.current.SetSelectedGameObject(resumeButton);
                 }
