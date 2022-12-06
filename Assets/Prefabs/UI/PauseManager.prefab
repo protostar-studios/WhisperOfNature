@@ -71,7 +71,7 @@ MonoBehaviour:
   pmc: {fileID: 0}
   charStatusImage: {fileID: 0}
   charStatusSprites:
-  - {fileID: 21300000, guid: b9ab4c3829ade3e42b01034f5e4d0a9d, type: 3}
+  - {fileID: 21300000, guid: fa72547fffefb6c4c84149595ca03695, type: 3}
   - {fileID: 21300000, guid: 64f02a19f229c88459e5565ebee71f9e, type: 3}
   - {fileID: 21300000, guid: 9051267863ddec3478fa014ecd2fab59, type: 3}
   - {fileID: 21300000, guid: 63ffd8960cc7b5a4b996da99a740b6fa, type: 3}
