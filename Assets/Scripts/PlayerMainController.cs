@@ -325,8 +325,42 @@ public class PlayerMainController : MonoBehaviour
         if(other.gameObject.CompareTag("FallThornyBush") || other.gameObject.CompareTag("harmfulobj")){
             isGrounded = true;
             jumping = false;
+            Debug.Log("asdfded");
             playerAnim.SetBool("jumping", false);
             try{
+
+                Debug.Log(other.gameObject.name);
+                if(other.gameObject.name == "beecloud_loop"){
+                    Debug.Log("beeded");
+                    PauseMenu.char_status = 7;
+                }
+                else if(other.gameObject.CompareTag("FallThornyBush")){
+                    if (seasonManager.curSeason == 3){
+                        PauseMenu.char_status = 5;
+                    }
+                    else {
+                        PauseMenu.char_status = 6;
+                    }
+                }
+                else{
+                    if (seasonManager.curSeason == 0){
+                        PauseMenu.char_status = 2;
+                    }
+                    else if (seasonManager.curSeason == 1){
+                        PauseMenu.char_status = 3;
+                    }
+                    else if (seasonManager.curSeason == 2){
+                        PauseMenu.char_status = 1;
+                    }
+                    else if (seasonManager.curSeason == 3){
+                        PauseMenu.char_status = 4;
+                    }
+                    else{
+                        PauseMenu.char_status = 2;
+                    }
+                    Debug.Log("ded");
+                }
+
                 rb.velocity = Vector3.zero;
                 //transform.position = respawnManager.curRespawn.position;
                 // transform.rotation = respawnManager.curRespawn.rotation;
