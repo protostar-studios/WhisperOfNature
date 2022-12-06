@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -314,6 +314,17 @@ Transform:
   m_Father: {fileID: 1462338113}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &63577380 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821551742, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 871484495}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &73564624
 Mesh:
   m_ObjectHideFlags: 0
@@ -11143,6 +11154,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 240208567}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
+      propertyPath: charStatusImage
+      value: 
+      objectReference: {fileID: 63577380}
+    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButtonImage
       value: 
       objectReference: {fileID: 240208565}
@@ -15292,11 +15307,11 @@ Transform:
   - {fileID: 1637048303}
   - {fileID: 792659357}
   - {fileID: 1806800619}
-  - {fileID: 1428924919}
   - {fileID: 444524525}
   - {fileID: 1301414595}
   - {fileID: 510473532}
   - {fileID: 1820642524}
+  - {fileID: 1428924919}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

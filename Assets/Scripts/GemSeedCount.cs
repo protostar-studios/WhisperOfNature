@@ -14,7 +14,7 @@ public class GemSeedCount : MonoBehaviour
     //Start is called before the first frame update
     void Start()
     {
-        
+        playerManager = FindObjectOfType<PlayerManager>();
     }
 
     // Update is called once per frame
