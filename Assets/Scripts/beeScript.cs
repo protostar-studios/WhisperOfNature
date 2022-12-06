@@ -17,7 +17,6 @@ public class beeScript : MonoBehaviour
     private GameObject beeCloud1;
     private GameObject beeCloud2;
     private GameObject beeCloud3;
-    private AudioSource audioSource;
     // Start is called before the first frame update
     void Start()
     {
@@ -25,7 +24,6 @@ public class beeScript : MonoBehaviour
         curSeason = seasonManager.curSeason;
         player = GameObject.FindWithTag("Player");
         collider = GetComponent<BoxCollider>();
-        audioSource = GetComponent<AudioSource>();
         beeAnim = gameObject.transform.GetChild(0).GetComponent<Animator>();
         beeCloud1 = gameObject.transform.GetChild(0).gameObject;//.GetComponent<SkinnedMeshRenderer>();
         // beeCloud2 = gameObject.transform.GetChild(1).gameObject;//.GetComponent<SkinnedMeshRenderer>();
@@ -46,7 +44,6 @@ public class beeScript : MonoBehaviour
             gameObject.tag = "Untagged";
             beeAnim.SetBool("isSummer", false);
             beeCloud1.SetActive(false);
-            audioSource.volume = 0.0f;
         //     beeCloud2.SetActive(false);
         //     beeCloud3.SetActive(false);
         }
@@ -56,7 +53,6 @@ public class beeScript : MonoBehaviour
             beeAnim.SetBool("isSummer", true);
             // beeCloud.enabled = true;
             beeCloud1.SetActive(true);
-            audioSource.volume = 0.3f;
             // beeCloud2.SetActive(true);
             // beeCloud3.SetActive(true);
         }
