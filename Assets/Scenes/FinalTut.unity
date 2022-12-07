@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.3684953, g: 0.40221256, b: 0.46285564, a: 1}
+  m_IndirectSpecularColor: {r: 0.36847842, g: 0.40219295, b: 0.46283615, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2445,6 +2445,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf815c58006b3684991e6f23fcde3dca, type: 3}
+--- !u!114 &430464810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1395353566, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 559251051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &447409637
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18260,6 +18271,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4588603076560915489, guid: fd499b43e5ba42b4686ee2162ad4f75d, type: 3}
   m_PrefabInstance: {fileID: 1154385662}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1713251770 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1821551742, guid: d4fec117df01fe341a7fec8bcb643950, type: 3}
+  m_PrefabInstance: {fileID: 559251051}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!43 &1721585365
 Mesh:
   m_ObjectHideFlags: 0
@@ -21734,11 +21756,15 @@ PrefabInstance:
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: statusText
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 430464810}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButton
       value: 
       objectReference: {fileID: 559251054}
+    - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
+      propertyPath: charStatusImage
+      value: 
+      objectReference: {fileID: 1713251770}
     - target: {fileID: 8563559547858808195, guid: 845c95dad9dee5648b22be5a45cea362, type: 3}
       propertyPath: resumeButtonImage
       value: 
