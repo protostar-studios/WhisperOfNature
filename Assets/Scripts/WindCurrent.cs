@@ -48,7 +48,7 @@ public class WindCurrent : MonoBehaviour{
         foreach (Transform child in transform){
             child.gameObject.SetActive(true);
         }
-        audioSource.volume = 1.0f;
+        audioSource.volume = 0.4f;
     }
 
     void HideNodes(){

@@ -23,6 +23,7 @@ public class ModelManager : MonoBehaviour
     void Start()
     {
         seasonManager = Object.FindObjectOfType<SeasonManager>();
+        ChangeSeasonModel();
         curSeason = seasonManager.curSeason;
         // playerCam = GameObject.FindObjectOfType<Camera>();
 

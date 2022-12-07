@@ -8,7 +8,7 @@ public class LevelsMenu : MonoBehaviour
 
     public void SelectLevel1()
     {
-        SceneManager.LoadScene("AlphaTut");
+        SceneManager.LoadScene("FinalTut");
     }
 
     public void SelectLevel2()

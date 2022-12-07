@@ -493,9 +493,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: []
-  MoveSpeed: 3
+  MoveSpeed: 2
   inbound: 0
-  distanceThreshold: 0
+  distanceThreshold: 1
 --- !u!82 &523579479
 AudioSource:
   m_ObjectHideFlags: 0
@@ -508,7 +508,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: b92d32e29abb74b4ab35618800975074, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.4
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -727,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0e56cebd9d39a44b97cb18e1d6ee0c9, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0
+      value: 0.68
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0e56cebd9d39a44b97cb18e1d6ee0c9, type: 3}
       propertyPath: m_LocalPosition.y
@@ -735,7 +735,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0e56cebd9d39a44b97cb18e1d6ee0c9, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.33
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f0e56cebd9d39a44b97cb18e1d6ee0c9, type: 3}
       propertyPath: m_LocalRotation.w
