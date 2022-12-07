@@ -40,6 +40,7 @@ public class MusicControl : MonoBehaviour
             }else{
                 backgroundMusic[i].volume = 0;
             }
+            backgroundMusic[i].Play();
         }
         
     }

@@ -14501,6 +14501,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
+      propertyPath: Musics.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: 3748ada2b1038f04ba5f091e04dd0abf, type: 3}
+    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
+      propertyPath: Musics.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5c72dc4e7353a5244ab9d01117a221b7, type: 3}
+    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
+      propertyPath: Musics.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 7bf953c6d22ed6e44b6aea2d6a660112, type: 3}
+    - target: {fileID: 1233527433272808782, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
+      propertyPath: Musics.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 49e2172339ce9ae428e6d7669efa4339, type: 3}
     - target: {fileID: 1233527433272808787, guid: c1dcd0a988ea9664cae088a07982c18a, type: 3}
       propertyPath: m_Name
       value: backgroundMusic
